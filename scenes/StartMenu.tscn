@@ -1,0 +1,404 @@
+[gd_scene load_steps=10 format=3 uid="uid://ch8lr2rtiagj8"]
+
+[ext_resource type="Script" uid="uid://dtcv4h5rbo2lu" path="res://scripts/StartMenu.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c58tnauaumdj2" path="res://assets/backgrounds/title_bg.jpg" id="2_bg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Tag"]
+bg_color = Color(0.85, 0.4, 0.5, 0.8)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 15.0
+expand_margin_right = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Start"]
+bg_color = Color(0.85, 0.4, 0.5, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(1, 0.4, 0.5, 0.4)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Secondary"]
+bg_color = Color(0.05, 0.1, 0.2, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.4, 0.6, 0.5)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Card"]
+bg_color = Color(0.02, 0.05, 0.1, 0.98)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Input"]
+content_margin_left = 15.0
+bg_color = Color(0.05, 0.08, 0.15, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.3, 0.5, 0.5)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Gender_Selected"]
+bg_color = Color(0.1, 0.2, 0.4, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.4, 0.7, 1, 0.8)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_Gender"]
+bg_color = Color(0.1, 0.15, 0.25, 0.4)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.4, 0.6, 0.3)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MainUI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopTag" type="PanelContainer" parent="MainUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 40.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_Tag")
+
+[node name="Label" type="Label" parent="MainUI/TopTag"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "杭州 · 2024"
+
+[node name="TitleBox" type="VBoxContainer" parent="MainUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -180.0
+offset_right = 300.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="MainUI/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.980392, 0.862745, 1)
+theme_override_colors/font_outline_color = Color(1, 0.8, 0.4, 0.5)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 96
+text = "西湖边的青春"
+horizontal_alignment = 1
+
+[node name="SubTitle" type="Label" parent="MainUI/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.6)
+theme_override_font_sizes/font_size = 18
+text = "三年初中 · 数百个日与夜 · 一段藏在记忆深处的故事"
+horizontal_alignment = 1
+
+[node name="MainButtons" type="HBoxContainer" parent="MainUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -350.0
+offset_top = -200.0
+offset_right = 350.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MainUI/MainButtons"]
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_Start")
+text = "开始游戏"
+
+[node name="LoadButton" type="Button" parent="MainUI/MainButtons"]
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_Secondary")
+text = "读取存档"
+
+[node name="GalleryButton" type="Button" parent="MainUI/MainButtons"]
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_Secondary")
+text = "立绘画廊"
+
+[node name="BottomInfo" type="Label" parent="MainUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 14
+text = "↕ 多结局 | 自由行动 | 双向攻略"
+horizontal_alignment = 1
+
+[node name="CreationUI" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="CreationUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Card" type="Panel" parent="CreationUI"]
+custom_minimum_size = Vector2(600, 650)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_Card")
+
+[node name="Content" type="VBoxContainer" parent="CreationUI/Card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = -50.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Title" type="Label" parent="CreationUI/Card/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "创建角色"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CreationUI/Card/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.5)
+theme_override_font_sizes/font_size = 16
+text = "你的故事，从这里开始"
+horizontal_alignment = 1
+
+[node name="Section1" type="VBoxContainer" parent="CreationUI/Card/Content"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CreationUI/Card/Content/Section1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.7)
+theme_override_font_sizes/font_size = 18
+text = "你的名字"
+
+[node name="NameInput" type="LineEdit" parent="CreationUI/Card/Content/Section1"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_Input")
+placeholder_text = "输入你的名字..."
+
+[node name="Section2" type="VBoxContainer" parent="CreationUI/Card/Content"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CreationUI/Card/Content/Section2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.7)
+theme_override_font_sizes/font_size = 18
+text = "学校名称"
+
+[node name="SchoolInput" type="LineEdit" parent="CreationUI/Card/Content/Section2"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_Input")
+placeholder_text = "例如：十三中、育才中学..."
+
+[node name="Section3" type="VBoxContainer" parent="CreationUI/Card/Content"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CreationUI/Card/Content/Section3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.7)
+theme_override_font_sizes/font_size = 18
+text = "性别"
+
+[node name="GenderCards" type="HBoxContainer" parent="CreationUI/Card/Content/Section3"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="BoyCard" type="Button" parent="CreationUI/Card/Content/Section3/GenderCards"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_Gender_Selected")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_Gender_Selected")
+theme_override_styles/hover = SubResource("StyleBoxFlat_Gender_Selected")
+
+[node name="VBox" type="VBoxContainer" parent="CreationUI/Card/Content/Section3/GenderCards/BoyCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Emoji" type="Label" parent="CreationUI/Card/Content/Section3/GenderCards/BoyCard/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "👦"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="CreationUI/Card/Content/Section3/GenderCards/BoyCard/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "男生"
+horizontal_alignment = 1
+
+[node name="Desc" type="Label" parent="CreationUI/Card/Content/Section3/GenderCards/BoyCard/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 14
+text = "攻略女角色"
+horizontal_alignment = 1
+
+[node name="GirlCard" type="Button" parent="CreationUI/Card/Content/Section3/GenderCards"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_Gender")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_Gender")
+theme_override_styles/hover = SubResource("StyleBoxFlat_Gender")
+
+[node name="VBox" type="VBoxContainer" parent="CreationUI/Card/Content/Section3/GenderCards/GirlCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Emoji" type="Label" parent="CreationUI/Card/Content/Section3/GenderCards/GirlCard/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "👧"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="CreationUI/Card/Content/Section3/GenderCards/GirlCard/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "女生"
+horizontal_alignment = 1
+
+[node name="Desc" type="Label" parent="CreationUI/Card/Content/Section3/GenderCards/GirlCard/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 14
+text = "攻略男角色"
+horizontal_alignment = 1
+
+[node name="IntroPanel" type="PanelContainer" parent="CreationUI/Card/Content"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_Input")
+
+[node name="IntroText" type="Label" parent="CreationUI/Card/Content/IntroPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.6)
+theme_override_font_sizes/font_size = 16
+text = "你是一名刚升入十三中的男生。窗外西湖的水汽带着初秋的微凉，教室里陌生的面孔——你的三年故事，从这里开始。"
+autowrap_mode = 3
+
+[node name="FooterButtons" type="HBoxContainer" parent="CreationUI/Card/Content"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="BackButton" type="Button" parent="CreationUI/Card/Content/FooterButtons"]
+custom_minimum_size = Vector2(140, 55)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_Secondary")
+text = "← 返回"
+
+[node name="ConfirmButton" type="Button" parent="CreationUI/Card/Content/FooterButtons"]
+custom_minimum_size = Vector2(180, 55)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_Start")
+text = "开始旅程 ✨"

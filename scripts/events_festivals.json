@@ -1,0 +1,714 @@
+[
+    {
+        "id": "fest_childrenday",
+        "location": "classroom",
+        "slots": [
+            "morning"
+        ],
+        "manual_only": true,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "六月一日儿童节。\n班主任走进来，把一盒糖摆到讲台上：\n\"今天的主题就一个——不许皱眉头。\"",
+                "choices": [
+                    {
+                        "text": "😄 去拿一块糖",
+                        "next": "candy"
+                    },
+                    {
+                        "text": "📝 继续埋头做题",
+                        "next": "study"
+                    }
+                ]
+            },
+            {
+                "id": "candy",
+                "text": "糖是荷花酥，甜得有点腻，但感觉时间倒回到了六七岁。\n你吃完，突然想：\n自己还算是个孩子吗？",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -8
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "childrenday_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "study",
+                "text": "周围的人都去拿糖，教室突然空了许多。\n你在安静里刷完了两道数学题。\n效率出奇地高——也许这就是儿童节给初中生的礼物。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "childrenday_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（六月一日。年年都有，但岁数不同了。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "fest_christmas",
+        "location": "school_kiosk",
+        "slots": [
+            "after"
+        ],
+        "manual_only": true,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "十二月二十五日，小卖部门口摆了一棵歪歪斜斜的圣诞树。\n老板戴着红色圣诞帽，帽子明显不合适，但很努力地挺直着。\n\"要不要买个平安果？\"",
+                "choices": [
+                    {
+                        "text": "🍎 买一个平安果（-5元）",
+                        "next": "buy_apple",
+                        "requireMoney": 5
+                    },
+                    {
+                        "text": "📸 拍张照就走",
+                        "next": "take_photo"
+                    },
+                    {
+                        "text": "🎁 给旁边的人买一个",
+                        "next": "gift_apple",
+                        "requireMoney": 5
+                    }
+                ]
+            },
+            {
+                "id": "buy_apple",
+                "text": "红苹果，上面贴了个金色贴纸，写着\"平安喜乐\"。\n你拿在手里走了一路，最后还是舍不得吃——放在了书桌上。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -6
+                    },
+                    {
+                        "type": "money",
+                        "amount": -5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "christmas_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "take_photo",
+                "text": "你把那棵歪树拍下来发进备忘录。\n\"2024.12.25 学校的圣诞节。\"\n某一天，这张照片会变得很重要。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "christmas_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "gift_apple",
+                "text": "\"给你的——\"你随手递给旁边一个同学。\n对方愣了一下，\"谢谢\"说得有点小声，但眼睛有点亮。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 3
+                    },
+                    {
+                        "type": "money",
+                        "amount": -5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "christmas_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（圣诞节，在国内的初中校园里，只是一个有平安果的普通星期四。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "fest_school_anniversary",
+        "location": "classroom",
+        "slots": [
+            "morning"
+        ],
+        "manual_only": true,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "今天是西湖中学建校七十周年校庆。\n操场上搭了台子，旗杆边挂了横幅。\n升旗仪式比平时长了整整二十分钟，校长说了很多话。\n你记住了其中一句：\n\"七十年前，这里只有几间平房、一块黑板。\"",
+                "choices": [
+                    {
+                        "text": "🏫 去领校庆纪念品",
+                        "next": "gift"
+                    },
+                    {
+                        "text": "📷 在横幅前拍一张",
+                        "next": "photo"
+                    },
+                    {
+                        "text": "🎵 看看表演节目",
+                        "next": "show"
+                    }
+                ]
+            },
+            {
+                "id": "gift",
+                "text": "纪念品是一个透明文件袋，印着学校的沿革图。\n你翻了翻，1954年，操场还是土路。\n此刻你站的地方，七十年前可能是菜地。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "school_anniversary_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "photo",
+                "text": "你在横幅前站了一下，让旁边的同学帮你按了一张快门。\n不知道未来会不会拿出来看——但拍了总比没拍好。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "school_anniversary_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "show",
+                "text": "合唱团唱的是《送别》，老师和学生一起站在台上。\n有个数学老师唱走音了，但下面的人鼓掌鼓得最响。\n今天不用上课，这个认知在胸腔里飘荡，格外轻盈。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -10
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "school_anniversary_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（七十年，三十届初中生。你是其中之一。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "fest_teacherday",
+        "location": "classroom",
+        "slots": [
+            "morning"
+        ],
+        "manual_only": true,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "九月十日，教师节。\n早上进教室，黑板上有人画了一束花，用粉笔，画得歪歪扭扭但很认真。\n\"老师，节日快乐\"六个字写在最中间。",
+                "choices": [
+                    {
+                        "text": "🌸 去给班主任送一束花",
+                        "next": "give_flower"
+                    },
+                    {
+                        "text": "📝 在黑板上补一笔",
+                        "next": "draw"
+                    },
+                    {
+                        "text": "（静静看着，没有说话）",
+                        "next": "watch"
+                    }
+                ]
+            },
+            {
+                "id": "give_flower",
+                "text": "你在校门口买了一束康乃馨——五块钱，蔫了一点，但颜色很好看。\n周老师接过去，愣了一下，然后笑了：\n\"好孩子，进去上课吧。\"\n你发现她把花插进了讲台上的玻璃杯里，放了一整天。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 2
+                    },
+                    {
+                        "type": "money",
+                        "amount": -5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "teacherday_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "draw",
+                "text": "你走到黑板前，在那束歪花旁边补了一片叶子。\n没有人说什么，但两个同学抬起头来笑了一下。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 1
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "teacherday_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "watch",
+                "text": "你没有动，只是站着看了一会儿。\n某种东西悄悄松动了——说不清是什么，可能是一点点对这个普通地方的感情。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -4
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "teacherday_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（黑板上那束粉笔花，到放学才擦掉。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "fest_newyear",
+        "location": "west_lake",
+        "slots": [
+            "evening"
+        ],
+        "manual_only": true,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "十二月三十一日，元旦前夜。\n西湖边的灯亮着，远处有烟花升起来——不是正式的，是有人自己放的。\n二〇二四年就要过去了。",
+                "choices": [
+                    {
+                        "text": "🎆 看烟花到跨年",
+                        "next": "fireworks"
+                    },
+                    {
+                        "text": "📱 发一条跨年消息",
+                        "next": "send_msg"
+                    },
+                    {
+                        "text": "🌙 一个人静静待着",
+                        "next": "alone"
+                    }
+                ]
+            },
+            {
+                "id": "fireworks",
+                "text": "烟花在湖面上炸开，光落在水里，很快消失。\n周围的人开始倒计时——十、九、八……\n你跟着喊，声音混进人群里，摸不到边界。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -10
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "newyear_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "send_msg",
+                "text": "你打开手机，想了很久，最后只发了五个字：\n\"新年好，加油。\"\n没加对象——群发出去，也算。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "newyear_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "alone",
+                "text": "零点的钟声响起时，你正坐在湖边的石栏上，看着远处灯火的倒影。\n没有许愿，没有祈祷。\n只是觉得：又一年了，得继续走。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -8
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "newyear_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（新年快乐。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "fest_dragonboat",
+        "location": "west_lake",
+        "slots": [
+            "noon"
+        ],
+        "manual_only": true,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "端午节，学校放了半天假。\n西湖边的龙舟赛早就结束了，但湖面上还有几艘船在慢悠悠地划。\n有人在岸边卖粽子，糯米味飘得很远。",
+                "choices": [
+                    {
+                        "text": "🍃 买个粽子吃",
+                        "next": "eat_zongzi"
+                    },
+                    {
+                        "text": "🚣 看龙舟，找个位置坐下来",
+                        "next": "watch_boat"
+                    },
+                    {
+                        "text": "📿 买条彩绳编手环",
+                        "next": "buy_rope"
+                    }
+                ]
+            },
+            {
+                "id": "eat_zongzi",
+                "text": "你买了一个咸肉粽，在包装纸上剥了半天才剥开。\n是外婆那种味道——不确定外婆有没有在端午包过粽子，\n但就是觉得像。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -8
+                    },
+                    {
+                        "type": "money",
+                        "amount": -6
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "dragonboat_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "watch_boat",
+                "text": "船桨击水，激起一道一道的涟漪。\n鼓声很响，从远处传过来，节奏快而整齐。\n你坐在岸边看了很久，没有说话，心里有什么东西也跟着节奏动了动。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -10
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "strength",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "dragonboat_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "buy_rope",
+                "text": "摊位上有卖五彩绳的，说是辟邪。\n你挑了条绿色的，系在手腕上，打了个结。\n有点松，但戴着走回学校，感觉不一样了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 1
+                    },
+                    {
+                        "type": "money",
+                        "amount": -3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -4
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "dragonboat_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（端午节的湖边，有龙舟声、粽子香、和一点说不清楚的乡愁。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "fest_midautumn",
+        "location": "west_lake",
+        "slots": [
+            "evening"
+        ],
+        "manual_only": true,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "中秋节夜晚，西湖边的人比平时多了几倍。\n月亮挂在湖上方，又圆又亮，倒影铺开来，像是另一个月亮沉在水里。",
+                "choices": [
+                    {
+                        "text": "🥮 吃月饼赏月",
+                        "next": "eat_mooncake"
+                    },
+                    {
+                        "text": "🎑 在湖边坐很久",
+                        "next": "sit_by_lake"
+                    },
+                    {
+                        "text": "📞 打电话回家",
+                        "next": "call_home"
+                    }
+                ]
+            },
+            {
+                "id": "eat_mooncake",
+                "text": "你买了一块蛋黄莲蓉，坐在苏堤边上吃。\n月饼很甜，甜得有点腻，你还是一口气吃完了。\n头顶的月亮，和去年一样大——你却觉得自己小了一点。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -10
+                    },
+                    {
+                        "type": "money",
+                        "amount": -10
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "midautumn_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "sit_by_lake",
+                "text": "你在断桥边坐了很久，什么都没干。\n湖风带着凉意，月光把自己的影子拉长在地上。\n今晚的心，很安静——像湖面一样。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -15
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "midautumn_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "call_home",
+                "text": "你拨通了家里的电话。\n接通那一刻，对面传来碗碟碰撞的声音、电视的杂音、妈妈叫爸爸的声音——\n\"喂，是我。对，我在西湖边。\"\n沉默了几秒，然后你们聊了很久不重要的事。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -12
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "midautumn_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（中秋 · 西湖 · 月圆。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "eco_lucky_money",
+        "location": null,
+        "slots": [
+            "morning"
+        ],
+        "manual_only": true,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "春节拜年回来，你的口袋里多了一些红包。\n今年亲戚们给的比往年多了一点——'长大了，给多点'。\n你数了数，有一笔不小的数字。",
+                "choices": [
+                    {
+                        "text": "💰 全部存起来",
+                        "next": "save_all"
+                    },
+                    {
+                        "text": "🛍️ 买了一直想买的东西",
+                        "next": "spend"
+                    },
+                    {
+                        "text": "🎁 给妈妈买一份礼物",
+                        "next": "gift_mom"
+                    }
+                ]
+            },
+            {
+                "id": "save_all",
+                "text": "你把所有压岁钱转进备用账户。\n\"以后有用。\"\n手机余额数字变大，那瞬间居然有点踏实。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "money",
+                        "amount": 80
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "lucky_money_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "spend",
+                "text": "你把心仪已久的那个东西买了——\n下单、支付、等待物流——\n整个过程比想象中爽，拿到手之后却有点不知道做什么。\n但还是很开心。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "money",
+                        "amount": 30
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -8
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "lucky_money_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "gift_mom",
+                "text": "你给妈妈买了一盒据说不错的茶叶。\n她接过去，\"你这孩子……\"然后把茶叶放进了橱柜里，很珍惜的那种放法。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "money",
+                        "amount": 40
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 3
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "lucky_money_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（一年一次的压岁钱，一年一次的\"长大了\"。）",
+                "isEnd": true
+            }
+        ]
+    }
+]

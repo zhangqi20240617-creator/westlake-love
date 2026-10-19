@@ -1,0 +1,166 @@
+[
+  {
+    "id": "event_class_election",
+    "title": "班干部竞选",
+    "location": "classroom",
+    "timeCost": 0,
+    "priority": 9999,
+    "scenes": [
+      {
+        "speaker": "teacher",
+        "text": "“好了，大家安静一下。开学已经有一阵子了，为了班级更好地运转，今天我们利用自习课的时间，把班委会给选出来！”",
+        "choices": [
+          {
+            "text": "竞选【班长】(需要社交30 魅力20)",
+            "requireStats": {
+              "social": 30,
+              "charm": 20
+            },
+            "next": 1
+          },
+          {
+            "text": "竞选【学习委员】(需要智力40)",
+            "requireStats": {
+              "intellect": 40
+            },
+            "next": 2
+          },
+          {
+            "text": "竞选【体育委员】(需要体能30)",
+            "requireStats": {
+              "strength": 30
+            },
+            "next": 3
+          },
+          {
+            "text": "做个闲云野鹤，放弃竞选",
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "narrator",
+        "text": "你凭借绝佳的人缘和口才，高票当选为班长。同学们为你鼓掌。虽然责任变重了，但平时有了更大的话语权。",
+        "statDelta": {
+          "social": 10,
+          "stress": 20
+        },
+        "flags": [
+          "role_monitor"
+        ],
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "毫无悬念，以你平时展现出来的智商，大家一致推举你为学习委员。班主任向你投来赞许的目光。",
+        "statDelta": {
+          "intellect": 5,
+          "charm": 5,
+          "stress": 10
+        },
+        "flags": [
+          "role_study"
+        ],
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "你亮了一手肌肉，轻松拿下了体育委员的头衔。男生们觉得你很酷，女生们也开始留意你。",
+        "statDelta": {
+          "charm": 10,
+          "social": 5,
+          "stress": 10
+        },
+        "flags": [
+          "role_pe"
+        ],
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "枪打出头鸟，你不愿卷入班级的政治漩涡，决定安静地做个透明人。这让你感觉非常轻松。",
+        "statDelta": {
+          "stress": -20
+        },
+        "next": 99
+      }
+    ],
+    "manual_only": true
+  },
+  {
+    "id": "event_cleaning_duty",
+    "title": "放学后的值日生",
+    "location": "classroom",
+    "timeCost": 1,
+    "priority": 9999,
+    "scenes": [
+      {
+        "speaker": "narrator",
+        "text": "每逢周五的放学后，教室里人走楼空。\n夕阳打在黑板上有些斑驳，今天轮到你留下来打扫卫生了。",
+        "choices": [
+          {
+            "text": "【专属羁绊】和晚晴一起擦黑板 (要求好感>40)",
+            "requireFav": {
+              "wanqing": 40
+            },
+            "next": 1
+          },
+          {
+            "text": "【专属羁绊】和雨桐一起倒垃圾 (要求好感>40)",
+            "requireFav": {
+              "yutong": 40
+            },
+            "next": 2
+          },
+          {
+            "text": "和男生们拿扫把打闹，快速扫完",
+            "next": 3
+          },
+          {
+            "text": "把笤帚一扔，直接跑路去网吧！(极高违纪)",
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "narrator",
+        "text": "你踩在凳子上擦着黑板高处，晚晴在下面递给你湿抹布。夕阳把她的侧脸映得红扑扑的。不知为何，你们聊起了彼此小时候的糗事，距离一下子拉近了。",
+        "statDelta": {
+          "charm": 5,
+          "social": 5,
+          "stress": -20
+        },
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "你们提着沉重的垃圾桶走向操场后头的回收站。雨桐走不动了，你霸气地接过两个桶。她轻咬着下唇跟在你身后，悄声说了句“谢谢”。夕阳把两人的影子拉得很长。",
+        "statDelta": {
+          "charm": 5,
+          "strength": 2,
+          "stress": -20
+        },
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "男生们根本不好好打扫，把扫把当成了金箍棒在走廊里比划。虽然扬起了一脸灰，但大家笑得前仰后合。",
+        "statDelta": {
+          "social": 15,
+          "stress": -10
+        },
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "你背起书包直接冲向了自由！\n第二天，看着堆满垃圾的教室，班主任大发雷霆。你被全校通报批评，教导主任彻底记住了你的名字！",
+        "statDelta": {
+          "dean_suspicion": 40,
+          "social": -10
+        },
+        "next": 99
+      }
+    ],
+    "manual_only": true
+  }
+]

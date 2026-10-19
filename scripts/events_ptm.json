@@ -1,0 +1,126 @@
+[
+  {
+    "id": "event_ptm",
+    "title": "家长会风暴",
+    "location": "classroom",
+    "timeCost": 0,
+    "priority": 999,
+    "scenes": [
+      {
+        "speaker": "narrator",
+        "text": "大考结束，你的模拟总分为 {stats.last_exam_total} 分。\n\n本周末，学校强制召开了所有年级的家长会。教室里挤满了来听取成绩的家长，气压低得可怕。",
+        "choices": [
+          {
+            "text": "【学霸特权】等待班主任表扬 (要求总分≥450)",
+            "requireStats": {
+              "last_exam_total": 450
+            },
+            "next": 1
+          },
+          {
+            "text": "【差生末路】等待公开处刑 (总分<250)",
+            "requireStats": {
+              "last_exam_total": 0
+            },
+            "excludeStats": {
+              "last_exam_total": 250
+            },
+            "next": 2
+          },
+          {
+            "text": "混在人群中熬过去",
+            "requireStats": {
+              "last_exam_total": 250
+            },
+            "excludeStats": {
+              "last_exam_total": 450
+            },
+            "next": 3
+          }
+        ]
+      },
+      {
+        "speaker": "narrator",
+        "text": "“这次考试，我们班有几位同学表现得极其优异！”班主任把你作为正面典型大夸特夸。你爸妈红光满面，教导主任在窗外也频频点头。\n\n回家后，你得到了丰厚的零花钱，最近积压的压力全都一扫而空了。",
+        "statDelta": {
+          "stress": -100,
+          "charm": 10
+        },
+        "moneyDelta": 500,
+        "next": 10
+      },
+      {
+        "speaker": "narrator",
+        "text": "班主任把最差的几张卷子贴在了黑板上拷问，其中就有你的。你的父母脸黑得像锅底一样。\n回家后，你迎来了狂风骤雨般的混合双打，零花钱被彻底冻结，并在学校挂上了【班级处分】！",
+        "statDelta": {
+          "stress": 80,
+          "punishment_level": 1,
+          "dean_suspicion": 30
+        },
+        "moneyDelta": -50,
+        "next": 10
+      },
+      {
+        "speaker": "narrator",
+        "text": "家长的目光都聚集在学霸和差生身上，你作为平庸的大多数，无惊无险地度过了这场家长会。\n\n散会后家长也没多说什么，日子照常。",
+        "statDelta": {
+          "stress": 10
+        },
+        "next": 10
+      },
+      {
+        "speaker": "narrator",
+        "text": "【家长的暗流】\n正当家长会即将开完散会时，班主任似乎又想起了什么……",
+        "choices": [
+          {
+            "text": "继续",
+            "next": 11
+          }
+        ]
+      },
+      {
+        "speaker": "teacher",
+        "text": "“另外提醒各位家长，最近要注意孩子们的作风问题。有极个别成绩下滑的同学，天天在操场和别的女生走得很近……”",
+        "conditionType": "ptm_romance_check",
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "幻灯片上闪出一张你在走廊里帮女生撑伞的模糊照片。你的家长和女方的家长同时看清了对方，视线在空气里擦出了恐怖的修罗场火花！",
+        "choices": [
+          {
+            "text": "冲进班级抢下话筒强行解释 (情商检定)",
+            "requireStats": {
+              "social": 30
+            },
+            "next": 13
+          },
+          {
+            "text": "门外吓得缩起脑袋",
+            "next": 14
+          }
+        ]
+      },
+      {
+        "speaker": "player",
+        "text": "“老师您误会了！那天是我们在对物理题！”你临场发挥爆发出极强的情商，圆得滴水不漏。\n这番勇敢的救场让对方家长稍松一口气，女孩在人群后崇拜地看着你。",
+        "statDelta": {
+          "stress": 15,
+          "social": 5
+        },
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "你没胆子反驳。双方家长在会后大吵一架，你和她的关系遭到毁灭性打击，甚至被勒令断绝来往。",
+        "statDelta": {
+          "stress": 50,
+          "social": -10
+        },
+        "logicType": "ptm_romance_fail",
+        "next": 99
+      }
+    ],
+    "manual_only": true
+  }
+]

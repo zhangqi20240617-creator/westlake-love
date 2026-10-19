@@ -1,0 +1,550 @@
+[
+  {
+    "id": "sq_001",
+    "rewardSprite": "wanqing",
+    "charId": "wanqing",
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 3,
+    "minAff": 0,
+    "priority": 8,
+    "title": "书架之间",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "图书馆深处，一个女生正在抄东西，身旁摞着五六本书。"
+      },
+      {
+        "speaker": "wanqing",
+        "text": "……你找什么书？",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "找不到，你帮我推荐一本？",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "随便逛逛。",
+            "affDelta": 2,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（想了想）……你喜欢冒险的还是安静的？（眼睛亮了一点）",
+        "affDelta": 3,
+        "next": 99
+      },
+      {
+        "speaker": "wanqing",
+        "text": "……哦。（低头继续抄）",
+        "affDelta": 0,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "sq_003",
+    "requireFlags": [
+      "sq_001"
+    ],
+    "charId": "wanqing",
+    "location": "library",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 30,
+    "priority": 1000,
+    "title": "静谧的晚自习",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "晚上的图书馆格外安静。苏晚晴旁边有个空位，她指了指。"
+      },
+      {
+        "speaker": "wanqing",
+        "text": "这里没人。",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（坐下）你在看什么？",
+            "affDelta": 8,
+            "next": 3
+          },
+          {
+            "text": "谢谢。（开始写作业）",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（把书封面亮给你看）……一本关于星空的诗集。你想听吗？",
+        "affDelta": 10,
+        "next": 99
+      },
+      {
+        "speaker": "wanqing",
+        "text": "……嗯。那我不打扰你了。（递给你一颗薄荷糖）",
+        "affDelta": 5,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "sq_002",
+    "requireFlags": [
+      "wq_book"
+    ],
+    "charId": "wanqing",
+    "location": "lakeside",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 25,
+    "priority": 100,
+    "title": "西湖边的故事",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "西湖苏堤，晚晴坐在石凳上，手边放着一本很旧的本子。"
+      },
+      {
+        "speaker": "wanqing",
+        "text": "……你怎么来这里了？",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "想看你写什么。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "散步。这里挺安静的。",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（慌忙合上本子，耳朵红）……这个不给人看的。（停顿）……但你坐这儿可以。",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "wanqing",
+        "text": "……嗯，是。（把石凳旁边挪了挪）一起看湖。",
+        "affDelta": 3,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "wq_book",
+    "requireFlags": [
+      "sq_001"
+    ],
+    "charId": "wanqing",
+    "location": "library",
+    "slotId": "noon",
+    "triggerDay": 0,
+    "minAff": 8,
+    "priority": 6,
+    "title": "那本书",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "图书馆。你在书架前找不到想看的，苏晚晴从旁边走过来，停了一下。"
+      },
+      {
+        "speaker": "wanqing",
+        "text": "你在找什么类型的？",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "不太确定……你推荐一本吧。",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "有点冒险的，又不太幼稚的。",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（想了很久，从第三排抽出一本）……这本。（停顿）你读完告诉我。",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（想了想，带你走到另一排）……这两本，按顺序读。",
+        "affDelta": 7,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "wq_cry",
+    "requireFlags": [
+      "sq_002"
+    ],
+    "rewardSprite": "wanqing",
+    "charId": "wanqing",
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 20,
+    "priority": 8,
+    "title": "书架背后",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "图书馆角落，你绕过书架，发现苏晚晴坐在地上，眼睛红着，膝盖上放着那个旧本子。"
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（听见动静，把头转开）……没事，你走吧。",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（坐下来，没有说话）",
+            "affDelta": 15,
+            "next": 3
+          },
+          {
+            "text": "我不走。发生什么了？",
+            "affDelta": 10,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（沉默了很久）……有时候写到一半，不知道怎么写了。（停顿）你不嫌弃的话，可以坐着。",
+        "affDelta": 8,
+        "next": 99
+      },
+      {
+        "speaker": "wanqing",
+        "text": "……没什么大事。（闭上眼睛）就是……故事里的人，不知道该怎么办。",
+        "affDelta": 6,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "wq_publish",
+    "requireFlags": [
+      "wq_cry"
+    ],
+    "charId": "wanqing",
+    "location": "classroom",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAff": 40,
+    "priority": 8,
+    "title": "校刊上的名字",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "班里有人拿着新一期校刊传阅。你翻到第三页——\"苏晚晴\"三个字印在上面。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（找到她）你上校刊了，我看到了。",
+            "affDelta": 12,
+            "next": 2
+          },
+          {
+            "text": "（放进书包，打算留着）",
+            "affDelta": 5,
+            "next": 3
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（抬头，眼睛里有些不一样的东西）……你看了？（停顿）……感觉怎么样？",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（后来发现了）……你把那期校刊留着了？",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "写得很好。我希望以后能读你的书。",
+            "affDelta": 15,
+            "next": 99
+          },
+          {
+            "text": "喜欢中间那段。",
+            "affDelta": 10,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wq_readback",
+    "charId": "wanqing",
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 15,
+    "priority": 7,
+    "requireFlags": [
+      "wq_book"
+    ],
+    "title": "你读完了那本书",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "图书馆，你把那本书还回来，苏晚晴正好在旁边。"
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（看见书，抬起头）……读完了？",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "读完了。里面那段关于海的比喻……我读了很多遍。",
+            "affDelta": 15,
+            "next": 3
+          },
+          {
+            "text": "读完了，是你喜欢的类型吗？",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（沉默了很久，然后把书接过来，重新放好）……你是第一个提那段的。（停顿）那是我最喜欢的一页。",
+        "affDelta": 8,
+        "next": 99
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（想了想）……嗯。（停顿）你觉得结局合理吗？",
+        "affDelta": 6,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "wq_writing",
+    "charId": "wanqing",
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 28,
+    "priority": 7,
+    "requireFlags": [
+      "wq_readback"
+    ],
+    "rewardSprite": "wanqing",
+    "title": "各自沉默的下午",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "图书馆最僻静的角落里，苏晚晴正全神贯注地低头写着什么。你拉开她对面的椅子坐下，安静地翻开了自己的作业本。"
+      },
+      {
+        "speaker": null,
+        "text": "谁也没有打破这份静谧。两人各自忙碌着，只有笔尖摩擦纸张的沙沙声，和偶尔交错又错开的视线。"
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（大约过了一个钟头，她终于停下笔，抬眼看向你）……你觉得，如果早就注定了一个不完美的结局，这个故事还值得被写出来吗？",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "值得。有些故事，结局就是它的意义。",
+            "affDelta": 15,
+            "next": 4
+          },
+          {
+            "text": "要看过程是不是真实。",
+            "affDelta": 10,
+            "next": 5
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（她低垂着眼帘，静静注视着手中的信笺）……谢谢你。（她深吸了一口气，轻轻合上笔记本）……这段剧情，我知道该怎么收尾了。",
+        "affDelta": 8,
+        "next": 99
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（想了很久）……你回答得很认真。（停顿）比我想的好。",
+        "affDelta": 6,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "wq_chat",
+    "charId": "wanqing",
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 1,
+    "repeatable": true,
+    "requireFlags": [
+      "wq_book"
+    ],
+    "title": "图书馆的宁静",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "图书馆里，苏晚晴正沉浸在一本厚厚的外文小说里。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "请教书中的内容",
+            "affDelta": 2,
+            "setTempFlag": "wq_chat_done",
+            "next": 2
+          },
+          {
+            "text": "送她一张精美的书签 (💰-20)",
+            "reqMoney": 20,
+            "affDelta": 5,
+            "statDelta": {
+              "money": -20
+            },
+            "next": 3
+          },
+          {
+            "text": "不打扰她看书了",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（她从书页上方抬起视线，看到是你，嘴角露出一抹浅笑）……这段话我也琢磨了很久，一起讨论下吗？",
+        "next": 4
+      },
+      {
+        "speaker": "wanqing",
+        "text": "（她接过书签，指尖轻轻抚过上面的纹路）……好漂亮，我会好好珍惜的。谢谢。",
+        "next": 4
+      },
+      {
+        "speaker": "wanqing",
+        "text": "还有其他想聊的吗？",
+        "next": 1
+      }
+    ]
+  },
+  {
+    "id": "wq_cold_war_01",
+    "charId": "wanqing",
+    "requireRelState": "close",
+    "location": "library",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 60,
+    "priority": 900,
+    "title": "书页间的误会",
+    "scenes": [
+      {
+        "speaker": "wanqing",
+        "pose": "serious",
+        "text": "（她合上笔记本，目光落在你身上）你上周说帮我看看新写的段落……后来就没了消息。是觉得写得不好，还是根本没放在心上？"
+      },
+      {
+        "speaker": "player",
+        "text": "？",
+        "choices": [
+          {
+            "text": "（烦躁）你整天就知道写你那点破故事，根本不懂我。",
+            "affDelta": -5,
+            "relCold": true,
+            "next": 99
+          },
+          {
+            "text": "（温和）对不起，我这几天有点累，不是故意不回你。",
+            "affDelta": 3,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wq_cold_recover_01",
+    "charId": "wanqing",
+    "requireRelState": "cold",
+    "location": "lakeside",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 950,
+    "relRecover": true,
+    "title": "夹在书里的书签",
+    "scenes": [
+      {
+        "speaker": "wanqing",
+        "pose": "shy",
+        "text": "（她把一本你借过的书递回来，扉页夹着一枚手绘书签）……那天我也太固执了，明明该先问你发生了什么。"
+      },
+      {
+        "speaker": "wanqing",
+        "text": "书先还你。我们……还能像之前那样，一起聊聊故事吗？",
+        "next": 99
+      }
+    ]
+  }
+]

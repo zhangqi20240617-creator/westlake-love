@@ -1,0 +1,622 @@
+[
+  {
+    "id": "jj_001",
+    "rewardSprite": "jingjing",
+    "charId": "jingjing",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 1,
+    "minAff": 0,
+    "priority": 10,
+    "excludeRelState": "cold",
+    "title": "门口的菁菁",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "晚上回家，楼道灯还没开，有人坐在你家门口的台阶上。"
+      },
+      {
+        "speaker": "jingjing",
+        "pose": "casual",
+        "text": "你终于回来了。我等了好久。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "等我干什么？（蹲下来看她）",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "有事找我？",
+            "affDelta": 4,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "pose": "shy",
+        "text": "没事。就是……想看看你第一天怎么样了。（低头）",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（停顿）……没事啦，就顺路。你吃饭了吗？",
+        "affDelta": 0,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jj_002",
+    "requireFlags": [
+      "jj_001"
+    ],
+    "charId": "jingjing",
+    "location": "school_gate",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 20,
+    "priority": 1000,
+    "excludeRelState": "cold",
+    "title": "放学等你",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "校门口，菁菁靠着铁栅栏，手里拿着两根棒冰。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "买了你那个口味。（把棒冰递过来）",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你怎么知道我喜欢这个口味？",
+            "affDelta": 8,
+            "next": 3
+          },
+          {
+            "text": "谢谢。（接过来）",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "……我认识你多少年了。（轻轻推了你一下）笨蛋。",
+        "affDelta": 3,
+        "next": 99
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（一起走）……别客气，邻居嘛。",
+        "affDelta": 0,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jj_end_pre",
+    "requireFlags": [
+      "jj_lake"
+    ],
+    "charId": "jingjing",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 75,
+    "priority": 120,
+    "excludeRelState": "cold",
+    "title": "说出那句话",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "初三深夜，楼道里，你们靠着墙站着，沉默比往常多。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "……以后去不同学校，可能见面就少了。（声音很轻）",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "我不想少。（看着她）",
+            "affDelta": 20,
+            "isEndTrigger": true,
+            "ending": "jingjing_good",
+            "next": 3
+          },
+          {
+            "text": "……会保持联系的。",
+            "affDelta": 0,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（愣了一秒，然后低头笑）……你这个人，说话还是一样直。（停顿）我也不想少。",
+        "affDelta": 0,
+        "next": 99
+      },
+      {
+        "speaker": "jingjing",
+        "text": "……嗯。（点点头，不再说话）",
+        "affDelta": 0,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jj_photo",
+    "requireFlags": [
+      "jj_002"
+    ],
+    "charId": "jingjing",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 10,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "翻出来的旧照片",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "小区楼下，菁菁手里拿着一张旧照片，看到你就把它往背后藏。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "……没什么，路过而已。",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "我看到了，那是我们小时候的照片吧？",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "（假装没看见）哦，晚上好。",
+            "affDelta": 3,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（脸红，把照片递过来）……我妈整理东西翻出来的。你那时候……好丑。（轻笑）",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（松了口气）……嗯，晚上好。（顿了顿）你……要不要上来吃饭？",
+        "affDelta": 6,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jj_sick",
+    "requireFlags": [
+      "jj_photo"
+    ],
+    "rewardSprite": "jingjing",
+    "charId": "jingjing",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 30,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "听说你发烧了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "菁菁今天没来学校。晚上你路过楼下，她家的灯亮着。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（开门，头发乱，披着外套）……你来干什么？",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "听说你发烧了。（把买好的粥递过去）",
+            "affDelta": 18,
+            "next": 3
+          },
+          {
+            "text": "来看看你有没有好一点。",
+            "affDelta": 10,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（看着粥，好半天没说话）……你买这个干什么。（声音有点哑）谢谢你。",
+        "affDelta": 8,
+        "next": 99
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（侧过头，不让你看她脸）……好多了。（停顿）进来坐会儿吗？",
+        "affDelta": 6,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jj_lake",
+    "requireFlags": [
+      "jj_sick"
+    ],
+    "charId": "jingjing",
+    "location": "lakeside",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 55,
+    "priority": 8,
+    "excludeRelState": "cold",
+    "title": "苏堤的傍晚",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "西湖苏堤，菁菁在前面走，踩着石板缝的边缘，像小时候一样。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（回头）你小时候也喜欢踩这个，记得吗？",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "记得。你每次都踩不稳，我都要扶你。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "不记得了。你也没变嘛。",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（笑了）才没有！我明明踩得很好——（踩空了）……你没看见。",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（微微撇嘴）……哪里没变，我长高了。（停顿）你也是。",
+        "affDelta": 6,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jj_umbrella",
+    "charId": "jingjing",
+    "location": "school_gate",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 8,
+    "priority": 100,
+    "requireFlags": [
+      "jj_001"
+    ],
+    "excludeRelState": "cold",
+    "title": "多出来的伞",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "放学，突然下雨。你没带伞，正发愁，一把伞从旁边伸过来。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（撑着伞，假装路过）……我妈让我带两把。（停顿）你正好。",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你妈让你带两把？（笑了）",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "谢谢你，菁菁。（接过去）",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（脸色微红）……笑什么！我就是说说而已！（把伞柄塞进你手里，往前走）快走！",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（走到你身边，伞往你这边偏了偏）……别淋湿了。",
+        "affDelta": 6,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jj_hallway_light",
+    "charId": "jingjing",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 40,
+    "priority": 8,
+    "requireFlags": [
+      "jj_sick"
+    ],
+    "rewardSprite": "jingjing",
+    "excludeRelState": "cold",
+    "title": "楼道灯亮了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "夜里，你路过菁菁家所在的单元楼。声控灯又坏了，楼道里漆黑一片。就在这时，菁菁房间的门开了一道缝，暖黄色的灯光倾泻在走廊上。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（她推门而出，手里紧紧攥着一个手电筒）……我就猜到灯又坏了。（她忽然看见了你，微微一怔）你……你怎么在这儿？",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "来看你的灯。（直接说）",
+            "affDelta": 14,
+            "next": 3
+          },
+          {
+            "text": "路过。（停顿）你怎么知道我来了？",
+            "affDelta": 10,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（她沉默了许久，上前一步将手电筒塞进你手里）……自己照着点路，别摔着了。（说罢便转身准备回屋）",
+        "affDelta": 5,
+        "next": 5
+      },
+      {
+        "speaker": "jingjing",
+        "text": "……你的脚步声，我听得出来。（话刚出口她就似觉不妥，慌忙别过脸去）……我的意思是，我只是刚好路过门边听见的。",
+        "affDelta": 8,
+        "next": 5
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "菁菁。（轻轻叫她名字）谢谢你。",
+            "affDelta": 18,
+            "next": 6
+          },
+          {
+            "text": "……好。那手电我用完还你。",
+            "affDelta": 5,
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（她背对着你，脚步微顿）……嗯。（声音轻得像蚊子叫）……路上黑，别走太快。",
+        "affDelta": 0,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jj_song",
+    "charId": "jingjing",
+    "location": "community",
+    "slotId": "noon",
+    "triggerDay": 0,
+    "minAff": 20,
+    "priority": 6,
+    "requireFlags": [
+      "jj_photo"
+    ],
+    "excludeRelState": "cold",
+    "title": "那首歌",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "小区楼下的长椅旁，菁菁正戴着耳机出神。她像是察觉到了什么，摘下一侧耳机，转头正好看见你。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "……你听过这首歌吗？（她将刚刚摘下的那只耳机轻轻递向你）",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（接过来，听了几秒）……是你小时候哼过的那首吧。",
+            "affDelta": 16,
+            "next": 3
+          },
+          {
+            "text": "（凑近听）……好像没听过。",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（她微微一愣，眼眸不自觉地睁大）……你居然还记得？（她停顿了片刻，有些不自然地别过脸）……我还以为，你早就把这些小事全忘了呢。",
+        "affDelta": 8,
+        "next": 99
+      },
+      {
+        "speaker": "jingjing",
+        "text": "……就是随便听的。（停顿，耳机没有收回来）……你喜欢吗？",
+        "affDelta": 5,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jj_chat",
+    "charId": "jingjing",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 1,
+    "repeatable": true,
+    "requireFlags": [
+      "jj_001"
+    ],
+    "excludeRelState": "cold",
+    "title": "晚风与散步",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "晚上的小区里，菁菁正百无聊赖地踢着路边的石子。",
+        "choices": [
+          {
+            "text": "陪她聊聊天",
+            "blockIfTempFlag": "jj_chat_done",
+            "affDelta": 2,
+            "setTempFlag": "jj_chat_done",
+            "next": 1
+          },
+          {
+            "text": "买些路边小吃一起分享 (💰-30)",
+            "reqMoney": 30,
+            "affDelta": 6,
+            "statDelta": {
+              "money": -30,
+              "stress": -8
+            },
+            "next": 2
+          },
+          {
+            "text": "不早了，早点回家休息吧",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（她转头看见是你，眉毛扬了一下）……家里太闷了，出来透透气。陪我走走？",
+        "next": 3
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（她开心地接过小吃）……嘿嘿，还是你懂我！正好饿了。",
+        "next": 3
+      },
+      {
+        "speaker": "jingjing",
+        "text": "还有事吗？没事我再踢会儿石头。",
+        "next": 0
+      }
+    ]
+  },
+  {
+    "id": "jj_cold_war_01",
+    "charId": "jingjing",
+    "requireRelState": "close",
+    "location": "school_gate",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 60,
+    "priority": 900,
+    "title": "巷口的沉默",
+    "scenes": [
+      {
+        "speaker": "jingjing",
+        "pose": "serious",
+        "text": "（她背靠路灯杆，把玩着手里的钥匙）……最近你总是一副心事重重的样子。是我多嘴，还是你正跟别人聊得开心？"
+      },
+      {
+        "speaker": "player",
+        "text": "？",
+        "choices": [
+          {
+            "text": "（不耐烦）我的事不用你管，你少操心。",
+            "affDelta": -5,
+            "relCold": true,
+            "next": 99
+          },
+          {
+            "text": "（缓和）抱歉，最近家里有点事，不是针对你。",
+            "affDelta": 3,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jj_cold_recover_01",
+    "charId": "jingjing",
+    "requireRelState": "cold",
+    "location": "community",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 950,
+    "relRecover": true,
+    "title": "门缝下的一张纸条",
+    "scenes": [
+      {
+        "speaker": "jingjing",
+        "pose": "shy",
+        "text": "（她站在你家门口，把叠好的纸条往你手里一塞）……昨晚是我语气不好。从小住隔壁的人，哪能说生分就生分。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "我们……还像以前那样，好不好？",
+        "next": 99
+      }
+    ]
+  }
+]

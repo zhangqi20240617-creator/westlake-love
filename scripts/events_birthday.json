@@ -1,0 +1,868 @@
+[
+    {
+        "id": "event_birthday_player",
+
+        "manual_only": true,
+        "location": "",
+
+        "slots": [
+            "morning"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "今天……是你的生日。\n窗外的光比平时柔和一些，手机屏幕亮起一条条消息——\n\"生日快乐！\"",
+
+                "next": "check_fav"
+
+            },
+            {
+                "id": "check_fav",
+
+                "text": "好像有人等着你说点什么。",
+
+                "choices": [
+                    {
+                        "text": "🎂 打开手机看大家的祝福",
+
+                        "next": "open_phone"
+
+                    },
+                    {
+                        "text": "🚶 去教室找认识的人",
+
+                        "next": "go_class",
+
+                        "requireFav": {
+                            "any": 30
+                        }
+                    },
+                    {
+                        "text": "😌 一个人安静地过",
+
+                        "next": "alone"
+
+                    }
+                ]
+            },
+            {
+                "id": "open_phone",
+
+                "text": "消息列表很长，每一条都写着你的名字。熟悉的头像，陌生的字迹。\n有人发来了贴纸，有人发来了音频。\n今天，手机格外暖。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -8
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "social",
+
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_today_player"
+
+                    }
+                ],
+                "next": "end_warm"
+
+            },
+            {
+                "id": "go_class",
+
+                "text": "走进教室的瞬间，有人立刻抬起头——\n\"哦！对，今天是你的生日！\"",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "social",
+
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -5
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_today_player"
+
+                    }
+                ],
+                "next": "end_warm"
+
+            },
+            {
+                "id": "alone",
+
+                "text": "一个人坐在窗边，看着阳光打在桌角。\n生日嘛，热不热闹不重要。\n能这样安静地数着年岁，也挺好的。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -3
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_today_player"
+
+                    }
+                ],
+                "next": "end_warm"
+
+            },
+            {
+                "id": "end_warm",
+
+                "text": "今天是你的生日。\n好感度高的朋友似乎会主动来找你……",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "event_birthday_yutong",
+
+        "manual_only": true,
+        "location": "",
+
+        "slots": [
+            "morning",
+            "noon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "（今天是陈雨桐的生日——\n你翻了一眼日历，又看了一眼手机里的联系人列表。）",
+
+                "choices": [
+                    {
+                        "text": "🎁 送她一份礼物",
+
+                        "next": "give_gift",
+
+                        "requireItem": "milk_tea"
+
+                    },
+                    {
+                        "text": "💬 发QQ祝她生日快乐",
+
+                        "next": "send_qq"
+
+                    },
+                    {
+                        "text": "😅 算了，不知道怎么开口",
+
+                        "next": "skip"
+
+                    }
+                ]
+            },
+            {
+                "id": "give_gift",
+
+                "text": "\"今天是你生日，这个……给你。\"\n雨桐眨了眨眼，接过去，低下头去看了很久。\n\"你……还记得啊。\"\n她的耳朵有点红。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "yutong",
+
+                        "amount": 12
+                    },
+                    {
+                        "type": "removeItem",
+
+                        "item": "milk_tea",
+
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_yutong_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "send_qq",
+
+                "text": "你找到了她的QQ头像，发出去了一个蛋糕表情和四个字。\n三分钟后，她回了一个小小的\"谢谢you～\"\n你盯着那个笑脸看了好一会儿。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "yutong",
+
+                        "amount": 4
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_yutong_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "skip",
+
+                "text": "你把手机揣回口袋。\n下次有机会再说吧……大概。",
+
+                "effects": [
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_yutong_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（一年就这么一次。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "event_birthday_jingjing",
+
+        "manual_only": true,
+        "location": "",
+
+        "slots": [
+            "morning",
+            "noon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "（叶菁菁今天过生日，她好像早就期待着了——\n昨天就暗示了你好几次。）",
+
+                "choices": [
+                    {
+                        "text": "🎁 认真准备了礼物",
+
+                        "next": "give_gift",
+
+                        "requireItem": "milk_tea"
+
+                    },
+                    {
+                        "text": "💬 当面祝她生日快乐",
+
+                        "next": "say_face"
+
+                    },
+                    {
+                        "text": "😶 装作忘了",
+
+                        "next": "skip"
+
+                    }
+                ]
+            },
+            {
+                "id": "give_gift",
+
+                "text": "\"给你，生日快乐。\"\n菁菁拿到手里，表情从\"嗯嗯\"瞬间变成了满脸灿烂——\n\"你！怎么！还真记得啊！\"\n她抱着礼物直接转了个圈。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "jingjing",
+
+                        "amount": 12
+                    },
+                    {
+                        "type": "removeItem",
+
+                        "item": "milk_tea",
+
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_jingjing_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "say_face",
+
+                "text": "\"生日快乐。\"\n她愣了一下，然后扑哧笑了：\n\"就这？就俩字？！\"\n但还是笑着走了，脸上挂着一种说不清楚的愉快。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "jingjing",
+
+                        "amount": 5
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_jingjing_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "skip",
+
+                "text": "你假装不知道。\n她在座位上等了一天……\n放学时，你看見她嘟着嘴低头走出去了。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "jingjing",
+
+                        "amount": -3
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_jingjing_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（时间过完这一天，就不会回来了。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "event_birthday_wanqing",
+
+        "manual_only": true,
+        "location": "",
+
+        "slots": [
+            "morning",
+            "noon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "（苏晚晴的生日是七月下旬，恰好在暑假——\n你能做的，似乎只有翻出她的QQ。）",
+
+                "choices": [
+                    {
+                        "text": "📝 给她写一段认真的文字",
+
+                        "next": "write_msg"
+
+                    },
+                    {
+                        "text": "📚 送她一本自己喜欢的书(需要背包有礼物)",
+
+                        "next": "give_book",
+
+                        "requireItem": "handmade_gift"
+
+                    },
+                    {
+                        "text": "😶 什么都不做",
+
+                        "next": "skip"
+
+                    }
+                ]
+            },
+            {
+                "id": "write_msg",
+
+                "text": "你想了很久，才落笔写了三行字。\n发出去以后，你盯着\"已读\"发呆。\n过了十分钟，她回了一串诗句——你查了很久才明白是什么意思。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "wanqing",
+
+                        "amount": 8
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_wanqing_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "give_book",
+
+                "text": "\"生日快乐，晚晴。这本是我觉得你会喜欢的。\"\n她翻了翻扉页，轻轻合上，用一种少见的认真眼神看着你：\n\"你很懂我。\"",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "wanqing",
+
+                        "amount": 14
+                    },
+                    {
+                        "type": "removeItem",
+
+                        "item": "handmade_gift",
+
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_wanqing_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "skip",
+
+                "text": "你记得，但你什么都没做。\n假期里，也许她不会在意……但你隐约知道，有些时刻错过了就真的过去了。",
+
+                "effects": [
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_wanqing_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（七月的阳光，一年只有一次。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "event_birthday_xiaoxia",
+
+        "manual_only": true,
+        "location": "",
+
+        "slots": [
+            "morning",
+            "noon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "（小夏的生日是九月初——\n开学没多久，运动会前夕，她整个人都精神抖擞的。）",
+
+                "choices": [
+                    {
+                        "text": "⚽ 去操场找她祝福",
+
+                        "next": "go_playground"
+
+                    },
+                    {
+                        "text": "🧋 送她一杯奶茶",
+
+                        "next": "give_tea",
+
+                        "requireItem": "milk_tea"
+
+                    },
+                    {
+                        "text": "📱 发消息说一声",
+
+                        "next": "send_msg"
+
+                    }
+                ]
+            },
+            {
+                "id": "go_playground",
+
+                "text": "\"小夏，生日快乐。\"\n她正在跑道上热身，停下来，扭头看你，愣了一秒——\n然后笑得特别爽朗：\n\"谢了！今天我一定跑出个人最好成绩！\"",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "xiaoxia",
+
+                        "amount": 10
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "strength",
+
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_xiaoxia_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "give_tea",
+
+                "text": "\"给你，跑完步补水用。\"\n她接过去，摇了摇——\"冰的！\"\n喝了一大口，露出一个非常纯粹的满足笑容。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "xiaoxia",
+
+                        "amount": 12
+                    },
+                    {
+                        "type": "removeItem",
+
+                        "item": "milk_tea",
+
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_xiaoxia_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "send_msg",
+
+                "text": "你发了一个\"生日快乐！\"附上一个蛋糕。\n她立刻回了三个向上的拳头。\n简洁，但感觉传到了。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "xiaoxia",
+
+                        "amount": 4
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_xiaoxia_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（九月的操场，台风前最后的晴天。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "event_birthday_keke",
+
+        "manual_only": true,
+        "location": "",
+
+        "slots": [
+            "morning",
+            "noon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "（方可可的生日在十一月——\n杭州的桂花已经落了，她今天来上学时戴了一个小小的发卡。）",
+
+                "choices": [
+                    {
+                        "text": "🎈 认真祝福她",
+
+                        "next": "greet"
+
+                    },
+                    {
+                        "text": "🎁 送她一点小礼物",
+
+                        "next": "give_gift",
+
+                        "requireItem": "milk_tea"
+
+                    },
+                    {
+                        "text": "😶 没注意到",
+
+                        "next": "skip"
+
+                    }
+                ]
+            },
+            {
+                "id": "greet",
+
+                "text": "\"今天是你生日，对吗？\"\n可可睁大了眼睛：\n\"你、你知道？！\"\n她按住脸颊，掩不住的高兴。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "keke",
+
+                        "amount": 8
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_keke_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "give_gift",
+
+                "text": "\"这个……送你，生日快乐。\"\n可可捧着礼物，重复了三遍\"谢谢\"，低头遮住了眼睛。\n\"……我以为大家都忘了。\"",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "keke",
+
+                        "amount": 14
+                    },
+                    {
+                        "type": "removeItem",
+
+                        "item": "milk_tea",
+
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_keke_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "skip",
+
+                "text": "下午，你发现她坐在窗边一个人发呆。\n今天好像有什么事……你没想起来。",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "keke",
+
+                        "amount": -2
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_keke_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（十一月，城市开始变冷，但有些人让人觉得温热。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "event_birthday_yifei",
+
+        "manual_only": true,
+        "location": "",
+
+        "slots": [
+            "morning",
+            "noon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "（沈逸飞的生日是四月，春假结束后第一个明媚的下午。\n音乐教室里有人在练琴……）",
+
+                "choices": [
+                    {
+                        "text": "🎵 去音乐教室找他",
+
+                        "next": "go_music"
+
+                    },
+                    {
+                        "text": "💬 QQ上发一条消息",
+
+                        "next": "send_qq"
+
+                    },
+                    {
+                        "text": "😶 随他去吧",
+
+                        "next": "skip"
+
+                    }
+                ]
+            },
+            {
+                "id": "go_music",
+
+                "text": "你推开音乐教室的门，钢琴声停了。\n\"……生日快乐，逸飞。\"\n他回头，沉默了两秒，才开口——\n\"谢谢。我正在写你会喜欢的曲子。\"",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "yifei",
+
+                        "amount": 10
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_yifei_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "send_qq",
+
+                "text": "你发了\"生日快乐\"。\n他过了一会儿回：\n\"谢谢你记得。\"",
+
+                "effects": [
+                    {
+                        "type": "favor",
+
+                        "char": "yifei",
+
+                        "amount": 4
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_yifei_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "skip",
+
+                "text": "你没有打扰他。\n音乐教室的灯亮了一整个傍晚。",
+
+                "effects": [
+                    {
+                        "type": "setFlag",
+
+                        "flag": "birthday_yifei_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（四月的春风，适合听一首新写的曲子。）",
+
+                "isEnd": true
+            }
+        ]
+    }
+]

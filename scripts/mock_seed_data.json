@@ -1,0 +1,75 @@
+{
+  "_comment": "Mock Server 种子数据（M4：测试态数据与代码分离）。仅供本地联调，不参与 Godot 导出（见 export_presets.cfg exclude_filter）。所有 intellect 必须落在 0-100，与 /leaderboard/submit 的服务端校验一致（M2）。",
+  "leaderboard": [
+    { "username": "学霸君",   "intellect": 95, "school": "杭州求是中学", "_stub": true },
+    { "username": "陈雨桐",   "intellect": 88, "school": "西湖中学",     "_stub": true },
+    { "username": "林大白",   "intellect": 82, "school": "西湖中学",     "_stub": true },
+    { "username": "卷王本王", "intellect": 99, "school": "建兰中学",     "_stub": true },
+    { "username": "叶菁菁",   "intellect": 60, "school": "西湖中学",     "_stub": true }
+  ],
+  "world_chat": [
+    {
+      "id": "msg_init",
+      "username": "系统向导",
+      "title": "💡 贴心提示",
+      "school": "官方运营",
+      "content": "欢迎来到青春世界聊天室！在这里你可以讨论杭州特产烹饪方法，寻找志同道合的同学约会，分享中考高分技巧哦！✨",
+      "timestamp": 0
+    }
+  ],
+  "wishes": [
+    {
+      "id": "wish_1",
+      "username": "陈雨桐",
+      "school": "西湖中学",
+      "content": "希望未来的我们，依然能像今天一样坐在西湖边聊天。🍃",
+      "replies": [
+        { "username": "叶菁菁", "school": "西湖中学", "content": "好呀！到时候我们要带上热乎乎的定胜糕！😋" },
+        { "username": "林大白", "school": "西湖中学", "content": "加一！顺便带个球去苏堤上打！" }
+      ]
+    },
+    {
+      "id": "wish_2",
+      "username": "叶菁菁",
+      "school": "西湖中学",
+      "content": "加油！这次期末考试一定要考到班级前十，绝对不能被他看扁了！😤",
+      "replies": [
+        { "username": "陈雨桐", "school": "西湖中学", "content": "加油菁菁！我也来帮你一起复习！📖" }
+      ]
+    },
+    {
+      "id": "wish_3",
+      "username": "林大白",
+      "school": "西湖中学",
+      "content": "西湖醋鱼真的很难吃……下周再也不点这道菜了。🥢",
+      "replies": [
+        { "username": "万清", "school": "建兰中学", "content": "这其实是草鱼的宿命……建议去点东坡肉。🥩" }
+      ]
+    },
+    {
+      "id": "wish_4",
+      "username": "万清",
+      "school": "建兰中学",
+      "content": "只要笔尖还在纸上滑动，属于我们的故事就永远没有结束的那天。✍️",
+      "replies": []
+    },
+    {
+      "id": "wish_5",
+      "username": "学霸君",
+      "school": "求是中学",
+      "content": "每天刷十道奥数题，中考一定要考上二中！🔥",
+      "replies": [
+        { "username": "老师", "school": "求是中学", "content": "好志向！但要注意劳逸结合，多睡饱觉。" }
+      ]
+    }
+  ],
+  "npc_usernames": ["陈雨桐", "叶菁菁", "万清", "林大白", "学霸君"],
+  "virtual_replies": [
+    { "username": "叶菁菁", "school": "西湖中学", "content": "中考之后，西湖边的风应该也是这么舒服吧。我们一起加油！🌸" },
+    { "username": "叶菁菁", "school": "西湖中学", "content": "笨蛋，写这些愿望的时候，是不是偷偷把我的名字也想进去了？哼😜" },
+    { "username": "陈雨桐", "school": "西湖中学", "content": "希望你的愿望都能实现。顺便提醒一句，今天的数学功课写完了吗？📚" },
+    { "username": "陈雨桐", "school": "西湖中学", "content": "默默路过，顺便给你的花灯送个祝福。中考加油。" },
+    { "username": "万清", "school": "建兰中学", "content": "笔尖写下的是期许，而努力实现它的人就在这里。加油，西湖中学的同学。" },
+    { "username": "林大白", "school": "西湖中学", "content": "兄弟，这个愿望很热血啊！等中考完我们去苏堤跑个痛快！🏃‍♂️" }
+  ]
+}

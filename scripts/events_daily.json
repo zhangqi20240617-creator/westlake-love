@@ -1,0 +1,862 @@
+[
+  {
+    "id": "errand_buy_classroom",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "noon",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 10,
+    "repeatable": true,
+    "title": "课间的悄悄话",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "趁着午休老师不在，后排的男生神秘地拉住你，塞给你一张纸条。"
+      },
+      {
+        "speaker": null,
+        "text": "“帮哥几个去校外带点辣条和可乐，剩下的钱算你的跑腿费，敢不敢？”"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "没问题，包在我身上！ (💰+25, 压力+10)",
+            "statDelta": {
+              "money": 25,
+              "stress": 10,
+              "social": 3
+            },
+            "next": 99
+          },
+          {
+            "text": "被抓到就惨了，不干。",
+            "statDelta": {
+              "stress": -2
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "errand_buy_playground",
+    "charId": null,
+    "location": "playground",
+    "slotId": "noon",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 12,
+    "repeatable": true,
+    "title": "操场围墙的秘密",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "午休的操场围墙边，几个同学正在张望。看到你过来，他们赶紧招手。"
+      },
+      {
+        "speaker": null,
+        "text": "“保安刚去食堂了，现在翻过去最安全。只要把东西带回来，我们就给你 💰40 报酬！”"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "富贵险中求！ (概率被抓)",
+            "probNext": {
+              "chance": 0.65,
+              "successNext": 3,
+              "successStat": {
+                "money": 40,
+                "stress": 15,
+                "social": 5
+              },
+              "failNext": 4,
+              "failStat": {
+                "money": -30,
+                "stress": 50
+              }
+            }
+          },
+          {
+            "text": "围墙太高了，还是算了。",
+            "statDelta": {
+              "stress": -5
+            },
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "（你动作矫健地翻过围墙，在校外小卖部迅速扫货后返回。同学们欢呼着递给你报酬，你的江湖地位提高了！）",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "（糟糕！教导主任今天竟然在操场巡逻！你刚翻回一半就被拎住了领子……不仅没拿到钱，还得写三千字检查。 💰-30）",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "off_campus_shop_general",
+    "charId": null,
+    "location": "off_campus_shop",
+    "slotId": null,
+    "triggerDay": 0,
+    "priority": 1,
+    "repeatable": true,
+    "title": "校外的小卖部",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "校外的一条狭窄巷子里，这家不起眼的小店挤满了学生。老板娘熟练地收着零钱，空气中满是烤香肠的味道。",
+        "choices": [
+          {
+            "text": "🥤 买瓶冰镇汽水 (💰-5, 压力-15)",
+            "reqMoney": 5,
+            "statDelta": {
+              "money": -5,
+              "stress": -15
+            },
+            "next": 99
+          },
+          {
+            "text": "🍟 买袋辣条边走边吃 (💰-10, 压力-25)",
+            "reqMoney": 10,
+            "statDelta": {
+              "money": -10,
+              "stress": -25
+            },
+            "next": 99
+          },
+          {
+            "text": "🤝 帮同学掩护偷溜出来 (社交+4, 压力+2)",
+            "statDelta": {
+              "social": 4,
+              "stress": 2
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lakeside_general",
+    "charId": null,
+    "location": "lakeside",
+    "slotId": null,
+    "triggerDay": 0,
+    "priority": 1,
+    "repeatable": true,
+    "title": "如画的西湖",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "西湖的美景无论看多少次都不会厌倦。",
+        "choices": [
+          {
+            "text": "🚶 环湖漫步思考 (艺术+3, 压力-25)",
+            "statDelta": {
+              "art": 3,
+              "stress": -25
+            },
+            "next": 99
+          },
+          {
+            "text": "📷 拍摄美丽的风景 (艺术+5, 💰-5)",
+            "reqMoney": 5,
+            "statDelta": {
+              "art": 5,
+              "money": -5,
+              "stress": -10
+            },
+            "next": 99
+          },
+          {
+            "text": "🛶 观察湖面游船 (社交+2, 压力-15)",
+            "statDelta": {
+              "social": 2,
+              "stress": -15
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "community_general",
+    "charId": null,
+    "location": "community",
+    "slotId": null,
+    "triggerDay": 0,
+    "priority": 1,
+    "repeatable": true,
+    "title": "小区楼下",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "晚风轻拂，邻居们正在散步。",
+        "choices": [
+          {
+            "text": "👋 帮邻居提东西 (社交+5, 压力+2)",
+            "statDelta": {
+              "social": 5,
+              "stress": 2
+            },
+            "next": 99
+          },
+          {
+            "text": "🐈 喂路边的野猫 (社交+2, 压力-15)",
+            "statDelta": {
+              "social": 2,
+              "stress": -15
+            },
+            "next": 99
+          },
+          {
+            "text": "🌌 抬头仰望星空 (压力-20)",
+            "statDelta": {
+              "stress": -20
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "school_gate_general",
+    "charId": null,
+    "location": "school_gate",
+    "slotId": null,
+    "triggerDay": 0,
+    "priority": 1,
+    "repeatable": true,
+    "title": "忙碌的校门",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "人来人往的校门口，承载着许多故事。",
+        "choices": [
+          {
+            "text": "👀 观察往来人群 (社交+3, 压力-5)",
+            "statDelta": {
+              "social": 3,
+              "stress": -5
+            },
+            "next": 99
+          },
+          {
+            "text": "🛒 购买门口地摊货 (💰-15, 压力-15)",
+            "reqMoney": 15,
+            "statDelta": {
+              "money": -15,
+              "stress": -15
+            },
+            "next": 99
+          },
+          {
+            "text": "⌛ 等待朋友路过 (社交+2, 压力-10)",
+            "statDelta": {
+              "social": 2,
+              "stress": -10
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stress_collapse",
+    "charId": null,
+    "location": null,
+    "slotId": null,
+    "triggerDay": 0,
+    "minStress": 90,
+    "priority": 300,
+    "repeatable": false,
+    "title": "😰 精神崩溃",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "（视线开始模糊，胸口沉重得喘不过气）你突然蹲在地上，眼泪止不住地流下来。你不知道自己为什么要这么努力，也不知道未来在哪里。"
+      },
+      {
+        "speaker": null,
+        "text": "由于极度焦虑，你大病了一场，修养了很久。",
+        "statDelta": {
+          "intellect": -10,
+          "social": -10,
+          "stress": -40
+        },
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "exam_result_perfect",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "priority": 500,
+    "repeatable": false,
+    "requireFlags": [
+      "exam_week"
+    ],
+    "title": "📝 期末成绩单",
+    "scenes": [
+      {
+        "speaker": "yutong",
+        "text": "恭喜你！这次考试你是全班第一名。看来你的努力没有白费。"
+      },
+      {
+        "speaker": null,
+        "text": "你在全区排名第12，父母非常高兴，给了你一笔丰厚的奖励。",
+        "statDelta": {
+          "money": 500,
+          "social": 10,
+          "stress": -20
+        },
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "exam_result_bad",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "priority": 500,
+    "repeatable": false,
+    "requireFlags": [
+      "exam_week"
+    ],
+    "title": "📉 期末成绩单",
+    "scenes": [
+      {
+        "speaker": "yutong",
+        "text": "（她看着你的试卷，轻轻叹了口气）你最近是不是分心了？这个分数……可能没法向家里交代。"
+      },
+      {
+        "speaker": null,
+        "text": "你的成绩排在全区末尾，回家后面对的是无尽的责备和被没收的零花钱。",
+        "statDelta": {
+          "money": -100,
+          "stress": 30,
+          "addict": -20
+        },
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "home_study",
+    "charId": null,
+    "location": "home",
+    "slotId": null,
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 100,
+    "repeatable": true,
+    "title": "完成今日作业",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "坐在书桌前，你拿出今天的作业...",
+        "choices": [
+          {
+            "text": "自己埋头苦写",
+            "next": 1
+          },
+          {
+            "text": "[同桌特权] 发QQ要答案直接抄",
+            "requireFlags": [
+              "flag_deskmate_wanqing",
+              "flag_deskmate_yutong",
+              "flag_deskmate_xiaoyu",
+              "flag_deskmate_generic_girl_nerd"
+            ],
+            "requireFlagsMatchAny": true,
+            "next": 2
+          },
+          {
+            "text": "[背着处分] 熬夜手抄行为规范消除处分",
+            "requireStats": {
+              "punishment_level": 1
+            },
+            "next": 100
+          }
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "开始答题...",
+        "logicType": "quiz_homework",
+        "next": 99
+      },
+      {
+        "speaker": "player",
+        "text": "（我在QQ上戳了戳同桌，没多久正确的步骤和答案就发过来了。几分钟搞定！）\n\n虽然没学到什么东西，但好在明天不用怕挨骂了。",
+        "statDelta": {
+          "stress": -5,
+          "intellect": -1
+        },
+        "logicType": "hw_copy_finish",
+        "next": 99
+      },
+      {
+        "speaker": "player",
+        "text": "你咬着牙，盯着微弱的台灯强忍困意，一笔一划地抄写着《中学生日常行为规范》。\n只要坚持抄完几本，总能打动教导主任大发慈悲的……",
+        "statDelta": {
+          "stress": 15,
+          "punishment_level": -1
+        },
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "home_sleep",
+    "charId": null,
+    "location": "home",
+    "slotId": null,
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 100,
+    "repeatable": true,
+    "title": "休息睡觉",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "躺在舒适的床上，你感觉疲惫渐渐涌上来。你想做点什么？",
+        "choices": [
+          {
+            "text": "🧘 健康休息 (压力-30, 学习+2)",
+            "statDelta": {
+              "stress": -30,
+              "intellect": 2
+            },
+            "next": 99
+          },
+          {
+            "text": "📱 玩手机刷视频 (压力-50, 网瘾+10)",
+            "statDelta": {
+              "stress": -50,
+              "addict": 10
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "classroom_homework_check",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "priority": 200,
+    "repeatable": true,
+    "conditionType": "hw_pending",
+    "title": "📝 早读课的检查",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "课代表开始挨个收作业，教室里充满了翻动纸张的声音。"
+      },
+      {
+        "speaker": null,
+        "text": "判定作业状态...",
+        "logicType": "hw_check",
+        "logicTargets": {
+          "hw_good": 2,
+          "hw_sloppy": 3,
+          "hw_missing": 4,
+          "hw_3rd_miss": 5
+        }
+      },
+      {
+        "speaker": "yutong",
+        "text": "你的作业写得真整洁，继续保持。",
+        "statDelta": {
+          "social": 1,
+          "intellect": 1
+        },
+        "resetHwStatus": true,
+        "resetHwNeglect": true,
+        "next": 99
+      },
+      {
+        "speaker": "yutong",
+        "text": "写得有点潦草哦，下次注意。",
+        "statDelta": {
+          "intellect": 1
+        },
+        "resetHwStatus": true,
+        "resetHwNeglect": true,
+        "next": 99
+      },
+      {
+        "speaker": "yutong",
+        "text": "（她皱着眉头站在你课桌前）你的作业呢？……别告诉我你又忘在家里了。",
+        "statDelta": {
+          "stress": 15,
+          "social": -5
+        },
+        "resetHwStatus": true,
+        "incHwNeglect": true,
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "班主任周老师出现在门口，脸色铁青。{playerName}，这周你已经三次没交作业了。跟我去办公室走一趟。",
+        "statDelta": {
+          "stress": 40,
+          "intellect": -5,
+          "social": -15
+        },
+        "resetHwStatus": true,
+        "resetHwNeglect": true,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "classroom_general",
+    "charId": null,
+    "location": "classroom",
+    "slotId": null,
+    "triggerDay": 0,
+    "priority": 1,
+    "repeatable": true,
+    "title": "在教室内",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "教室里弥漫着淡淡的墨水味和纸张的气息，你想利用这段时间做什么？",
+        "choices": [
+          {
+            "text": "📝 认真听讲/自习 (学习+4, 压力+5)",
+            "statDelta": {
+              "intellect": 4,
+              "stress": 5
+            },
+            "next": 99
+          },
+          {
+            "text": "😴 课间趴着打个盹 (压力-12)",
+            "statDelta": {
+              "stress": -12
+            },
+            "next": 99
+          },
+          {
+            "text": "💬 和前后位闲聊 (社交+3, 压力+2)",
+            "statDelta": {
+              "social": 3,
+              "stress": 2
+            },
+            "next": 99
+          },
+          {
+            "text": "🪟 望着窗外发呆 (压力-15, 艺术+1)",
+            "statDelta": {
+              "stress": -15,
+              "art": 1
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "classroom_cleanup",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "after",
+    "triggerDay": 0,
+    "priority": 2,
+    "repeatable": true,
+    "title": "值日时间",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "今天轮到你值日了，黑板上的粉笔灰在阳光下跳动。",
+        "choices": [
+          {
+            "text": "🧹 认真打扫卫生 (社交+4, 压力+5)",
+            "statDelta": {
+              "social": 4,
+              "stress": 5
+            },
+            "next": 99
+          },
+          {
+            "text": "🏃 偷懒溜走 (压力-10, 社交-2)",
+            "statDelta": {
+              "stress": -10,
+              "social": -2
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "library_general",
+    "charId": null,
+    "location": "library",
+    "slotId": null,
+    "triggerDay": 0,
+    "priority": 1,
+    "repeatable": true,
+    "title": "图书馆自习",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "阳光斜射入静谧的图书馆，这里是绝佳的沉淀之处。",
+        "choices": [
+          {
+            "text": "📖 沉浸式深度阅读 (学习+5, 艺术+2, 压力+4)",
+            "statDelta": {
+              "intellect": 5,
+              "art": 2,
+              "stress": 4
+            },
+            "next": 99
+          },
+          {
+            "text": "✍️ 整理错题与笔记 (学习+4, 压力+2)",
+            "statDelta": {
+              "intellect": 4,
+              "stress": 2
+            },
+            "next": 99
+          },
+          {
+            "text": "🧘 坐在靠窗位发呆 (压力-20)",
+            "statDelta": {
+              "stress": -20
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "playground_general",
+    "charId": null,
+    "location": "playground",
+    "slotId": null,
+    "triggerDay": 0,
+    "priority": 1,
+    "repeatable": true,
+    "title": "活跃的操场",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "塑胶跑道的热气混着少年们的呼喊声，充满了活力。",
+        "choices": [
+          {
+            "text": "🏃 挥洒汗水的训练 (运动+6, 压力+5)",
+            "statDelta": {
+              "strength": 6,
+              "stress": 5
+            },
+            "next": 99
+          },
+          {
+            "text": "🏀 组织一场对抗赛 (运动+4, 社交+5)",
+            "statDelta": {
+              "strength": 4,
+              "social": 5
+            },
+            "next": 99
+          },
+          {
+            "text": "🍃 坐在看台吹风 (压力-22)",
+            "statDelta": {
+              "stress": -22
+            },
+            "next": 99
+          },
+          {
+            "text": "👟 练习定点投篮 (运动+5)",
+            "statDelta": {
+              "strength": 5
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "music_room_general",
+    "charId": null,
+    "location": "music_room",
+    "slotId": null,
+    "triggerDay": 0,
+    "priority": 1,
+    "repeatable": true,
+    "title": "艺术空间",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "空气中似乎还残留着乐器的余韵。",
+        "choices": [
+          {
+            "text": "🎵 练习乐理知识 (艺术+5, 学习+1)",
+            "statDelta": {
+              "art": 5,
+              "intellect": 1
+            },
+            "next": 99
+          },
+          {
+            "text": "🎹 弹奏简单的旋律 (艺术+3, 压力-10)",
+            "statDelta": {
+              "art": 3,
+              "stress": -10
+            },
+            "next": 99
+          },
+          {
+            "text": "🎧 戴上耳机听磁带 (压力-18)",
+            "statDelta": {
+              "stress": -18
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "art_room_general",
+    "charId": null,
+    "location": "art_room",
+    "slotId": null,
+    "triggerDay": 0,
+    "priority": 1,
+    "repeatable": true,
+    "title": "安静的画室",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "松节油的味道让你感到平静。",
+        "choices": [
+          {
+            "text": "🎨 临摹大师素描 (艺术+6, 压力+4)",
+            "statDelta": {
+              "art": 6,
+              "stress": 4
+            },
+            "next": 99
+          },
+          {
+            "text": "🖌️ 随意涂鸦写生 (艺术+4, 压力-8)",
+            "statDelta": {
+              "art": 4,
+              "stress": -8
+            },
+            "next": 99
+          },
+          {
+            "text": "🖼️ 欣赏前辈作品 (艺术+2, 压力-15)",
+            "statDelta": {
+              "art": 2,
+              "stress": -15
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "forced_netbar",
+    "charId": null,
+    "location": "home",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAddict": 70,
+    "priority": 200,
+    "repeatable": true,
+    "title": "📱 无法克制的欲望",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "（你的手在颤抖）脑子里全是昨天没打完的关卡……那些视频还在循环播放……你看着书包，突然觉得学校离你很远。"
+      },
+      {
+        "speaker": "player",
+        "text": "就玩一小会儿，就一个小时……"
+      },
+      {
+        "speaker": null,
+        "text": "你最终没有去学校，而是在房间里虚度了整个上午。",
+        "statDelta": {
+          "intellect": -5,
+          "addict": 15,
+          "stress": -10
+        },
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "skip_class_game",
+    "location": "off_campus_shop",
+    "slotId": "after",
+    "triggerDay": 0,
+    "priority": 10,
+    "repeatable": true,
+    "title": "通宵打游戏",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "便利店不仅有卖零食，还有免费的空调和极速 Wi-Fi。如果你现在坐下来掏出手机打游戏，今晚的作业就全泡汤了，而且很可能会一不小心玩个通宵都不回家。",
+        "choices": [
+          {
+            "text": "不管了，蹭网通宵打游戏！(💰-30, 压力清空, 网瘾+30, 学习-15)",
+            "reqMoney": 30,
+            "statDelta": {
+              "money": -30,
+              "stress": -100,
+              "addict": 30,
+              "intellect": -15,
+              "strength": -10
+            },
+            "next": 1
+          },
+          {
+            "text": "算了，还是回去好好写作业吧。",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "你买了一瓶饮料当做“座位费”，坐在便利店角落连上 Wi-Fi，瞬间沉浸在手机游戏的厮杀中，忘却了所有烦恼。\n不知不觉天已经亮了，你盯着小小的屏幕熬过了整整一夜，连家都没回……",
+        "skipToNextDay": true,
+        "next": 99
+      }
+    ]
+  }
+]

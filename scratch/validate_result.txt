@@ -1,0 +1,23 @@
+
+==================================================
+��֤���: 138 ���¼�, 7 ���ļ�
+==================================================
+
+  [OK] �޴���
+
+[WARNINGS] 3 ������:
+  [WARNING] [events_daily.json] home_study[scene0][choice2] next=100 Խ�� (scenes��4��)
+  [WARNING] [events_daily.json] exam_result_perfect requireFlag 'exam_week' �޶�Ӧ�¼�ID
+  [WARNING] [events_daily.json] exam_result_bad requireFlag 'exam_week' �޶�Ӧ�¼�ID
+
+==================================================
+���ļ�ͳ��:
+  events_yutong.json              17 ���¼�  24KB
+  events_jingjing.json            12 ���¼�  16KB
+  events_wanqing.json             11 ���¼�  14KB
+  events_xiaoxia.json             10 ���¼�  13KB
+  events_male.json                45 ���¼�  65KB
+  events_special.json             23 ���¼�  46KB
+  events_daily.json               20 ���¼�  21KB
+
+EXIT CODE: 0

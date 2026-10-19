@@ -1,0 +1,466 @@
+[
+    {
+        "id": "exam_midterm_prep",
+        "location": "library",
+        "slots": [
+            "after"
+        ],
+        "triggerDay": 175,
+        "priority": 30,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "期中考试还有三天。\n图书馆里今天突然多了很多人，每张桌子都坐满了，连平时没人待的角落也有人。\n你找了一个位置坐下来，桌上摆了一摞复习卷。",
+                "choices": [
+                    {
+                        "text": "📚 集中刷题，不分心",
+                        "next": "study_hard"
+                    },
+                    {
+                        "text": "🗣️ 找人组队复习",
+                        "next": "group_study"
+                    },
+                    {
+                        "text": "😮‍💨 看了一眼卷子，合上了",
+                        "next": "give_up"
+                    }
+                ]
+            },
+            {
+                "id": "study_hard",
+                "text": "你做了两个小时，把错题一道道圈出来重做。\n出图书馆的时候，灯走廊上已经暗了。\n你感觉自己准备好了——或者至少，比昨天好一点。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 5
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "group_study",
+                "text": "你凑到几个同学那桌，大家互相讲题——\n有个人解题方法和你完全不一样，但是更快。\n你记下了那个方法，感觉赚到了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 2
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "give_up",
+                "text": "看了一眼卷子的题量，你把它合上了。\n\"临时抱佛脚也没用了。\"你对自己说，\n然后拿出手机，刷了二十分钟——\n其实心里还是有点慌。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 8
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（考前三天，每个人都有自己的仪式。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "exam_first_simulation",
+        "location": "classroom",
+        "slots": [
+            "morning"
+        ],
+        "triggerDay": 362,
+        "priority": 50,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "一模成绩出来了。\n你坐在座位上，班主任把成绩单递下来。\n你翻到自己那一行——数字就在那里，冷静、客观，不带任何感情色彩。",
+                "choices": [
+                    {
+                        "text": "😤 比预期好，稳住",
+                        "next": "good_result",
+                        "conditionStat": "intellect",
+                        "conditionMin": 50
+                    },
+                    {
+                        "text": "😶 和预期差不多",
+                        "next": "expected_result"
+                    },
+                    {
+                        "text": "😰 没考好，有点崩",
+                        "next": "bad_result"
+                    }
+                ]
+            },
+            {
+                "id": "good_result",
+                "text": "比预期好了一点。\n你看着那行数字，平静了几秒，然后决定什么反应都不表现——\n因为这只是一模，距离中考还有很长时间。\n但夜里，你一个人笑了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "mock1_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "expected_result",
+                "text": "和模拟的差不多。\n你把成绩单叠好放进书包，告诉自己：\n\"继续保持，二模争取进步一点。\"\n说起来容易，做起来需要方向。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "mock1_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "bad_result",
+                "text": "没考好。\n你不说话，把成绩单夹进了书的最里层，不让自己再看。\n但那串数字已经刻在脑子里了——\n你知道，它们会是你之后很长时间的动力，或者压力。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 15
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "mock1_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（一模，中考前的第一次定位。全年级的坐标轴。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "exam_pe_training",
+        "location": "playground",
+        "slots": [
+            "after"
+        ],
+        "triggerDay": 490,
+        "priority": 40,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "体育中考到了。\n今天考的是八百米——\n你站在起跑线上，旁边是十几个同学，体育老师拿着秒表看着你们。\n\"各就各位——\"",
+                "choices": [
+                    {
+                        "text": "🏃 全力冲出去",
+                        "next": "sprint"
+                    },
+                    {
+                        "text": "🎯 按节奏跑，不冒进",
+                        "next": "pace"
+                    },
+                    {
+                        "text": "😮‍💨 死撑下来就行了",
+                        "next": "survive"
+                    }
+                ]
+            },
+            {
+                "id": "sprint",
+                "text": "你前两百米跑得过猛，中段腿开始发沉。\n最后一百米，每一步都是意志力——\n冲过终点线的那一刻，你直接弯腰扶着膝盖，喘了很久。\n成绩不错。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "strength",
+                        "amount": 4
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -8
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "pe_exam_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "pace",
+                "text": "你控制着步频，不让自己提前透支。\n最后四百米，前面的人开始掉速，你匀速超了过去。\n过终点后，你还有余力站直。\n体育老师点了点头：\"跑法不错。\"",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "strength",
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "pe_exam_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "survive",
+                "text": "你靠着\"不放弃\"的念头撑完了全程——\n最后两百米，世界只有脚步声和心跳声。\n过了终点线，你扶着围栏站了很久，才能说话。\n\"没倒下就是胜利。\"",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "strength",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "pe_exam_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（体育中考，用身体回答的那道题。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "exam_science_lab",
+        "location": "classroom",
+        "slots": [
+            "noon"
+        ],
+        "triggerDay": 165,
+        "priority": 25,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "今天有化学实验操作考查。\n你们两人一组，要在规定时间内完成一个简单的化学实验——\n但是一进实验室，你就发现你的搭档完全没有预习过步骤。",
+                "choices": [
+                    {
+                        "text": "🧪 帮他，一起搞定",
+                        "next": "help_partner"
+                    },
+                    {
+                        "text": "😤 自己操作，让他看",
+                        "next": "do_alone"
+                    },
+                    {
+                        "text": "🗣️ 快速分工，各做一半",
+                        "next": "split_work"
+                    }
+                ]
+            },
+            {
+                "id": "help_partner",
+                "text": "你一边操作，一边小声解释步骤。\n他跟着做，虽然慢了一些，但没有出错。\n最后老师记录的时候，你们都过了。\n出实验室，他说了句：\"下次我认真预习。\"",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "lab_exam_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "do_alone",
+                "text": "你把步骤做完，做得很标准，但速度偏慢——\n因为要一个人兼顾两个人的分工。\n搭档有点尴尬，但也没有添乱。\n你过了，他勉强过了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 4
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "lab_exam_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "split_work",
+                "text": "\"你负责记录数据，我来操作——快点。\"\n你们分工明确，效率出奇地高。\n一分钟内确认搭档学会了记数据的格式，\n最后完成得比大部分组都早。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "lab_exam_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（实验课，是理科难得有味道的时刻。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "exam_second_mock_anxiety",
+        "location": "home",
+        "slots": [
+            "evening"
+        ],
+        "triggerDay": 482,
+        "priority": 45,
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "二模结束了。\n你把试卷带回家，坐在书桌前估分：\n只比一模强了五分，和自己预期的提升差了太远。\n你坐在那里，发了很久的呆。",
+                "choices": [
+                    {
+                        "text": "📓 冷静复盘，梳理错题类型",
+                        "next": "review"
+                    },
+                    {
+                        "text": "😤 发泄一下，出去跑步",
+                        "next": "run"
+                    },
+                    {
+                        "text": "📞 给家人或朋友说说",
+                        "next": "talk"
+                    }
+                ]
+            },
+            {
+                "id": "review",
+                "text": "你把试卷分科摆开，圈出所有错得离谱的题。\n看着看着，你发现：有一类题你总是粗心，不是不会，是没有耐心。\n\"好，这个可以改。\"你在本子上写下了一条计划。\n焦虑没有消失，但有了方向。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -4
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "mock2_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "run",
+                "text": "你换上鞋，去楼下跑了半个小时。\n跑起来什么都不想，脑子空了，身体累了。\n回来冲澡，坐回书桌——\n不知道为什么，看试卷没有刚才那么难了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "strength",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -10
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "mock2_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "talk",
+                "text": "你给\"那个人\"发了条消息：\n\"今天二模，没考好，心情很差。\"\n对方隔了二十分钟才回，但回来了：\n\"你已经很努力了。中考一定会比二模好。\"\n你不确定这是不是真的，但看了好几遍。",
+                "effects": [
+                    {
+                        "type": "favorBest",
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -8
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "mock2_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（二模，中考前最后的参照系。再往后，就是真的了。）",
+                "isEnd": true
+            }
+        ]
+    }
+]

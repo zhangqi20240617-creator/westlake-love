@@ -1,0 +1,1316 @@
+[
+  {
+    "id": "holiday_kickoff_winter",
+    "charId": null,
+    "location": "",
+    "slotId": "",
+    "triggerDay": 90,
+    "minAff": 0,
+    "priority": 200,
+    "requireHoliday": "winter",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_winter.jpg",
+    "title": "❄️ 寒假开始了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "期末考完，书包一甩，真正的寒假终于来了。窗外飘着细雪，屋里暖气开得足足的。"
+      },
+      {
+        "speaker": null,
+        "text": "妈妈在客厅喊：「假期别光顾着玩，该学的还是得学。」可窗外的雪，实在太诱人了。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "🔥 趁假期补补课，先卷为敬",
+            "statDelta": {"intellect": 4, "stress": 6},
+            "setFlag": "holiday_mode_winter_study",
+            "next": 3
+          },
+          {
+            "text": "🎿 出去玩！滑雪/庙会走起",
+            "statDelta": {"social": 3, "stress": -8, "money": -30},
+            "setFlag": "holiday_chapter_winter",
+            "next": 4
+          },
+          {
+            "text": "💌 陪陪心里那个人",
+            "statDelta": {"social": 2},
+            "setFlag": "holiday_chapter_winter",
+            "next": 5
+          }
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "你决定把作业和复习排上日程——假期也不松懈，中考的路还长。",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "假期嘛，该玩就玩。你盘算着约上在意的人，去雪场，或者就在西湖边走走。",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "你给那个熟悉的人发了条消息：「假期有空吗？出来走走？」没过多久，回信来了。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "holiday_kickoff_summer",
+    "charId": null,
+    "location": "",
+    "slotId": "",
+    "triggerDay": 270,
+    "minAff": 0,
+    "priority": 200,
+    "requireHoliday": "summer",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_summer_trip.jpg",
+    "title": "🌞 暑假开始了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "最后一门课考完，教室里一阵欢呼。暑假，是初中三年里最长的一段自由时光。"
+      },
+      {
+        "speaker": null,
+        "text": "你看着窗外刺眼的阳光，忽然意识到：距离中考，其实已经不算远了。这个假期，怎么过？"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "📚 提前预习初三，抢占先机",
+            "statDelta": {"intellect": 5, "stress": 5},
+            "setFlag": "holiday_mode_summer_study",
+            "next": 3
+          },
+          {
+            "text": "🏖️ 夏令营/夜游，痛快玩",
+            "statDelta": {"social": 3, "stress": -10, "money": -40},
+            "setFlag": "holiday_chapter_summer",
+            "next": 4
+          },
+          {
+            "text": "💌 陪陪心里那个人",
+            "statDelta": {"social": 2},
+            "setFlag": "holiday_chapter_summer",
+            "next": 5
+          }
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "你翻开崭新的练习册。中考倒计时虽还没亮起，但早一步，就少一分慌。",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "蝉鸣太吵，阳光太好。你把课本塞进柜子，这个夏天要先好好活着——约上在意的人，去湖边看萤火。",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "你拨通了那个熟悉的号码：「暑假……要不要一起出去？」听筒那头，是藏不住的笑意。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "holiday_kickoff_spring",
+    "charId": null,
+    "location": "",
+    "slotId": "",
+    "triggerDay": 150,
+    "minAff": 0,
+    "priority": 200,
+    "requireHoliday": "spring",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_spring_outing.jpg",
+    "title": "🌱 春假开始了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "春学期过半，学校难得放了几天的春假。风里都是花香，苏堤的桃花应该开了吧。"
+      },
+      {
+        "speaker": null,
+        "text": "你伸了个懒腰——短暂的假期，是用来喘口气的。这段时间，想怎么过？"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "🌿 在家复习，稳住节奏",
+            "statDelta": {"intellect": 3, "stress": 4},
+            "setFlag": "holiday_mode_spring_study",
+            "next": 3
+          },
+          {
+            "text": "🌸 春游/踏青去！",
+            "statDelta": {"social": 3, "stress": -7},
+            "setFlag": "holiday_chapter_spring",
+            "next": 4
+          },
+          {
+            "text": "💌 陪陪心里那个人",
+            "statDelta": {"social": 2},
+            "setFlag": "holiday_chapter_spring",
+            "next": 5
+          }
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "你坐在书桌前，把前半学期的错题又过了一遍。稳，才能走得远。",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "你背起包出了门，桃花、春风、还有不用早起的自由——约上在意的人，去苏堤走走。",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "你给那个人发了条消息：「春假有空吗？去苏堤走走？」回信很快，只有一个字：好。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "holiday_kickoff_autumn",
+    "charId": null,
+    "location": "",
+    "slotId": "",
+    "triggerDay": 304,
+    "minAff": 0,
+    "priority": 200,
+    "requireHoliday": "autumn",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_autumn_osmanthus.jpg",
+    "title": "🍂 秋假开始了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "国庆前后，学校放了几天秋假。桂花香飘满整条街，空气里都是秋天的味道。"
+      },
+      {
+        "speaker": null,
+        "text": "你趴在窗边发呆。中秋刚过，白色情人节也快了……这个秋天，好像有点不一样。假期怎么安排？"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "🍁 收心复习，备战期中",
+            "statDelta": {"intellect": 4, "stress": 5},
+            "setFlag": "holiday_mode_autumn_study",
+            "next": 3
+          },
+          {
+            "text": "🇨🇳 国庆出游/逛市集",
+            "statDelta": {"social": 3, "stress": -8, "money": -30},
+            "setFlag": "holiday_chapter_autumn",
+            "next": 4
+          },
+          {
+            "text": "💌 陪陪心里那个人",
+            "statDelta": {"social": 2},
+            "setFlag": "holiday_chapter_autumn",
+            "next": 5
+          }
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "你把秋天的桂花香关在窗外，摊开卷子。期中，可不能马虎。",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "你随人流挤进热闹的市集，糖画、桂花糕、人声鼎沸——约上在意的人，假期的快乐很简单。",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "你给那个人发了条消息：「秋假……要不要一起去平湖秋月？」窗外的桂雨，落了一地金黄。",
+        "next": 99
+      }
+    ]
+  },
+
+  {
+    "id": "break_winter_chapter_yutong",
+    "charId": "yutong",
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 90,
+    "minAff": 30,
+    "priority": 170,
+    "requireHoliday": "winter",
+    "requireFlags": ["holiday_chapter_winter"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_winter.jpg",
+    "title": "❄️ 寒假·与雨桐的雪夜",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "寒假的夜里，你收到雨桐的消息：「雪刚停，要不要去断桥走走？」你回想起期末前她说想看雪。"
+      },
+      {
+        "speaker": "yutong",
+        "text": "（在断桥边哈着白气等你）还挺准时。（把围巾紧了紧）走吧，趁雪没化。",
+        "emoji": "👩‍🎓"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（走到她身边）走，今天陪你。", "affDelta": 8, "next": 3},
+          {"text": "（递过一杯热奶茶）先暖暖手。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "你们沿白堤慢慢走，雪后的西湖静得像一幅画。她偶尔指着远处的宝石山，讲些课本外的冷知识，眼睛在路灯下亮晶晶的。",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "你陪她在桥上数雪地里星星点点的脚印。她忽然小声说：『其实……放假一个人也挺没意思的。』",
+        "next": 5
+      },
+      {
+        "speaker": "yutong",
+        "text": "（在断桥中央停下，回头看你）这次……不是班长，也不是同学。就只是，想和你一起看场雪。",
+        "emoji": "👩‍🎓"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（轻轻握住她的手）那以后每年的雪，都一起看。", "affDelta": 16, "next": 6},
+          {"text": "（只是并肩站着）好，今晚就够了。", "affDelta": 10, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "她的手在你掌心微微颤了一下，却没有抽走。雪又悄悄落下来，断桥上只有你们两个人的呼吸。",
+        "setFlag": "holiday_memory_winter_yutong",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "你们谁都没说话，肩并着肩看雪落湖面。风很轻，这一刻比任何台词都长。",
+        "setFlag": "holiday_memory_winter_yutong",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "break_winter_chapter_jingjing",
+    "charId": "jingjing",
+    "location": "off_campus_shop",
+    "slotId": "after",
+    "triggerDay": 90,
+    "minAff": 30,
+    "priority": 165,
+    "requireHoliday": "winter",
+    "requireFlags": ["holiday_chapter_winter"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_winter.jpg",
+    "title": "❄️ 寒假·与菁菁的糖水铺",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "寒假里，菁菁发消息喊你去楼下新开的糖水铺：『我请客，不许不来！』"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（坐在靠窗的位置，晃着腿）来啦？这家的桂花酒酿超好喝，给你点了一碗。",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（坐到她对面）那我就不客气了。", "affDelta": 8, "next": 3},
+          {"text": "（把自己的那份推过去）你吃吧，我减肥。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "你们有一搭没一搭地聊着学校的八卦，她笑得前仰后合，糖水碗见底了还舍不得走。",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "她忽然正色：『说真的……寒假不上课，反而有点想大家了。』说完自己先红了耳朵。",
+        "next": 5
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（低头搅着空碗）那个……明年这时候，我们还在不在一个班啊？（抬头飞快看你一眼）",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（伸手揉揉她头发）在的，我保证。", "affDelta": 16, "next": 6},
+          {"text": "（认真看着她）不管在哪，我都在。", "affDelta": 12, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "她愣了下，然后笑成一朵花，把空碗往你那边一推：『记住你说的啊，赖账我就……』没说完，自己先笑了。",
+        "setFlag": "holiday_memory_winter_jingjing",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "她没接话，只是把脸埋进围巾里偷笑，脚在桌下轻轻碰了碰你的鞋尖。",
+        "setFlag": "holiday_memory_winter_jingjing",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "break_winter_chapter_yifei",
+    "charId": "yifei",
+    "location": "cinema",
+    "slotId": "noon",
+    "triggerDay": 90,
+    "minAff": 30,
+    "priority": 160,
+    "requireHoliday": "winter",
+    "requireFlags": ["holiday_chapter_winter"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_winter.jpg",
+    "title": "❄️ 寒假·与逸飞的冬夜影院",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "寒假，逸飞约你去看一场冬天限定的音乐会电影：『难得有空，去不去？』"
+      },
+      {
+        "speaker": "yifei",
+        "pose": "casual",
+        "text": "（在影院门口抱着保温杯）来得正好，开场前三分钟。（顿了顿）坐我旁边？",
+        "emoji": "🎻"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（自然地坐到他身边）当然。", "affDelta": 8, "next": 3},
+          {"text": "（递过爆米花）你请电影，我请零食。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "灯光暗下，琴声从银幕淌出来。他靠着椅背，手指在膝盖上无意识地跟着节拍，侧脸被光影勾出轮廓。",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "中场他忽然低声说：『其实……好久没这样放松过了。』热气在冷空气中凝成一小团白雾。",
+        "next": 5
+      },
+      {
+        "speaker": "yifei",
+        "pose": "casual",
+        "text": "（散场后站在影院外，雪花落在他肩头）下次……还一起看吗？（声音很淡，像怕被风刮走）",
+        "emoji": "🎻"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（点头）下次我还来。", "affDelta": 16, "next": 6},
+          {"text": "（笑着拂去他肩上的雪）不止下次。", "affDelta": 12, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "他弯了弯嘴角，没说话，只是把保温杯塞进你手里捂了捂：「拿着，暖。」",
+        "setFlag": "holiday_memory_winter_yifei",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "他低头笑了笑，雪花落进他眼底：『那说定了。』",
+        "setFlag": "holiday_memory_winter_yifei",
+        "next": 99
+      }
+    ]
+  },
+
+  {
+    "id": "break_spring_chapter_wanqing",
+    "charId": "wanqing",
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 150,
+    "minAff": 30,
+    "priority": 170,
+    "requireHoliday": "spring",
+    "requireFlags": ["holiday_chapter_spring"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_spring_outing.jpg",
+    "title": "🌸 春假·与晚晴的桃林写生",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "春假，晚晴发来一张苏堤桃花的照片：『今天的风很软，想不想来写生？』"
+      },
+      {
+        "speaker": "wanqing",
+        "pose": "casual",
+        "text": "（坐在长椅上，膝上摊着本子）来了。（拍拍身边）坐吧，这儿光线最好。",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（在她身边坐下）画我看看？", "affDelta": 8, "next": 3},
+          {"text": "（把带来的热茶递给她）先暖暖手。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "她低头作画，笔尖扫过纸面，桃花、湖水、还有你侧脸的轮廓慢慢显形。『你别动，』她轻声说，『这一刻很好。』",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "她合上本子，望着对岸：『春天太短了，像好多东西一样。』风把她的发丝吹到你手背上。",
+        "next": 5
+      },
+      {
+        "speaker": "wanqing",
+        "pose": "casual",
+        "text": "（停下笔，看向你）我写了个关于春天的故事……主角的名字，我想好了。（顿了顿）要不要听？",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（认真地看着她）想，念给我听。", "affDelta": 16, "next": 6},
+          {"text": "（轻轻握住她的手）主角叫什么？", "affDelta": 12, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "她念出那个名字，声音轻得像花瓣落地。念完，她把本子合上，耳尖红透：『……就是现在这个春天。』",
+        "setFlag": "holiday_memory_spring_wanqing",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "她没念出口，只是把本子轻轻压在你手心：『名字写在最后一页，你自己看。』",
+        "setFlag": "holiday_memory_spring_wanqing",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "break_spring_chapter_xiaoxia",
+    "charId": "xiaoxia",
+    "location": "community",
+    "slotId": "after",
+    "triggerDay": 150,
+    "minAff": 30,
+    "priority": 165,
+    "requireHoliday": "spring",
+    "requireFlags": ["holiday_chapter_spring"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_spring_outing.jpg",
+    "title": "🌸 春假·与小夏的攀岩馆",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "春假，小夏在群里喊：『新开的攀岩馆，谁去！』你回：我去。"
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（在岩馆门口比了个耶）够哥们！今天不爬到顶不算完！",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（系好安全带）输了你请奶茶。", "affDelta": 8, "next": 3},
+          {"text": "（递毛巾）慢点，别拉伤。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "你俩较着劲往上爬，她到顶那一刻回头冲你喊：『看！老子的地盘！』阳光把她的影子拉得老长。",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "下来后她瘫在垫子上：『哎，好久没这么疯了。』忽然认真，『其实……跟你一起才好玩。』",
+        "next": 5
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（把攀岩的纪念手环套你手腕上）这个归你。（别开目光）下次春假，还约？",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（反手也套她一个）约，每年都约。", "affDelta": 16, "next": 6},
+          {"text": "（揉她头发）只要你想。", "affDelta": 12, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "她咧嘴笑，撞了下你的肩：『说话算话啊，笨蛋！』",
+        "setFlag": "holiday_memory_spring_xiaoxia",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "她把头一歪，假装生气又忍不住笑：『那说好了，跑不了。』",
+        "setFlag": "holiday_memory_spring_xiaoxia",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "break_spring_chapter_beichen",
+    "charId": "beichen",
+    "location": "cinema",
+    "slotId": "noon",
+    "triggerDay": 150,
+    "minAff": 30,
+    "priority": 160,
+    "requireHoliday": "spring",
+    "requireFlags": ["holiday_chapter_spring"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_spring_outing.jpg",
+    "title": "🌸 春假·与北辰的科幻片",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "春假，北辰约你去看科幻片：『听说特效炸裂，敢不敢？』"
+      },
+      {
+        "speaker": "beichen",
+        "text": "（买好票，挑眉）胆小的话现在退缩还来得及。",
+        "emoji": "🏀"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（毫不示弱）谁怕谁。", "affDelta": 8, "next": 3},
+          {"text": "（递过可乐）压压惊。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "影片高潮，飞船坠毁的火光映在你脸上。他侧头看你，忽然笑了：『还挺镇定的嘛。』",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "散场他伸了个懒腰：『好久没这么痛快了。』顿了顿，『跟你一起，更痛快。』",
+        "next": 5
+      },
+      {
+        "speaker": "beichen",
+        "text": "（在影院外的春风里站定）下个春假……还一起看电影？（说得随意，耳根却红了）",
+        "emoji": "🏀"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（点头）下个春假，老地方。", "affDelta": 16, "next": 6},
+          {"text": "（笑着撞他肩）不止春假。", "affDelta": 12, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "他虎牙一咧，把手臂搭你肩上：『成交，跑了我追你三条街。』",
+        "setFlag": "holiday_memory_spring_beichen",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "他挠挠头，难得没贫嘴，只是笑：『那就说定了。』",
+        "setFlag": "holiday_memory_spring_beichen",
+        "next": 99
+      }
+    ]
+  },
+
+  {
+    "id": "break_summer_chapter_keke",
+    "charId": "keke",
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 270,
+    "minAff": 30,
+    "priority": 170,
+    "requireHoliday": "summer",
+    "requireFlags": ["holiday_chapter_summer"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_summer_trip.jpg",
+    "title": "🌞 暑假·与可可的萤火夜跑",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "暑假，可可发消息：『西湖夜跑约不约？跑完去看萤火虫！』"
+      },
+      {
+        "speaker": "keke",
+        "text": "（在湖边做拉伸）来啦来啦！今天给你看个秘密基地！",
+        "emoji": "🍬"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（系鞋带）跑就跑，谁怕谁。", "affDelta": 8, "next": 3},
+          {"text": "（递水）先补水，别中暑。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "夜风里你俩沿湖慢跑，她忽然拐进一片芦苇荡：『看——』草丛里浮起星星点点的萤火，像被打碎的银河。",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "她蹲在岸边，萤光照亮她认真的脸：『我小时候爷爷带我来过，今天想带你来。』",
+        "next": 5
+      },
+      {
+        "speaker": "keke",
+        "text": "（萤火里转头看你）暑假好长哦……可是有你在，好像没那么长了。（抿嘴笑）明年暑假，还来吗？",
+        "emoji": "🍬"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（伸手揉她发顶）明年还来，每年都来。", "affDelta": 16, "next": 6},
+          {"text": "（轻轻握住她手）不止暑假。", "affDelta": 12, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "她愣了下，然后把额头轻轻抵在你肩上，萤火在睫毛上跳：『那说好了，拉钩。』",
+        "setFlag": "holiday_memory_summer_keke",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "她没说话，只是把萤火虫一只只放回草丛，临走拽了拽你的衣角：『明年见。』",
+        "setFlag": "holiday_memory_summer_keke",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "break_summer_chapter_zijun",
+    "charId": "zijun",
+    "location": "community",
+    "slotId": "after",
+    "triggerDay": 270,
+    "minAff": 30,
+    "priority": 165,
+    "requireHoliday": "summer",
+    "requireFlags": ["holiday_chapter_summer"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_summer_trip.jpg",
+    "title": "🌞 暑假·与子珺的夜市淘宝",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "暑假，子珺约你去逛夜市：『新开的文创市集，陪我去淘淘宝？』"
+      },
+      {
+        "speaker": "zijun",
+        "text": "（在摊位前眼睛发亮）这个明信片好看！那个手作也好看！（回头拉你）快帮我参谋！",
+        "emoji": "🌟"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（笑着跟上）好好好，参谋上线。", "affDelta": 8, "next": 3},
+          {"text": "（买了个发夹别她头上）这个最适合你。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "她举着淘来的小物件叽叽喳喳讲半天，夏夜的风把她的碎发吹到你手腕上，痒痒的。",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "走到尽头她忽然安静，望着河灯：『暑假快过去一半了……和你逛街，时间过得好快。』",
+        "next": 5
+      },
+      {
+        "speaker": "zijun",
+        "text": "（在河灯前站定，侧脸被暖光描亮）明年暑假……还陪我逛吗？（说得轻，像怕惊散灯影）",
+        "emoji": "🌟"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（点头）明年，这条街。", "affDelta": 16, "next": 6},
+          {"text": "（把河灯轻轻推给她）不止明年。", "affDelta": 12, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "她弯眼笑，把河灯稳稳放下：『那说好了，明年我等你。』",
+        "setFlag": "holiday_memory_summer_zijun",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "她没接话，只是把买来的明信片塞进你口袋：『留着，想我的时候看。』",
+        "setFlag": "holiday_memory_summer_zijun",
+        "next": 99
+      }
+    ]
+  },
+
+  {
+    "id": "break_autumn_chapter_zicheng",
+    "charId": "zicheng",
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 303,
+    "minAff": 30,
+    "priority": 170,
+    "requireHoliday": "autumn",
+    "requireFlags": ["holiday_chapter_autumn"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_autumn_osmanthus.jpg",
+    "title": "🍂 秋假·与子诚的桂花林",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "秋假，子诚发来桂花林的定位：『桂花开了，来不来？我请你吃桂花糕。』"
+      },
+      {
+        "speaker": "zicheng",
+        "pose": "casual",
+        "text": "（靠在桂树下，手里拎着纸袋）来啦！趁热，这家的桂花糕一绝。",
+        "emoji": "🏀"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（接过糕咬一口）嗯！你请客我就不客气了。", "affDelta": 8, "next": 3},
+          {"text": "（把自己的那份掰一半递回）你也吃。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "桂雨簌簌落在你们肩头，他忽然指着湖面：『秋天这样过，比打球还舒服。』说完自己都愣了。",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "他低头啃糕，含糊道：『其实……跟你瞎晃的日子，挺上头的。』耳尖红了一截。",
+        "next": 5
+      },
+      {
+        "speaker": "zicheng",
+        "pose": "casual",
+        "text": "（在桂花香里站定，难得没笑）下个秋天……还一起晃吗？（问得随意，手却攥紧了纸袋）",
+        "emoji": "🏀"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（伸手揉他头发）下个秋天，老地方。", "affDelta": 16, "next": 6},
+          {"text": "（笑着撞他肩）每个秋天都来。", "affDelta": 12, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "他虎牙一咧，把纸袋往你怀里一塞：『成交！敢不来我天天堵你。』",
+        "setFlag": "holiday_memory_autumn_zicheng",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "他挠头，难得没贫嘴，只是笑：『那就说定了，跑不了。』",
+        "setFlag": "holiday_memory_autumn_zicheng",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "break_autumn_chapter_jingjing_m",
+    "charId": "jingjing_m",
+    "location": "community",
+    "slotId": "after",
+    "triggerDay": 303,
+    "minAff": 30,
+    "priority": 165,
+    "requireHoliday": "autumn",
+    "requireFlags": ["holiday_chapter_autumn"],
+    "repeatable": false,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "bg": "res://assets/backgrounds/holiday_autumn_osmanthus.jpg",
+    "title": "🍂 秋假·与菁菁的诗会",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "秋假，菁菁（男）发消息：『社区办桂花诗会，要不要来当观众？我朗诵。』"
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（站在台上清了清嗓子，看到你，眼神亮了下）下面这首……写给我的朋友。",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（在台下用力鼓掌）加油！", "affDelta": 8, "next": 3},
+          {"text": "（递过温水）别紧张，润润喉。", "affDelta": 6, "next": 4}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "他朗诵完跑下台，额发被风吹乱：『怎么样？没给你丢脸吧？』眼睛亮得像盛了桂雨。",
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "散场他忽然正色：『其实……这首诗，一半是写给秋天的，一半是写今天的你。』",
+        "next": 5
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（在桂花树下站定，声音很轻）明年的秋天……还能听我朗诵吗？（指尖无意识地捻着衣角）",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（点头）明年，前排给你留座。", "affDelta": 16, "next": 6},
+          {"text": "（认真看他）不止明年。", "affDelta": 12, "next": 7}
+        ]
+      },
+      {
+        "speaker": null,
+        "text": "他弯眼笑，把一枚桂花书签塞进你手里：『那说好了，每年秋天都来。』",
+        "setFlag": "holiday_memory_autumn_jingjing_m",
+        "next": 99
+      },
+      {
+        "speaker": null,
+        "text": "他没说话，只是把书签轻轻压在你掌心，耳尖染了桂色的红：『记住啊。』",
+        "setFlag": "holiday_memory_autumn_jingjing_m",
+        "next": 99
+      }
+    ]
+  },
+
+  {
+    "id": "break_winter_ski",
+    "charId": null,
+    "location": "community",
+    "slotId": "after",
+    "triggerDay": 90,
+    "minAff": 0,
+    "priority": 120,
+    "requireHoliday": "winter",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "🎿 郊外滑雪",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "朋友约你去郊外的滑雪场。第一次踩上雪板，你差点摔个四脚朝天，引来一阵大笑。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（冲下初级道，风灌进领口）", "statDelta": {"strength": 3, "stress": -10, "social": 1}, "next": 99},
+          {"text": "（在雪圈区躺着晒太阳）", "statDelta": {"stress": -6, "social": 1}, "next": 99}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "break_winter_family",
+    "charId": null,
+    "location": "home",
+    "slotId": "evening",
+    "triggerDay": 90,
+    "minAff": 0,
+    "priority": 110,
+    "requireHoliday": "winter",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "🏠 寒假·家的温度",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "晚上回到家，爸妈难得都在。电视里放着晚会，茶几上摆着瓜子花生。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（帮爸妈准备年夜饭）", "statDelta": {"social": 3, "stress": -6}, "next": 99},
+          {"text": "（窝在房间安静复习）", "statDelta": {"intellect": 3, "stress": 4}, "next": 99}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "break_winter_temple",
+    "charId": null,
+    "location": "community",
+    "slotId": "noon",
+    "triggerDay": 90,
+    "minAff": 0,
+    "priority": 115,
+    "requireHoliday": "winter",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "🏮 新春庙会",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "社区广场办起了庙会，红灯笼一串串挂下来，糖画摊前围满了小孩。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（买串糖葫芦边走边吃）", "statDelta": {"social": 2, "stress": -5}, "next": 99},
+          {"text": "（在灯笼摊前驻足许愿）", "statDelta": {"stress": -4, "social": 1}, "next": 99}
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "break_summer_camp",
+    "charId": null,
+    "location": "amusement_park",
+    "slotId": "after",
+    "triggerDay": 270,
+    "minAff": 0,
+    "priority": 120,
+    "requireHoliday": "summer",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "⛺ 暑期夏令营",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "夏令营在一片开阔的草地上搭起了帐篷。白天拓展，晚上围着篝火聊天，星空低得伸手可及。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（参加夺旗游戏，满场跑）", "statDelta": {"strength": 3, "social": 3, "stress": -8}, "next": 99},
+          {"text": "（在篝火边听大家讲故事）", "statDelta": {"social": 2, "stress": -6}, "next": 99}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "break_summer_lake_night",
+    "charId": null,
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 270,
+    "minAff": 0,
+    "priority": 125,
+    "requireHoliday": "summer",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "🌉 西湖夏夜游",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "夏夜的西湖，晚风吹散了白天的燥热。你和朋友租了条小船，桨声惊起岸边一串虫鸣。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（把手伸进凉凉的湖水里）", "statDelta": {"stress": -10, "social": 2}, "next": 99},
+          {"text": "（靠在船舷看对岸灯火）", "statDelta": {"stress": -8, "social": 1, "art": 1}, "next": 99}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "break_summer_cram_meet",
+    "charId": "yutong",
+    "location": "community",
+    "slotId": "noon",
+    "triggerDay": 270,
+    "minAff": 20,
+    "priority": 130,
+    "requireHoliday": "summer",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "📖 补习班偶遇·雨桐",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "你被家长塞进社区的暑期补习班。推门进去，没想到班长陈雨桐也坐在靠窗的位置。"
+      },
+      {
+        "speaker": "yutong",
+        "text": "（抬起头，有点意外）……你也来这儿？（把旁边的空位拍了拍）坐吧，这排就剩这儿了。",
+        "emoji": "👩‍🎓"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（坐到她旁边一起刷题）", "affDelta": 12, "statDelta": {"intellect": 2}, "next": 99},
+          {"text": "（递过去一瓶水）这么热的天，辛苦班长了。", "affDelta": 8, "next": 99}
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "break_spring_outing",
+    "charId": null,
+    "location": "community",
+    "slotId": "noon",
+    "triggerDay": 150,
+    "minAff": 0,
+    "priority": 120,
+    "requireHoliday": "spring",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "🌸 春日短途春游",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "春假第一天，你和几个同学骑车去了郊外的茶园。满山的新绿，风一吹就是一阵波浪。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（在田埂上追着风筝跑）", "statDelta": {"stress": -8, "social": 2, "strength": 1}, "next": 99},
+          {"text": "（找块石头坐着发呆）", "statDelta": {"stress": -6, "art": 1}, "next": 99}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "break_spring_qingming",
+    "charId": null,
+    "location": "lakeside",
+    "slotId": "morning",
+    "triggerDay": 150,
+    "minAff": 0,
+    "priority": 125,
+    "requireHoliday": "spring",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "🍃 清明踏青",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "清明时节，西湖边的柳枝刚抽嫩芽。你沿着白堤慢慢走，脚下是刚被雨水洗过的青石板。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（折一段柳枝编成圈）", "statDelta": {"stress": -6, "art": 1}, "next": 99},
+          {"text": "（在湖边喂锦鲤）", "statDelta": {"stress": -5, "social": 1}, "next": 99}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "break_spring_companion",
+    "charId": "jingjing",
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 150,
+    "minAff": 30,
+    "priority": 130,
+    "requireHoliday": "spring",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "💞 春假·陪菁菁看桃花",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "你约了菁菁去苏堤。桃花开得正好，粉白的花瓣落了她一头，她浑然不觉，还在仰头数花。"
+      },
+      {
+        "speaker": "jingjing",
+        "text": "（伸手接住一片花瓣，递到你面前）喏，花神赐福，只给你一个人的。",
+        "emoji": "🌸"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（接过花瓣，轻轻别在她发间）那我也还你一个。", "affDelta": 15, "next": 99},
+          {"text": "（和她并肩坐在长椅上）今年的春天，挺好的。", "affDelta": 10, "next": 99}
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "break_autumn_nationalday",
+    "charId": null,
+    "location": "lakeside",
+    "slotId": "after",
+    "triggerDay": 303,
+    "minAff": 0,
+    "priority": 120,
+    "requireHoliday": "autumn",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "🇨🇳 国庆西湖行",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "国庆的西湖边人山人海，断桥上挤满了举着小旗的游客。你找了个相对人少的亭子，看湖面被夕阳染成橘红。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（在湖边买个气球玩）", "statDelta": {"stress": -7, "social": 2}, "next": 99},
+          {"text": "（找个长椅坐着看夕阳）", "statDelta": {"stress": -6, "art": 1}, "next": 99}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "break_autumn_osmanthus",
+    "charId": null,
+    "location": "community",
+    "slotId": "noon",
+    "triggerDay": 303,
+    "minAff": 0,
+    "priority": 115,
+    "requireHoliday": "autumn",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "🌼 桂花市集",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "社区办起了桂花市集，整条街都是甜的香气。桂花糕、桂花酿、还有现做的桂花糖藕，热气腾腾。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（买一盒桂花糕带回家）", "statDelta": {"social": 2, "stress": -5, "money": -10}, "next": 99},
+          {"text": "（在香气里发了会儿呆）", "statDelta": {"stress": -6}, "next": 99}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "break_autumn_companion",
+    "charId": "wanqing",
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 303,
+    "minAff": 25,
+    "priority": 130,
+    "requireHoliday": "autumn",
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "isSpecial": true,
+    "title": "📚 秋假·陪晚晴写秋日",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "你找到晚晴时，她正坐在平湖秋月的石栏边，膝上摊着本子，桂花落了一页。她说，想在秋假里写完一个关于秋天的故事。"
+      },
+      {
+        "speaker": "wanqing",
+        "pose": "casual",
+        "text": "（把笔帽轻轻盖上）你来了。（侧过脸）主角……还没有名字。也许，等我想好了，第一个告诉你。",
+        "emoji": "📚"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {"text": "（在她旁边坐下，看湖面的月）不急，秋天还长。", "affDelta": 12, "next": 99},
+          {"text": "（把落在她发间的桂花轻轻拿掉）写慢一点，我陪你。", "affDelta": 15, "next": 99}
+        ]
+      }
+    ]
+  }
+]

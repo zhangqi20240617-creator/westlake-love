@@ -1,0 +1,8 @@
+{
+    "hotkey": "F9",
+    "confidence_threshold": 60,
+    "wechat_region": null,
+    "ocr_lang": "ch",
+    "click_delay": 0.5,
+    "auto_click": true
+}

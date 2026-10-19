@@ -1,0 +1,949 @@
+{
+  "chinese": [
+    {
+      "id": "c1",
+      "question": "下列诗句中，哪一句是描写春天的？",
+      "options": [
+        "无边落木萧萧下",
+        "忽如一夜春风来",
+        "吹面不寒杨柳风",
+        "接天莲叶无穷碧"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "c2",
+      "question": "《背影》的作者是下列哪位文学家？",
+      "options": [
+        "鲁迅",
+        "朱自清",
+        "老舍",
+        "巴金"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "c3",
+      "question": "下列词语中没有错别字的一项是：",
+      "options": [
+        "迫不急待",
+        "走投无路",
+        "川流不息",
+        "出奇不意"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "c4",
+      "question": "“温故而知新，可以为师矣”出自哪部典籍？",
+      "options": [
+        "《孟子》",
+        "《庄子》",
+        "《论语》",
+        "《道德经》"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "c5",
+      "question": "下列不属于唐宋八大家的是：",
+      "options": [
+        "韩愈",
+        "杜甫",
+        "欧阳修",
+        "苏轼"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "c6",
+      "question": "中国古代神话《夸父逐日》蕴含了什么精神？",
+      "options": [
+        "探索自我的精神",
+        "舍己为人的精神",
+        "不屈不挠的征服精神",
+        "孝敬父母的精神"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "c7",
+      "question": "《水浒传》中智取生辰纲的关键人物是：",
+      "options": [
+        "宋江",
+        "吴用",
+        "林冲",
+        "鲁智深"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "c8",
+      "question": "“海内存知己，天涯若比邻”是哪位诗人的名句？",
+      "options": [
+        "李白",
+        "王勃",
+        "杜甫",
+        "白居易"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "c9",
+      "question": "下列成语出处与项羽无关的是：",
+      "options": [
+        "破釜沉舟",
+        "四面楚歌",
+        "霸王别姬",
+        "草木皆兵"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "c10",
+      "question": "《朝花夕拾》是鲁迅先生的一部：",
+      "options": [
+        "小说集",
+        "散文集",
+        "诗集",
+        "戏剧选"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "c11",
+      "question": "“醉翁之意不在酒”的下一句是：",
+      "options": [
+        "在乎山水之间也",
+        "得之心而寓之酒也",
+        "山水之乐",
+        "酿泉为酒"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "c12",
+      "question": "下列不属于中国四大古典名著的是：",
+      "options": [
+        "《红楼梦》",
+        "《三国演义》",
+        "《封神演义》",
+        "《西游记》"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "c13",
+      "question": "“出淤泥而不染，濯清涟而不妖”赞美的是什么植物？",
+      "options": [
+        "梅花",
+        "荷花",
+        "菊花",
+        "兰花"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "c14",
+      "question": "在中国古代科举考试中，殿试第一名称为：",
+      "options": [
+        "解元",
+        "状元",
+        "榜眼",
+        "探花"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "c15",
+      "question": "《繁星·春水》的作者是：",
+      "options": [
+        "冰心",
+        "老舍",
+        "巴金",
+        "朱自清"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "c16",
+      "question": "我国第一部纪传体通史是：",
+      "options": [
+        "《春秋》",
+        "《史记》",
+        "《汉书》",
+        "《资治通鉴》"
+      ],
+      "correct": 1
+    }
+  ],
+  "math": [
+    {
+      "id": "m1",
+      "question": "如果在数轴上，点A向右移动3个单位到点B，点B表示-1，那么点A表示的数是：",
+      "options": [
+        "2",
+        "-4",
+        "-2",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "m2",
+      "question": "已知一个等边三角形的周长是24cm，则它的一条边长是：",
+      "options": [
+        "6cm",
+        "8cm",
+        "10cm",
+        "12cm"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "m3",
+      "question": "下列哪个方程是一元一次方程？",
+      "options": [
+        "x^2 + 1 = 0",
+        "x + y = 2",
+        "1/x = 3",
+        "2x - 3 = 5"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "m4",
+      "question": "若x = -2是方程3x + a = 2的解，则a的值是：",
+      "options": [
+        "8",
+        "-8",
+        "4",
+        "-4"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "m5",
+      "question": "一个正方体的表面积是54平方厘米，那么它的体积是多少立方厘米？",
+      "options": [
+        "9",
+        "18",
+        "27",
+        "81"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "m6",
+      "question": "一次函数 y = -2x + 4 的图像与y轴的交点坐标是：",
+      "options": [
+        "(0, 4)",
+        "(4, 0)",
+        "(0, -2)",
+        "(2, 0)"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "m7",
+      "question": "在直角三角形中，如果一直角边长为3，斜边长为5，则另一直角边长为：",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "m8",
+      "question": "当 x=3 时，多项式 2x^2 - x + 4 的值是多少？",
+      "options": [
+        "19",
+        "25",
+        "13",
+        "34"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "m9",
+      "question": "一个正多边形的内角和是1080度，它是几边形？",
+      "options": [
+        "六边形",
+        "七边形",
+        "八边形",
+        "九边形"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "m10",
+      "question": "若x，y互为相反数，则x+y的值是：",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "无法确定"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "m11",
+      "question": "下列图形中，不是轴对称图形的是：",
+      "options": [
+        "等腰三角形",
+        "矩形",
+        "平行四边形",
+        "圆"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "m12",
+      "question": "一件商品标价100元，打八折后的价格是：",
+      "options": [
+        "80元",
+        "90元",
+        "120元",
+        "88元"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "m13",
+      "question": "抛物线 y = x^2 - 2x + 1 的顶点坐标是：",
+      "options": [
+        "(1, 0)",
+        "(0, 1)",
+        "(-1, 0)",
+        "(1, 1)"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "m14",
+      "question": "若分式 (x-2)/(x+1) 的值为0，则x的值为：",
+      "options": [
+        "-1",
+        "0",
+        "2",
+        "-2"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "m15",
+      "question": "绝对值小于3的所有整数的和是：",
+      "options": [
+        "0",
+        "3",
+        "6",
+        "不存在"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "m16",
+      "question": "数据 3, 5, 5, 8, 9 的中位数是：",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "8"
+      ],
+      "correct": 1
+    }
+  ],
+  "english": [
+    {
+      "id": "e1",
+      "question": "Which of the following is correct?",
+      "options": [
+        "She don't like apples.",
+        "She doesn't likes apples.",
+        "She doesn't like apples.",
+        "She isn't like apples."
+      ],
+      "correct": 2
+    },
+    {
+      "id": "e2",
+      "question": "My father usually goes to work ___ bus.",
+      "options": [
+        "in",
+        "on",
+        "by",
+        "with"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "e3",
+      "question": "—___ did you buy this book? —Yesterday.",
+      "options": [
+        "Where",
+        "When",
+        "How",
+        "Why"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "e4",
+      "question": "If it ___ tomorrow, we will stay at home.",
+      "options": [
+        "rains",
+        "rain",
+        "will rain",
+        "rained"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "e5",
+      "question": "I have been learning English ___ three years.",
+      "options": [
+        "since",
+        "for",
+        "in",
+        "after"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "e6",
+      "question": "He is one of the ___ in our class.",
+      "options": [
+        "taller boy",
+        "tallest boy",
+        "tallest boys",
+        "taller boys"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "e7",
+      "question": "Which word has a different vowel sound?",
+      "options": [
+        "Cat",
+        "Hat",
+        "Bat",
+        "Car"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "e8",
+      "question": "Neither he nor I ___ wrong.",
+      "options": [
+        "is",
+        "am",
+        "are",
+        "were"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "e9",
+      "question": "I am looking forward ___ you.",
+      "options": [
+        "to see",
+        "seeing",
+        "to seeing",
+        "see"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "e10",
+      "question": "He has two brothers. ___ of them is a doctor.",
+      "options": [
+        "Both",
+        "Neither",
+        "All",
+        "None"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "e11",
+      "question": "You’d better ___ late for school again.",
+      "options": [
+        "not be",
+        "not to be",
+        "don't be",
+        "won't be"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "e12",
+      "question": "The book ___ I borrowed yesterday is interesting.",
+      "options": [
+        "who",
+        "whose",
+        "whom",
+        "which"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "e13",
+      "question": "She makes her son ___ his room every weekend.",
+      "options": [
+        "cleaning",
+        "cleans",
+        "clean",
+        "to clean"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "e14",
+      "question": "I don't know if he ___. If he ___, I will call you.",
+      "options": [
+        "comes; comes",
+        "will come; will come",
+        "comes; will come",
+        "will come; comes"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "e15",
+      "question": "By the end of last month, we ___ five English songs.",
+      "options": [
+        "have learned",
+        "learned",
+        "had learned",
+        "will learn"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "e16",
+      "question": "There ___ a meeting tomorrow afternoon.",
+      "options": [
+        "is going to be",
+        "will have",
+        "is going to have",
+        "have"
+      ],
+      "correct": 0
+    }
+  ],
+  "science": [
+    {
+      "id": "sc1",
+      "question": "下列物质中，属于纯净物的是：",
+      "options": [
+        "空气",
+        "食盐水",
+        "蒸馏水",
+        "酱油"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "sc2",
+      "question": "声音在以下哪种介质中传播速度最快？",
+      "options": [
+        "空气",
+        "水",
+        "钢铁",
+        "真空"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "sc3",
+      "question": "在生物圈中，绿色植物的主要作用是：",
+      "options": [
+        "消费者",
+        "分解者",
+        "次级消费者",
+        "生产者"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "sc4",
+      "question": "下列哪个现象是物理变化？",
+      "options": [
+        "铁生锈",
+        "冰融化成水",
+        "木柴燃烧",
+        "食物腐败"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "sc5",
+      "question": "人体内最主要的消化和吸收器官是：",
+      "options": [
+        "胃",
+        "小肠",
+        "大肠",
+        "肝脏"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "sc6",
+      "question": "在串联电路中，如果去掉其中一个用电器，其他用电器会：",
+      "options": [
+        "变亮",
+        "变暗",
+        "停止工作",
+        "保持不变"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "sc7",
+      "question": "在太阳系中，体积最大的行星是：",
+      "options": [
+        "地球",
+        "火星",
+        "土星",
+        "木星"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "sc8",
+      "question": "将红色的石蕊试液滴入酸性溶液中，试液变：",
+      "options": [
+        "红色",
+        "蓝色",
+        "紫色",
+        "无色"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "sc9",
+      "question": "植物进行光合作用的主要场所是：",
+      "options": [
+        "线粒体",
+        "叶绿体",
+        "细胞核",
+        "液泡"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "sc10",
+      "question": "下列哪种能源属于不可再生能源？",
+      "options": [
+        "太阳能",
+        "风能",
+        "石油",
+        "地热能"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "sc11",
+      "question": "光在真空中的传播速度大致是：",
+      "options": [
+        "3×10^8 m/s",
+        "340 m/s",
+        "3×10^5 m/s",
+        "约零"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "sc12",
+      "question": "食物链一般开始于：",
+      "options": [
+        "食草动物",
+        "食肉动物",
+        "绿色植物",
+        "微生物"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "sc13",
+      "question": "人体有几种基本血型（ABO系统）？",
+      "options": [
+        "2种",
+        "3种",
+        "4种",
+        "5种"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "sc14",
+      "question": "一标准大气压等于多少毫米水银柱？",
+      "options": [
+        "76",
+        "760",
+        "101.3",
+        "10"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "sc15",
+      "question": "下列元素中，符号为“Fe”的是：",
+      "options": [
+        "铜",
+        "铁",
+        "锌",
+        "铝"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "sc16",
+      "question": "力的大小单位通常是：",
+      "options": [
+        "千克 (kg)",
+        "焦耳 (J)",
+        "牛顿 (N)",
+        "瓦特 (W)"
+      ],
+      "correct": 2
+    }
+  ],
+  "society": [
+    {
+      "id": "so1",
+      "question": "世界上面积最大的洋是：",
+      "options": [
+        "大西洋",
+        "太平洋",
+        "印度洋",
+        "北冰洋"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "so2",
+      "question": "中国古代四大发明不包括下列哪一项？",
+      "options": [
+        "造纸术",
+        "指南针",
+        "火药",
+        "地动仪"
+      ],
+      "correct": 3
+    },
+    {
+      "id": "so3",
+      "question": "人类历史上第一次工业革命的标志是？",
+      "options": [
+        "内燃机的发明",
+        "电子计算机的发明",
+        "蒸汽机的广泛应用",
+        "电力的广泛应用"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "so4",
+      "question": "下列我国的省级行政区中，纬度最低的是：",
+      "options": [
+        "台湾省",
+        "海南省",
+        "广东省",
+        "云南省"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "so5",
+      "question": "《中华人民共和国未成年人保护法》保护的对象是：",
+      "options": [
+        "未满14周岁的公民",
+        "未满16周岁的公民",
+        "未满18周岁的公民",
+        "在校的中小学生"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "so6",
+      "question": "下面哪个国家和中国不相邻？",
+      "options": [
+        "俄罗斯",
+        "印度",
+        "日本",
+        "越南"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "so7",
+      "question": "地球仪上，地心指向北极星方向的点被称为？",
+      "options": [
+        "南极",
+        "北极",
+        "赤道",
+        "本初子午线"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "so8",
+      "question": "世界三大宗教中，主要发源于阿拉伯半岛的是？",
+      "options": [
+        "基督教",
+        "佛教",
+        "伊斯兰教",
+        "犹太教"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "so9",
+      "question": "我国的根本政治制度是？",
+      "options": [
+        "社会主义制度",
+        "人民代表大会制度",
+        "民族区域自治制度",
+        "基层群众自治制度"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "so10",
+      "question": "14-16世纪，发源于意大利的以“人文主义”为核心的运动是：",
+      "options": [
+        "启蒙运动",
+        "文艺复兴",
+        "宗教改革",
+        "工业革命"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "so11",
+      "question": "秦始皇统一六国后，规定的全国通用文字是：",
+      "options": [
+        "大篆",
+        "小篆",
+        "隶书",
+        "楷书"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "so12",
+      "question": "标志着中国近代史开端的历史事件是：",
+      "options": [
+        "鸦片战争",
+        "第二次鸦片战争",
+        "甲午中日战争",
+        "八国联军侵华战争"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "so13",
+      "question": "世界上最大的平原是：",
+      "options": [
+        "东欧平原",
+        "西西伯利亚平原",
+        "亚马孙平原",
+        "长江中下游平原"
+      ],
+      "correct": 2
+    },
+    {
+      "id": "so14",
+      "question": "我国的国家宪法日是每年的：",
+      "options": [
+        "12月4日",
+        "10月1日",
+        "7月1日",
+        "1月1日"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "so15",
+      "question": "丝绸之路的起点是中国古代的哪座城市？",
+      "options": [
+        "洛阳",
+        "长安",
+        "建康",
+        "燕京"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "so16",
+      "question": "世界上人口最多的国家目前是：",
+      "options": [
+        "中国",
+        "印度",
+        "美国",
+        "印度尼西亚"
+      ],
+      "correct": 1
+    }
+  ],
+  "math_olympiad": [
+    {
+      "id": "mo1",
+      "question": "已知非负实数x,y,z满足x+y+z=1，求x^2+y^2+z^2+2xyz的最大值。",
+      "options": [
+        "1",
+        "1/2",
+        "3/4",
+        "9/16"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "mo2",
+      "question": "设a,b,c是不全相等的正数，且a+b+c=3，则1/(a^2+b+c)+1/(b^2+a+c)+1/(c^2+a+b)的最大值一定小于：",
+      "options": [
+        "1",
+        "3/2",
+        "2",
+        "3"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "mo3",
+      "question": "圆内接四边形ABCD中，AB=2，BC=3，CD=4，DA=5，则该四边形的面积是？",
+      "options": [
+        "2√6",
+        "2√30",
+        "4√3",
+        "√35"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "mo4",
+      "question": "对于有多少个正整数n能够使 n^4 + n^2 + 1 成为一个质数？",
+      "options": [
+        "0个",
+        "1个",
+        "2个",
+        "无穷多个"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "mo5",
+      "question": "若x,y为整数，方程 x^2 - xy + y^2 = 3 有多少组解？",
+      "options": [
+        "2组",
+        "4组",
+        "6组",
+        "8组"
+      ],
+      "correct": 2
+    }
+  ]
+}

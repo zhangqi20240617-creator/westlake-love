@@ -1,0 +1,60 @@
+
+============================================================
+Running: python tests/olympiad_smoke/verify_qa.py
+============================================================
+Running D3 Olympiad System QA Check...
+✅ events_life.json is valid JSON.
+✅ Found all 6 olympiad events: ['olympiad_recruit', 'olympiad_training_1', 'olympiad_training_2', 'olympiad_training_3', 'olympiad_city_round', 'olympiad_province_final']
+✅ ExamManager.gd intercepts flag_olympiad_gold and overrides admission.
+✅ StudySubjectPopup.gd references Olympiad flags for UI feedback.
+======================
+VERDICT: PASS
+
+
+============================================================
+Running: python tests/life_smoke/validate_life.py
+============================================================
+[PASS] A1 events_life.json 已注册进 EVENT_FILES — EVENT_FILES 共 16 个文件
+[PASS] A2 events_life.json 含 30 个事件（24 life_ + 6 olympiad_） — 实际 30 个
+[PASS] A3 全部事件 id 以 'life_' 或 'olympiad_' 前缀 — 异常前缀: []
+[PASS] A4 全局事件 id 唯一（不与现有约 262 事件重名） — 全局共 216 个事件，无重复
+[PASS] B 全部 life statDelta key ⊆ 合法集合（无 'study' 死键） — 均为合法 key
+[PASS] C 无 life 事件写 requireRelState/excludeRelState — 未触碰恋爱状态机
+[PASS] D 全部 life 事件 charId == null — 全部为 null
+[PASS] E1 flag_conflict_active: C1/C2 setFlag，C3/C4 requireFlags — setters=['life_conflict_excluded', 'life_conflict_rumor'] requirers=['life_conflict_bystander', 'life_conflict_reconcile']
+[PASS] E2 flag_conflict_resolved: C4 setFlag，C2/C4 excludeFlags — setters=['life_conflict_reconcile'] excluders=['life_conflict_reconcile', 'life_conflict_rumor']
+[PASS] E3 flag_family_quarrel: F1 setFlag，F2 requireFlags — setters=['life_family_quarrel'] requirers=['life_family_reconcile']
+[PASS] E4 flag_family_ok: F2 setFlag — setters=['life_family_reconcile']
+[PASS] E5 无死锁：life 事件消费的 flag 均有上游 setFlag — life 消费端 flag 均有上游置位
+[PASS] F1 requireHoliday 取值合法 (winter/spring/summer/autumn/any) — 全部合法
+[PASS] F2 F6(life_family_grandparent) requireHoliday == 'any'（长假探亲语义） — any 正确
+[WARN] location 取值不在 LOCATION_STAT_GAINS 已知集合 — [('olympiad_city_round', None), ('olympiad_province_final', None)]
+
+============================================================
+SUMMARY  total=14  PASS=14  FAIL=0  WARN=1
+============================================================
+  ok  A1 events_life.json 已注册进 EVENT_FILES
+  ok  A2 events_life.json 含 30 个事件（24 life_ + 6 olympiad_）
+  ok  A3 全部事件 id 以 'life_' 或 'olympiad_' 前缀
+  ok  A4 全局事件 id 唯一（不与现有约 262 事件重名）
+  ok  B 全部 life statDelta key ⊆ 合法集合（无 'study' 死键）
+  ok  C 无 life 事件写 requireRelState/excludeRelState
+  ok  D 全部 life 事件 charId == null
+  ok  E1 flag_conflict_active: C1/C2 setFlag，C3/C4 requireFlags
+  ok  E2 flag_conflict_resolved: C4 setFlag，C2/C4 excludeFlags
+  ok  E3 flag_family_quarrel: F1 setFlag，F2 requireFlags
+  ok  E4 flag_family_ok: F2 setFlag
+  ok  E5 无死锁：life 事件消费的 flag 均有上游 setFlag
+  ok  F1 requireHoliday 取值合法 (winter/spring/summer/autumn/any)
+  ok  F2 F6(life_family_grandparent) requireHoliday == 'any'（长假探亲语义）
+-- warnings --
+  ?? location 取值不在 LOCATION_STAT_GAINS 已知集合: [('olympiad_city_round', None), ('olympiad_province_final', None)]
+
+QUALITY GATE: CONCERNS
+
+STDERR: d:\zkgame\tests\life_smoke\validate_life.py:19: SyntaxWarning: "\z" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\z"? A raw string is also an option.
+  - res://scripts/*.json �� ���� D:\zkgame\scripts\*.json
+
+
+============================================================
+OVERALL: PASS

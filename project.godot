@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="西湖边的青春"
+run/main_scene="res://scenes/StartMenu.tscn"
+config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://scripts/GameManager.gd"
+InitiativeManager="*res://scripts/InitiativeManager.gd"
+ExamManager="*res://scripts/ExamManager.gd"
+WeatherManager="*res://scripts/WeatherManager.gd"
+CollectionManager="*res://scripts/CollectionManager.gd"
+LocationManager="*res://scripts/LocationManager.gd"
+DailyCycleManager="*res://scripts/DailyCycleManager.gd"
+NGPlusManager="*res://scripts/NGPlusManager.gd"
+RelationshipManager="*res://scripts/RelationshipManager.gd"
+DataManager="*res://scripts/DataManager.gd"
+SaveSystem="*res://scripts/SaveSystem.gd"
+NetworkManager="*res://scripts/NetworkManager.gd"
+CookingManager="*res://scripts/CookingManager.gd"
+SeasonManager="*res://scripts/SeasonManager.gd"
+WardrobeManager="*res://scripts/WardrobeManager.gd"
+AchievementManager="*res://scripts/AchievementManager.gd"
+AudioManager="*res://scripts/AudioManager.gd"
+SettingsManager="*res://scripts/SettingsManager.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation="landscape"
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

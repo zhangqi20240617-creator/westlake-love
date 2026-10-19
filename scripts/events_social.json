@@ -1,0 +1,575 @@
+[
+    {
+        "id": "social_bestie_night",
+        "location": "home",
+        "slots": [
+            "evening"
+        ],
+        "repeatable": false,
+        "minAff": 0,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "周五夜晚，另一个女生发来消息：\n\"在吗？能来我家吗？不为什么，就是想找人聊。\"",
+                "choices": [
+                    {
+                        "text": "🏃 马上过去",
+                        "next": "go"
+                    },
+                    {
+                        "text": "😴 今天太累了，拒绝",
+                        "next": "refuse"
+                    }
+                ]
+            },
+            {
+                "id": "go",
+                "text": "你们坐在她房间的地板上，吃零食，说了很多平时不会开口的事情——\n关于喜不喜欢班里某人，关于中考的恐惧，关于父母，\n关于\"有时候觉得自己是不是太奇怪了\"。\n聊到快十二点，你们都哭了又笑了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 5
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -12
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "social_bestie_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "refuse",
+                "text": "\"抱歉，今天真的很累……\"\n她回了一个\"没事\"的贴纸。\n你睡着之前，隐约觉得，有些夜晚错过了就不会再有了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -3
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "social_bestie_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（有些友谊，不需要任何理由。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "social_bros_basketball",
+        "location": "playground",
+        "slots": [
+            "after"
+        ],
+        "repeatable": true,
+        "minAff": 0,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "放学后，球场上已经有人在打球了。\n一个男生抬起头：\"来不来？差一个人。\"",
+                "choices": [
+                    {
+                        "text": "🏀 上！",
+                        "next": "play"
+                    },
+                    {
+                        "text": "👀 站在旁边看",
+                        "next": "watch"
+                    },
+                    {
+                        "text": "❌ 摆摆手走了",
+                        "next": "leave"
+                    }
+                ]
+            },
+            {
+                "id": "play",
+                "text": "你打了整整四十分钟，大汗淋漓。\n最后投进一个球，旁边的人猛地拍了你肩膀：\n\"兄弟，下次还叫你！\"\n什么考试、什么烦恼，在这一刻全部没有了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "strength",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -10
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "watch",
+                "text": "你站在边上看了一会儿，有人递过来一瓶水：\n\"渴了喝点。\"\n你说谢谢，然后就站在那里，陪他们打完了那场球。\n好像也参与了，虽然没有上场。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 1
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -4
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "leave",
+                "text": "你抬头看了看球场，摇摇头走开了。\n今天不是这种心情。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -1
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（操场，傍晚，一场说散就散的球赛。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "social_classgroup_chaos",
+        "location": "home",
+        "slots": [
+            "evening"
+        ],
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "晚上十点，班级群突然炸开了。\n起因是：有人在群里接龙，\"明天来不来学校\"，结果接到一半发现——\n接龙顺序完全混乱，很多人接在了自己后面，\n而班长一直在试图解释接龙规则，越解释越乱。",
+                "choices": [
+                    {
+                        "text": "😂 参与乱接龙",
+                        "next": "join_chaos"
+                    },
+                    {
+                        "text": "🙈 静静吃瓜",
+                        "next": "watch_chaos"
+                    },
+                    {
+                        "text": "😴 屏蔽消息，去睡觉",
+                        "next": "sleep"
+                    }
+                ]
+            },
+            {
+                "id": "join_chaos",
+                "text": "你跟着发了一条\"已读\"，接在了班长后面，\n然后觉得不够，又发了一条解释，结果更乱了。\n群里的笑哭表情发了二百多个，你记录了这个数字。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -6
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "classgroup_chaos_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "watch_chaos",
+                "text": "你躺在床上，单手举着手机，一条一条往上翻——\n什么都没做，但笑了很久。\n有时候，吃瓜比参与更快乐。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -8
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "classgroup_chaos_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "sleep",
+                "text": "你把群设成了免打扰，关掉手机睡觉。\n第二天起来，群里有四百七十三条消息，\n你鼠标一拖，选择\"全部已读\"。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "classgroup_chaos_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（班级群，中学生的公共广场。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "social_clique_invite",
+        "location": "school_canteen",
+        "slots": [
+            "noon"
+        ],
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "食堂里，班里那个小团体——四个人总是坐在一起那种——\n有个人抬起头朝你招手：\n\"这儿有空位，来一起坐？\"",
+                "choices": [
+                    {
+                        "text": "😊 走过去坐下",
+                        "next": "join"
+                    },
+                    {
+                        "text": "🤔 犹豫了一下，还是找了别的位置",
+                        "next": "hesitate"
+                    }
+                ]
+            },
+            {
+                "id": "join",
+                "text": "你坐下来，他们聊的是周末去哪里玩。\n一开始你只是应声，后来慢慢说了几句话。\n出食堂的时候，有人问你：\"下次还一起吃吗？\"\n你说好。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 4
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "clique_joined"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "hesitate",
+                "text": "你摇了摇头，说\"不了，我那边有同学\"——\n实际上那边并没有特别要好的人，只是不确定自己适不适合融进去。\n你端着托盘走开，感觉有什么东西轻轻地错过了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "clique_declined"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（有些饭桌，比想象中的门槛要低。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "social_misunderstanding",
+        "location": "classroom",
+        "slots": [
+            "after"
+        ],
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "不知从哪里开始，有个同学开始不和你说话。\n你们之前不算太好，但也不算差——\n现在见面，他只是低下头，不看你。\n你不知道哪里出了问题。",
+                "choices": [
+                    {
+                        "text": "🚶 走过去直接问他",
+                        "next": "confront"
+                    },
+                    {
+                        "text": "💬 托朋友打听一下",
+                        "next": "ask_around"
+                    },
+                    {
+                        "text": "⏳ 先不管，等他自己好了",
+                        "next": "wait"
+                    }
+                ]
+            },
+            {
+                "id": "confront",
+                "text": "\"诶，我们最近有什么问题吗？\"\n对方愣了一下，然后说：\n\"没有……其实，是我上次听错了你说的话。\n以为你在说我坏话，其实你说的是另一个人。\"\n两个人对视了一秒，然后都笑了，有点尴尬，但松了一口气。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 4
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -6
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "misunderstanding_resolved"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "ask_around",
+                "text": "你委婉地问了一个共同认识的人。\n\"哦，他以为你上次在背后说他来着——但好像是误会？\"\n你找到机会解释了一句，对方点点头，虽然没有明确和好，\n但第二天见面，他抬起头了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "misunderstanding_resolved"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "wait",
+                "text": "你没有去管，觉得时间会解决一切。\n但那种冷淡持续了很长时间，长到两个人之间形成了一种习惯——\n路过，不看对方。\n你想：也许有些误会，沉默解决不了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "misunderstanding_unresolved"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（同学关系，不复杂，但需要一点勇气说出来。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "social_gossip_target",
+        "location": "library",
+        "slots": [
+            "after"
+        ],
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "有人告诉你，班里在传一件关于你的事——\n不是什么大事，但被扭曲了，版本越传越离谱。\n你在图书馆听到了后排两个人在讨论这件事的\"最新版\"，\n和实际发生的已经完全不一样了。",
+                "choices": [
+                    {
+                        "text": "💬 走过去当面纠正",
+                        "next": "correct"
+                    },
+                    {
+                        "text": "😶 装作没听见，继续看书",
+                        "next": "ignore"
+                    },
+                    {
+                        "text": "😤 去找当时说错的那个人理论",
+                        "next": "confront_source"
+                    }
+                ]
+            },
+            {
+                "id": "correct",
+                "text": "你走过去，平静地说：\n\"那件事不是这样的，实际上……\"\n他们有点不好意思，连忙说\"啊，原来如此\"。\n谣言没有立刻消失，但减速了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -4
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "gossip_handled"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "ignore",
+                "text": "你没有动，继续看书，像是那两个人的声音从来没有进入你的耳膜。\n谣言会消失的——大多数时候，只要你不喂它，它就会饿死。\n你把注意力重新放回页面上。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 1
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 4
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "gossip_ignored"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "confront_source",
+                "text": "你找到了那个\"起点\"的人。\n对话很激烈，最后对方承认是\"无意间说出去的\"——\n不是恶意，但造成了伤害。\n你不确定原不原谅，但有一件事确定了：\n以后不会再和这个人说心里话了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 1
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "gossip_confronted"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（流言在校园里走得很快，但真相总是更慢一点。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "social_gender_barrier",
+        "location": "classroom",
+        "slots": [
+            "noon"
+        ],
+        "repeatable": false,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "午休时间，教室里按照默认\"男女分区\"坐着。\n你注意到，女生这边有个人好像在哭——低着头，很轻，但是在哭。\n没有人过去。",
+                "choices": [
+                    {
+                        "text": "🚶 过去问一声",
+                        "next": "approach"
+                    },
+                    {
+                        "text": "📝 递一张纸条过去",
+                        "next": "note"
+                    },
+                    {
+                        "text": "🤐 没有动，看向别处",
+                        "next": "pretend"
+                    }
+                ]
+            },
+            {
+                "id": "approach",
+                "text": "\"你没事吧？\"\n对方先是一惊，然后用力点头：\"没事，谢谢。\"\n你没有追问，只是把一包纸巾放到她桌上，然后回到自己位置。\n后来，她抬起头，朝你轻轻点了一下。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 4
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -3
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "barrier_crossed"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "note",
+                "text": "你撕了一张纸，写了\"没事的\"，折了个不规则的三角形传过去。\n她打开，看了看，把纸折了起来，没有再哭了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "barrier_crossed"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "pretend",
+                "text": "你把目光移开了。\n不是因为不在意——也许是因为太在意，所以不知道怎么开口。\n她之后止住了哭声，好像什么都没发生。\n但你隐约知道：什么都发生了。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 3
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（教室里，有些声音很轻，但不意味着不重要。）",
+                "isEnd": true
+            }
+        ]
+    }
+]

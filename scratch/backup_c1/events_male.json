@@ -1,0 +1,2322 @@
+[
+  {
+    "id": "yf_001",
+    "rewardSprite": "yifei",
+    "charId": "yifei",
+    "location": "music_room",
+    "slotId": "noon",
+    "triggerDay": 3,
+    "minAff": 0,
+    "priority": 100,
+    "title": "走廊传来的琴声",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "音乐教室的门没关严，里面传来小提琴声，一个男生站在窗边拉琴，阳光把他的侧脸镀成金色。"
+      },
+      {
+        "speaker": "yifei",
+        "text": "（停下来）……进来听了多久了？",
+        "emoji": "🎻"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "不知道，忘了计时。太好听了。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "刚才路过……对不起打扰你了。",
+            "affDelta": 4,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "yifei",
+        "text": "（沉默片刻）……喜欢哪一段？",
+        "affDelta": 3,
+        "next": 99
+      },
+      {
+        "speaker": "yifei",
+        "text": "不打扰。（停顿）……要继续听吗？",
+        "affDelta": 6,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "yf_002",
+    "requireFlags": [
+      "yf_001"
+    ],
+    "charId": "yifei",
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 15,
+    "priority": 100,
+    "title": "湖边的练习",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "西湖边，沈逸飞正对着湖水拉琴，背影显得有些落寞。"
+      },
+      {
+        "speaker": "yifei",
+        "text": "（察觉到你）……这里的回声很好。",
+        "emoji": "🎻"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（静静听完）拉得真好。",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "不冷吗？湖边风大。",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "yifei",
+        "text": "（收起琴弓，转过身）……谢谢。你是第一个在这儿听我拉完的人。",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "yifei",
+        "text": "……习惯了。清醒一点，才能拉出想拉的音。",
+        "affDelta": 2,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zc_001",
+    "rewardSprite": "zicheng",
+    "charId": "zicheng",
+    "location": "playground",
+    "slotId": "after",
+    "triggerDay": 2,
+    "minAff": 0,
+    "priority": 100,
+    "title": "捡球的机会",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "篮球滚到你脚下，你捡起来，一个男生跑过来要球。"
+      },
+      {
+        "speaker": "zicheng",
+        "text": "谢了！你是新来的？我叫周子诚，来一起打吗？",
+        "emoji": "🏀"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "好啊，我试试。",
+            "affDelta": 10,
+            "statDelta": {
+              "sport": 3
+            },
+            "next": 3
+          },
+          {
+            "text": "我不太会……",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（大笑）没事，我帮你！你叫什么？",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "zicheng",
+        "text": "没事，我们一起练！（把球递还给你）",
+        "affDelta": 8,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "yf_walk",
+    "requireFlags": [
+      "yf_001"
+    ],
+    "charId": "yifei",
+    "location": "school_gate",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 15,
+    "priority": 6,
+    "title": "同路",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "放学后，你在校门口撞见沈逸飞，他背着琴盒，准备往相同的方向走。"
+      },
+      {
+        "speaker": "yifei",
+        "text": "……你也往那边？",
+        "emoji": "🎻"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "嗯，一起走？",
+            "affDelta": 8,
+            "next": 3
+          },
+          {
+            "text": "对，你去哪儿？",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "yifei",
+        "text": "……好。（走了几步，听见你跟上来，放慢了脚步）",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "yifei",
+        "text": "练琴。（停顿）你呢？（问完之后，他好像也没打算接话，只是先问）",
+        "affDelta": 4,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "yf_concert",
+    "requireFlags": [
+      "yf_walk"
+    ],
+    "rewardSprite": "yifei",
+    "charId": "yifei",
+    "location": "music_room",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 35,
+    "priority": 8,
+    "title": "明天的比赛",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "音乐教室，逸飞在对着谱子反复拉同一段，停了，又拉，停了。"
+      },
+      {
+        "speaker": "yifei",
+        "text": "……你来干什么？（没回头，但拉弓的动作停了）",
+        "emoji": "🎻"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "来听你拉。（坐下来）继续吧。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "明天比赛，来给你加油。",
+            "affDelta": 10,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "yifei",
+        "text": "（停顿，然后再次举起弓——这次拉得格外认真）",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "yifei",
+        "text": "……（第一次有一点点不自然）加油……不必要。（停顿）但，谢谢你来。",
+        "affDelta": 8,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zc_team",
+    "requireFlags": [
+      "zc_001"
+    ],
+    "charId": "zicheng",
+    "location": "playground",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 15,
+    "priority": 6,
+    "title": "选上校队了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "操场边，周子诚正和队友击掌，看起来心情极好。看见你，他直接跑过来。"
+      },
+      {
+        "speaker": "zicheng",
+        "text": "我选上校队了！（比了个大拇指）高不高兴？",
+        "emoji": "🏀"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "当然！恭喜你！（给他击掌）",
+            "affDelta": 8,
+            "next": 3
+          },
+          {
+            "text": "高兴啊，你什么时候第一场比赛？",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（爽朗大笑）对吧！到时候你要来看！（停顿，笑容小了一点点）……你来的话，我会发挥更好。",
+        "affDelta": 7,
+        "next": 99
+      },
+      {
+        "speaker": "zicheng",
+        "text": "下个月！你一定要来——（停顿，摸头）……就是希望有人在场边看。",
+        "affDelta": 8,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zc_injured",
+    "requireFlags": [
+      "zc_team"
+    ],
+    "rewardSprite": "zicheng",
+    "charId": "zicheng",
+    "location": "off_campus_shop",
+    "slotId": "noon",
+    "triggerDay": 0,
+    "minAff": 35,
+    "priority": 8,
+    "title": "手腕受伤",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "校外小卖部，子诚一只手买东西，另一只手缠着绷带。他看见你，先露出了虎牙笑，然后把绷带往袖子里藏。"
+      },
+      {
+        "speaker": "zicheng",
+        "text": "……没事，小伤。别大惊小怪。",
+        "emoji": "🏀"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（拉住他的手腕）给我看看。",
+            "affDelta": 15,
+            "next": 3
+          },
+          {
+            "text": "比赛能上吗？要紧吗？",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（愣了一下，没有抽回手）……没骨折。（停顿，声音小了）……你别这么担心，我会……不好意思。",
+        "affDelta": 8,
+        "next": 99
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（皱了皱眉）……医生说要休息两周。（然后苦笑）你第一个问这个。别人都只问能不能上场。",
+        "affDelta": 10,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "yf_hallway",
+    "charId": "yifei",
+    "location": "music_room",
+    "slotId": "noon",
+    "triggerDay": 0,
+    "minAff": 10,
+    "priority": 6,
+    "requireFlags": [
+      "yf_001"
+    ],
+    "title": "走廊的问题",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "音乐教室走廊，逸飞抱着琴盒走出来，停在你面前。"
+      },
+      {
+        "speaker": "yifei",
+        "text": "……上次那首曲子——你记得哪一段？",
+        "emoji": "🎻"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "中间那段拉了三次，每次都不一样。",
+            "affDelta": 14,
+            "next": 3
+          },
+          {
+            "text": "最后那个收尾，很安静。",
+            "affDelta": 10,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "yifei",
+        "text": "（停顿，眼神里有什么东西）……你听得很仔细。（低头）……谢谢你告诉我。",
+        "affDelta": 8,
+        "next": 99
+      },
+      {
+        "speaker": "yifei",
+        "text": "（点了点头）……我也觉得。（然后往前走，停了一步）……下次还来听吗？",
+        "affDelta": 10,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zc_sideline",
+    "charId": "zicheng",
+    "location": "playground",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 12,
+    "priority": 6,
+    "requireFlags": [
+      "zc_001"
+    ],
+    "title": "场边约定",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "操场边，周子诚擦着汗走过来，把毛巾搭在脖子的上，看见你就喊。"
+      },
+      {
+        "speaker": "zicheng",
+        "text": "你每次都站在这里看——下次要不要一起打？",
+        "emoji": "🏀"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "好啊，我不太会，你多包涵。",
+            "affDelta": 8,
+            "next": 3
+          },
+          {
+            "text": "我就喜欢看你们打……我继续站着好了。",
+            "affDelta": 10,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（把球抛给你）现在就来！我一对一教你！",
+        "affDelta": 6,
+        "next": 99
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（愣了一下，然后笑）……你喜欢看我打？（摸头）……那以后我打给你看。",
+        "affDelta": 12,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "yf_name_piece",
+    "charId": "yifei",
+    "location": "music_room",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 40,
+    "priority": 8,
+    "requireFlags": [
+      "yf_concert"
+    ],
+    "rewardSprite": "yifei",
+    "title": "以你名字命名的曲子",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "空荡的音乐教室里只有你们两人。逸飞立在洒满夕阳的窗边，他缓缓举起琴弓，目光静静地投向你。"
+      },
+      {
+        "speaker": "yifei",
+        "text": "……之前那首曲子——我想为你拉一次完整版。（他顿了顿）如果你现在有时间的话。",
+        "emoji": "🎻"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "我有时间。（在椅子上坐好）",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "为什么是现在告诉我？",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "yifei",
+        "text": "（琴弓落下，旋律流淌——这首曲子比初听时更长了，悠扬中偶尔夹杂着几丝仿佛快要纠缠打结的凝重，但最终都会化作豁然开朗的舒展）",
+        "affDelta": 0,
+        "next": 5
+      },
+      {
+        "speaker": "yifei",
+        "text": "……因为，初中只剩下最后一年了。（他重新调整了握弓的姿势）安静听好。",
+        "affDelta": 5,
+        "next": 5
+      },
+      {
+        "speaker": null,
+        "text": "曲终，余音渐渐消散在轻舞的窗帘后。他安静地站在原地，没有转身。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（走过去）……这首曲子叫什么名字？",
+            "affDelta": 20,
+            "next": 7
+          },
+          {
+            "text": "（很久后）你拉得很好。",
+            "affDelta": 10,
+            "next": 8
+          }
+        ]
+      },
+      {
+        "speaker": "yifei",
+        "text": "（他转过身来，眼底罕见地闪过一丝紧张）……还没起名字。（他停顿了一下）……要不，{playerName}，你来定？",
+        "affDelta": 8,
+        "next": 99
+      },
+      {
+        "speaker": "yifei",
+        "text": "……谢谢。（他垂下眼帘，将弓轻轻放回琴盒）……你是第一个完整听完它的人。",
+        "affDelta": 5,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zc_gameday_eve",
+    "charId": "zicheng",
+    "location": "off_campus_shop",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 40,
+    "priority": 8,
+    "requireFlags": [
+      "zc_team"
+    ],
+    "rewardSprite": "zicheng",
+    "title": "比赛前夜的校外小卖部",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "明天就是篮球联赛的关键战了。子诚独自坐在校外小卖部外面的塑料椅上，望着面前那瓶还没拧开的汽水发呆。"
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（看到你走近，他一直紧锁的眉头终于舒展了些许）……你来啦。",
+        "emoji": "🏀"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "明天的比赛紧张吗？",
+            "affDelta": 6,
+            "next": 3
+          },
+          {
+            "text": "（坐下来，把饮料推开一点）你在想什么？",
+            "affDelta": 10,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（他愣了一下，有些烦躁地抓了抓头发）……算是有一点吧。（他低头盯着自己的手指）……我其实是在想，不知道明天你到底会不会来看我打球。",
+        "affDelta": 8,
+        "next": 5
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（他破天荒地没有立刻接话，沉默了片刻）……没想什么。（他忽然抬起头，直直地看向你）你……明天会来现场吗？",
+        "affDelta": 5,
+        "next": 5
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "我会去的。为你加油。",
+            "affDelta": 18,
+            "next": 6
+          },
+          {
+            "text": "……你想让我去吗？",
+            "affDelta": 12,
+            "next": 7
+          }
+        ]
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（他一把抓起桌上的汽水，不由分说地塞进你手里）……请你喝。（他嘴角忍不住疯狂上扬）……看着吧，我明天绝对会大杀四方的。",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（他咧开嘴，露出那颗标志性的小虎牙）……废话，当然想啊！（他不好意思地摸了摸后脑勺）……那就这么说定了，明天……一定要来啊。",
+        "affDelta": 8,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "yf_chat",
+    "charId": "yifei",
+    "location": "music_room",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 1,
+    "repeatable": true,
+    "requireFlags": [
+      "yf_001"
+    ],
+    "title": "琴声与夕阳",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "音乐教室里传出悠扬的小提琴声，逸飞正闭着眼睛拉琴。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "听他聊音乐",
+            "affDelta": 2,
+            "setTempFlag": "yf_chat_done",
+            "next": 2
+          },
+          {
+            "text": "送他一本最新的古典乐杂志 (💰-20)",
+            "reqMoney": 20,
+            "affDelta": 5,
+            "statDelta": {
+              "money": -20
+            },
+            "next": 3
+          },
+          {
+            "text": "不打扰他练琴了",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "yifei",
+        "text": "（一曲终了，他放下琴弓看着你）……什么时候来的？",
+        "next": 4
+      },
+      {
+        "speaker": "yifei",
+        "text": "（他接过杂志，翻了几页）……这本很难买到，你有心了。",
+        "next": 4
+      },
+      {
+        "speaker": "yifei",
+        "text": "还有什么事？",
+        "next": 1
+      }
+    ]
+  },
+  {
+    "id": "zc_chat",
+    "charId": "zicheng",
+    "location": "off_campus_shop",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 1,
+    "repeatable": true,
+    "requireFlags": [
+      "zc_001"
+    ],
+    "title": "校外小卖部的常客",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "子诚正在校外小卖部门口咬着冰棍，刚打完球的他看起来大汗淋漓。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "聊聊明天的球赛",
+            "affDelta": 2,
+            "setTempFlag": "zc_chat_done",
+            "next": 2
+          },
+          {
+            "text": "请他喝冰汽水 (💰-15)",
+            "reqMoney": 15,
+            "affDelta": 4,
+            "statDelta": {
+              "money": -15,
+              "social": 2
+            },
+            "next": 3
+          },
+          {
+            "text": "回见，球场见",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（他大方地拍了拍口袋）……去挑吧，今天这顿我请！",
+        "next": 4
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（他接过汽水猛灌一口）……哈！痛快！哥们儿谢了！",
+        "next": 4
+      },
+      {
+        "speaker": "zicheng",
+        "text": "还有啥吩咐？",
+        "next": 1
+      }
+    ]
+  },
+  {
+    "id": "friend_warning_addict_zc",
+    "charId": "zicheng",
+    "location": "playground",
+    "slotId": null,
+    "triggerDay": 0,
+    "minAff": 10,
+    "minAddict": 50,
+    "priority": 100,
+    "repeatable": false,
+    "title": "球场上的缺席",
+    "scenes": [
+      {
+        "speaker": "zicheng",
+        "text": "喂，你最近怎么老是抱着手机？叫你打球都不来。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "游戏刚好打到关键时候……",
+            "affDelta": -5,
+            "next": 2
+          },
+          {
+            "text": "最近有点提不起劲。",
+            "affDelta": 0,
+            "next": 3
+          }
+        ]
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（他一把夺过你的手机，皱眉）再这样下去你人都傻了！走，跟我跑两圈出出汗！",
+        "affDelta": 0,
+        "statDelta": {
+          "stress": -10,
+          "addict": -10,
+          "sport": 2
+        },
+        "next": 99
+      },
+      {
+        "speaker": "zicheng",
+        "text": "（他拍了拍你的肩膀）别整天盯着屏幕，眼睛都直了。有心事可以跟我说啊。",
+        "affDelta": 2,
+        "statDelta": {
+          "stress": -5
+        },
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "yf_cold_war_01",
+    "charId": "yifei",
+    "requireRelState": "close",
+    "location": "music_room",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 60,
+    "priority": 900,
+    "title": "琴声戛然而止",
+    "scenes": [
+      {
+        "speaker": "yifei",
+        "pose": "serious",
+        "text": "（他停下弓，侧脸在灯下显得疏冷）……你刚才看手机的样子，像是在忍着听我拉琴。是我自作多情了？"
+      },
+      {
+        "speaker": "player",
+        "text": "？",
+        "choices": [
+          {
+            "text": "（不耐烦）你那点高雅爱好，谁耐烦听。",
+            "affDelta": -5,
+            "relCold": true,
+            "next": 99
+          },
+          {
+            "text": "（缓和）抱歉，刚才走神了，不是故意的。",
+            "affDelta": 3,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yf_cold_recover_01",
+    "charId": "yifei",
+    "requireRelState": "cold",
+    "location": "lakeside",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 950,
+    "relRecover": true,
+    "title": "乐谱里夹着的纸条",
+    "scenes": [
+      {
+        "speaker": "yifei",
+        "pose": "shy",
+        "text": "（他把一卷乐谱递给你，指尖有点凉）……那天是我太沉溺自己，没注意到你。谱子里夹了张纸，你看看。"
+      },
+      {
+        "speaker": "yifei",
+        "text": "还愿意来听我拉琴吗？",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zc_cold_war_01",
+    "charId": "zicheng",
+    "requireRelState": "close",
+    "location": "playground",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 60,
+    "priority": 900,
+    "title": "球场边的冷脸",
+    "scenes": [
+      {
+        "speaker": "zicheng",
+        "pose": "upset",
+        "text": "（他擦着汗，笑容收了起来）刚才训练你冲我发那通火，队友都看见了。我……是哪里惹你不痛快了？"
+      },
+      {
+        "speaker": "player",
+        "text": "？",
+        "choices": [
+          {
+            "text": "（火大）你算老几？少来管教我！",
+            "affDelta": -5,
+            "relCold": true,
+            "next": 99
+          },
+          {
+            "text": "（缓和）刚才心情差，冲你撒气了，别往心里去。",
+            "affDelta": 3,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zc_cold_recover_01",
+    "charId": "zicheng",
+    "requireRelState": "cold",
+    "location": "off_campus_shop",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 950,
+    "relRecover": true,
+    "title": "递来的冰可乐",
+    "scenes": [
+      {
+        "speaker": "zicheng",
+        "pose": "shy",
+        "text": "（他把一瓶冰可乐塞给你，咧了下嘴又别开眼）……那天我嘴太快，拿你撒气不对。可乐你爱喝冰的。"
+      },
+      {
+        "speaker": "zicheng",
+        "text": "还一起打球不？球场又不会自己跑。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "bc_cold_war_01",
+    "charId": "beichen",
+    "requireRelState": "close",
+    "location": "library",
+    "slotId": "evening",
+    "triggerDay": 300,
+    "minAff": 60,
+    "priority": 900,
+    "title": "最后一盏灯下",
+    "scenes": [
+      {
+        "speaker": "beichen",
+        "pose": "serious",
+        "text": "（闭馆铃响，他合上书，难得主动开口）……你刚才那句'跟你没话聊'，是认真的？"
+      },
+      {
+        "speaker": "player",
+        "text": "？",
+        "choices": [
+          {
+            "text": "（冷淡）你话这么少，跟你说着累。",
+            "affDelta": -5,
+            "relCold": true,
+            "next": 99
+          },
+          {
+            "text": "（缓和）抱歉，我没听清，你再说一遍？",
+            "affDelta": 3,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bc_cold_recover_01",
+    "charId": "beichen",
+    "requireRelState": "cold",
+    "location": "school_gate",
+    "slotId": "morning",
+    "triggerDay": 300,
+    "minAff": 0,
+    "priority": 950,
+    "relRecover": true,
+    "title": "校门口的伞",
+    "scenes": [
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "text": "（他撑着伞在校门口等你，难得抬眼）……昨天是我不对，不该赌气不理你。下雨了，一起走？"
+      },
+      {
+        "speaker": "beichen",
+        "text": "路不远，伞够两个人。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jm_cold_war_01",
+    "charId": "jingjing_m",
+    "requireRelState": "close",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 60,
+    "priority": 900,
+    "title": "隔壁窗内的沉默",
+    "scenes": [
+      {
+        "speaker": "jingjing_m",
+        "pose": "upset",
+        "text": "（他拎着书包站在你家门口，欲言又止）……我刚想顺路陪你走段，你那句'不用你管'说得挺顺口。"
+      },
+      {
+        "speaker": "player",
+        "text": "？",
+        "choices": [
+          {
+            "text": "（不耐烦）我的事不用你这个哥哥操心。",
+            "affDelta": -5,
+            "relCold": true,
+            "next": 99
+          },
+          {
+            "text": "（缓和）抱歉，今天有点烦，不是冲你。",
+            "affDelta": 3,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jm_cold_recover_01",
+    "charId": "jingjing_m",
+    "requireRelState": "cold",
+    "location": "school_gate",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 950,
+    "relRecover": true,
+    "title": "塞进书包的糖",
+    "scenes": [
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "text": "（他趁你不备，往你书包侧袋塞了颗糖，耳根发红）……从小一块长大，你别跟我生分。"
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "还当我是不说话的邻居哥哥，行吗？",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zj_cold_war_01",
+    "charId": "zijun",
+    "requireRelState": "close",
+    "location": "art_room",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 60,
+    "priority": 900,
+    "title": "画布前的僵局",
+    "scenes": [
+      {
+        "speaker": "zijun",
+        "pose": "serious",
+        "text": "（她握着画笔，挑眉看你）我这幅画改了三遍，你刚才那句'也就那样'……是真觉得不好，还是随便敷衍我？"
+      },
+      {
+        "speaker": "player",
+        "text": "？",
+        "choices": [
+          {
+            "text": "（冷淡）就你那点画，也值得较真？",
+            "affDelta": -5,
+            "relCold": true,
+            "next": 99
+          },
+          {
+            "text": "（缓和）抱歉，我刚才说话重了。",
+            "affDelta": 3,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zj_cold_recover_01",
+    "charId": "zijun",
+    "requireRelState": "cold",
+    "location": "library",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 950,
+    "relRecover": true,
+    "title": "速写本里的一页",
+    "scenes": [
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "text": "（她把速写本推到你面前，翻到一页——画的是你，脸有点红）……那天是我太要强了。这幅，是照着记忆画的。"
+      },
+      {
+        "speaker": "zijun",
+        "text": "还当我是朋友吗？",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "bc_meet_01",
+    "charId": "beichen",
+    "rewardSprite": "beichen",
+    "location": "library",
+    "slotId": "evening",
+    "triggerDay": 300,
+    "minAff": 0,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "最后一盏灯下的人",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "初二开学，图书馆快闭馆。所有人都走了，只剩靠窗那盏灯还亮着，一个男生低头写着什么，对周遭毫无察觉。",
+        "next": 1
+      },
+      {
+        "speaker": "beichen",
+        "pose": "default",
+        "emoji": "🌙",
+        "text": "（察觉你站着，笔没停）……闭馆了。管理员去锁门了，你走侧门。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你每天都最后走？",
+            "affDelta": 8,
+            "next": 3
+          },
+          {
+            "text": "（放下手里的书）你也在躲人？",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "text": "（笔尖顿了顿）……习惯了。人少，安静。（抬眼看了你一下，又低头）……你也是转学的？",
+        "next": 99
+      },
+      {
+        "speaker": "beichen",
+        "text": "（摇头）……不是躲。只是话少，别人嫌闷，我也乐得清静。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "bc_library_01",
+    "requireFlags": [
+      "bc_meet_01"
+    ],
+    "charId": "beichen",
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 300,
+    "minAff": 15,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "沉默的同桌",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "午后的图书馆，你又撞见那个转学生在老位置。这次，他对面莫名多摆了一本书，像是留给谁。",
+        "next": 1
+      },
+      {
+        "speaker": "beichen",
+        "pose": "default",
+        "emoji": "🌙",
+        "text": "（看见你，把那本书往你这边推了推）……这本你昨天找过。我借到了。（顿了顿）坐吧，椅子空着。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你怎么知道我在找这本？",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "（坐下）谢谢，你话不多但挺细心。",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "text": "（翻了页书，没抬头）……你翻书架的样子，像在找东西又找不到。（声音很轻）……下次直接问我就行。",
+        "next": 99
+      },
+      {
+        "speaker": "beichen",
+        "text": "（难得弯了下嘴角）……细心谈不上。只是，看一眼就记住了。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "bc_friend_01",
+    "requireFlags": [
+      "bc_library_01"
+    ],
+    "charId": "beichen",
+    "location": "school_gate",
+    "slotId": "morning",
+    "triggerDay": 300,
+    "minAff": 30,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "校门口的伞柄",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "早晨下着小雨，你没带伞，正缩在校门口屋檐下。一把黑伞无声地撑到你头顶。",
+        "next": 1
+      },
+      {
+        "speaker": "beichen",
+        "pose": "default",
+        "emoji": "🌙",
+        "text": "（把伞柄塞进你手里，自己往雨里迈了半步）……我走得快，伞给你。（顿了顿）……别还我，明天我还来。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "那你呢？淋着？",
+            "affDelta": 14,
+            "next": 3
+          },
+          {
+            "text": "（接过伞）……你怎么知道我在这？",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "text": "（雨里的背影顿了顿）……淋点雨而已。（声音被雨声盖了一半）……你别感冒就行。",
+        "next": 99
+      },
+      {
+        "speaker": "beichen",
+        "text": "（隔着雨幕看你一眼）……每天这个点，你都从这门出来。（说完自己先愣了，快步走进雨里）",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "bc_close_01",
+    "requireRelState": "close",
+    "charId": "beichen",
+    "location": "library",
+    "slotId": "evening",
+    "triggerDay": 300,
+    "minAff": 60,
+    "priority": 8,
+    "title": "借给他的那支笔",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "傍晚的图书馆，他破天荒把椅子挪到了你旁边，两人之间只隔着一臂的距离。",
+        "next": 1
+      },
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "emoji": "🌙",
+        "text": "（把一本摊开的书推过来）……这段，我看了三遍没看懂。你帮我看看？（顿了顿）……其实我知道你看懂了，就是想问你。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（凑近）你这是找借口跟我说话吧？",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "（认真讲解）这样，懂了吗？",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "text": "（耳尖动了动，没否认）……（极轻地）被你发现了。（把笔帽慢慢扣好）……那，以后我常问，你常答，行吗？",
+        "next": 99
+      },
+      {
+        "speaker": "beichen",
+        "text": "（点头，嘴角很淡地扬了下）……懂了就好。（把笔轻轻放在你手边，没拿回去）……笔先放你那。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "bc_crush_01",
+    "requireRelState": "crush",
+    "charId": "beichen",
+    "location": "school_gate",
+    "slotId": "evening",
+    "triggerDay": 300,
+    "minAff": 85,
+    "priority": 8,
+    "title": "月亮替他说的话",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "初三的一天放学，校门口的晚霞褪成了深蓝。他难得没急着走，靠在栏杆上等你，手里捏着那支早该还你的笔。",
+        "next": 1
+      },
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "emoji": "🌙",
+        "text": "（把笔递回来，却没松手）……笔我还你。但有句话，我憋了很久。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（心跳很快）你说。",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "（轻轻握住笔和他一起的手）我猜到了。",
+            "affDelta": 8,
+            "next": 3
+          }
+        ]
+      },
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "text": "（深吸一口气，终于抬眼直视你）……从转来那天起，我的'最后走'，其实是在等你一起走。（声音发紧）……我喜欢你。很早就喜欢了。",
+        "next": 4
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（笑）那以后，每天一起走。",
+            "affDelta": 20,
+            "next": 5
+          },
+          {
+            "text": "（把笔收好）我也是，从借书那天。",
+            "affDelta": 12,
+            "next": 6
+          }
+        ]
+      },
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "text": "（像是松了口气，肩膀塌下来一点）……好。（把伞往你那边偏了偏）……走吧，今天我送你。",
+        "next": 99
+      },
+      {
+        "speaker": "beichen",
+        "text": "（难得笑了下）……那支笔，归你了。（转身，步子比平时慢了些）",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "bc_chat",
+    "requireFlags": [
+      "bc_meet_01"
+    ],
+    "charId": "beichen",
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 300,
+    "minAff": 0,
+    "priority": 1,
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "title": "图书馆的安静陪伴",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "图书馆角落，顾北辰正伏案写字，察觉你坐下，只抬了下眼皮。",
+        "choices": [
+          {
+            "text": "安静陪他看书",
+            "blockIfTempFlag": "bc_chat_done",
+            "affDelta": 2,
+            "setTempFlag": "bc_chat_done",
+            "next": 1
+          },
+          {
+            "text": "递给他一杯热茶 (💰-15)",
+            "reqMoney": 15,
+            "affDelta": 5,
+            "statDelta": {
+              "money": -15,
+              "stress": -5
+            },
+            "next": 2
+          },
+          {
+            "text": "不打扰他，轻轻离开",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "beichen",
+        "pose": "default",
+        "emoji": "🌙",
+        "text": "（笔尖没停，却往你这边推了半块橡皮）……坐。我写完这页，陪你走段。",
+        "next": 3
+      },
+      {
+        "speaker": "beichen",
+        "text": "（接过茶，指尖暖了暖）……谢谢。（低头抿了一口，耳尖有点红）……下次别破费。",
+        "next": 3
+      },
+      {
+        "speaker": "beichen",
+        "text": "（翻了一页）……还坐吗？不坐我继续写了。",
+        "next": 0
+      }
+    ]
+  },
+  {
+    "id": "bc_gate_01",
+    "requireFlags": [
+      "bc_friend_01"
+    ],
+    "charId": "beichen",
+    "location": "school_gate",
+    "slotId": "after",
+    "triggerDay": 300,
+    "minAff": 35,
+    "priority": 50,
+    "excludeRelState": "cold",
+    "title": "默认的同路",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "放学铃响，你走出校门，发现那个总独来独往的男生停在不远处，像是刻意等你。",
+        "next": 1
+      },
+      {
+        "speaker": "beichen",
+        "pose": "default",
+        "emoji": "🌙",
+        "text": "（看见你，把书包带拎了拎）……顺路。（顿了顿，补了一句）……我回家就这条路。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "那一起走，省得我一个人。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "你天天都'顺路'？",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "beichen",
+        "pose": "shy",
+        "text": "（脚步放慢，与你并肩）……嗯。（沉默几步，极轻地）……有人一起走，路短些。",
+        "next": 99
+      },
+      {
+        "speaker": "beichen",
+        "text": "（被你问住，难得有点无措）……（别过脸）……你管得真多。（却没否认，步子放慢了）",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jm_meet_01",
+    "charId": "jingjing_m",
+    "rewardSprite": "jingjing_m",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "隔壁的那个人",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "傍晚回家，楼道里你又撞见隔壁那个男生。他抱着篮球，像是刚想敲你家的门，又缩回了手。",
+        "next": 1
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "default",
+        "emoji": "🌿",
+        "text": "（看见你，把手往后一背）……回来了？（顿了顿）没什么，就看看你今天有没有又被留堂。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你一直在这儿等我？",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "（笑）叶明轩，你管得真宽。",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "text": "（肩膀松了点）……顺路。（声音越来越小）……从小一块长大，总得有人看着你别出事。",
+        "next": 99
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（耳根一红）……才没有。就是……习惯了。（把篮球往肩上颠了颠）走，上楼，我帮你拎书包。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jm_community_01",
+    "requireFlags": [
+      "jm_meet_01"
+    ],
+    "charId": "jingjing_m",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 15,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "楼下的老位置",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "小区楼下的石凳，他正低头给篮球上气，抬头看见你，往旁边挪了挪，给你腾地方。",
+        "next": 1
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "default",
+        "emoji": "🌿",
+        "text": "（拍了拍凳子）……坐。这儿能看到你家的窗，灯一亮我就知道你到家了。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你天天都在这等着？",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "（坐下）那以后一起写作业？",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "text": "（手一抖，气针戳歪了）……才、才没有天天。（小声）……就偶尔。怕你一个人害怕。",
+        "next": 99
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（眼睛亮了下又压下）……行。（把笔记本摊开）……我数学好，你那个破应用题，我包了。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jm_friend_01",
+    "requireFlags": [
+      "jm_community_01"
+    ],
+    "charId": "jingjing_m",
+    "location": "school_gate",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAff": 30,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "书包带断了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "早上到校，你的书包带突然断了，书本哗啦撒了一地。旁边伸过来一双手，麻利地帮你捡。",
+        "next": 1
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "default",
+        "emoji": "🌿",
+        "text": "（蹲下帮你理书，眉头皱着）……早就说你这带子要断。（从兜里掏出根备用绳）我早备着了。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你连这个都备着？",
+            "affDelta": 14,
+            "next": 3
+          },
+          {
+            "text": "（接过绳）谢谢，明轩。",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "text": "（别过脸）……顺手。（声音很轻）……你的事，我都记着。",
+        "next": 99
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（帮你系好，拍了拍书包）……好了。（站起身，耳朵红）……走吧，要迟到了，笨蛋。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jm_close_01",
+    "requireRelState": "close",
+    "charId": "jingjing_m",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 60,
+    "priority": 8,
+    "title": "没说出口的那句",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "深夜楼道，声控灯坏了。他举着手机的手电筒照路，却一直把你护在里侧，自己半边身子在暗处。",
+        "next": 1
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "emoji": "🌿",
+        "text": "（手电光晃了下，落在你脸上）……从小我就想跟你说句话。（顿了很久）……但每次到嘴边，又咽回去了。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（停住）那现在说。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "（拉住他袖子）我等你这句话很久了。",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "text": "（手电筒光抖了抖）……（极轻地）'别的人，都不如你'。（说完自己先慌了）……当我没说，行吗？",
+        "next": 99
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（被你拉住，整个人僵了一瞬）……（声音发紧）……你也知道？（把光往你这边偏了偏，没再说话）",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jm_crush_01",
+    "requireRelState": "crush",
+    "charId": "jingjing_m",
+    "location": "school_gate",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 85,
+    "priority": 8,
+    "title": "十六年的喜欢",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "初三的一个傍晚，校门口只剩你们俩。他难得没躲，把篮球搁在脚边，像是下了很大决心。",
+        "next": 1
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "emoji": "🌿",
+        "text": "（深吸一口气）……从七岁你搬来隔壁，我就……（顿了顿，终于直视你）……就喜欢你。喜欢了快十年。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（笑出声）你怎么现在才说。",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "（握住他的手）我也喜欢你，明轩。",
+            "affDelta": 8,
+            "next": 3
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "text": "（耳尖红透，却没移开眼）……怕说了，连邻居都做不成。（声音发颤）……现在不怕了。",
+        "next": 4
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "那以后，换我等你放学。",
+            "affDelta": 20,
+            "next": 5
+          },
+          {
+            "text": "（把篮球捡起来抱住）这个归我了，抵押。",
+            "affDelta": 12,
+            "next": 6
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "text": "（愣了下，然后笑，眼睛弯起来）……好。（伸手揉了揉你头）……那说好了，一辈子。",
+        "next": 99
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（脸更红了，去抢篮球）……还我！（抢到手，却没松劲，反而把球轻轻放回你怀里）……骗你的，送你。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "jm_chat",
+    "requireFlags": [
+      "jm_meet_01"
+    ],
+    "charId": "jingjing_m",
+    "location": "community",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 1,
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "title": "楼下的闲坐",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "小区楼下，叶明轩正坐在石凳上发呆，见你下来，往旁边挪了挪。",
+        "choices": [
+          {
+            "text": "陪他坐会儿",
+            "blockIfTempFlag": "jm_chat_done",
+            "affDelta": 2,
+            "setTempFlag": "jm_chat_done",
+            "next": 1
+          },
+          {
+            "text": "分他一半零食 (💰-20)",
+            "reqMoney": 20,
+            "affDelta": 5,
+            "statDelta": {
+              "money": -20,
+              "stress": -5
+            },
+            "next": 2
+          },
+          {
+            "text": "不早了，先回家",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "default",
+        "emoji": "🌿",
+        "text": "（拍拍凳子）……坐。今晚星星挺亮。（顿了顿）……你在这儿，我安心。",
+        "next": 3
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（接过零食，耳尖微红）……谢了。（掰一半递回）……一人一半，老规矩。",
+        "next": 3
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（仰头看星星）……还不困？不困我接着陪。",
+        "next": 0
+      }
+    ]
+  },
+  {
+    "id": "jm_school_01",
+    "requireFlags": [
+      "jm_friend_01"
+    ],
+    "charId": "jingjing_m",
+    "location": "school_gate",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 35,
+    "priority": 50,
+    "excludeRelState": "cold",
+    "title": "护着你的人",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "放学时，几个高年级男生有意无意地撞了你一下。旁边的叶明轩几步跨过来，挡在你身前。",
+        "next": 1
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "default",
+        "emoji": "🌿",
+        "text": "（冷着脸扫了那几人一眼，等他们走了才回头）……没事吧？（拳握了握又松开）……以后离这种人远点，有我在。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你刚才好帅。",
+            "affDelta": 14,
+            "next": 3
+          },
+          {
+            "text": "（拉他袖子）你别随便打架。",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "jingjing_m",
+        "pose": "shy",
+        "text": "（耳根一红，别过脸）……才没有。（声音很轻）……你重要，别的都不重要。",
+        "next": 99
+      },
+      {
+        "speaker": "jingjing_m",
+        "text": "（被你一拉，僵了下）……不打。（低头）……你扯我袖子，我舍不得动。走吧，送你回家。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zj_meet_01",
+    "charId": "zijun",
+    "rewardSprite": "zijun",
+    "location": "art_room",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "画室里的新人",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "放学后的画室，一个男生正对着窗光调色，听见门响，笔没停，只偏头看了你一眼。",
+        "next": 1
+      },
+      {
+        "speaker": "zijun",
+        "pose": "default",
+        "emoji": "🎨",
+        "text": "（把调色盘一转）哟，新面孔。美术课代表林紫君。（挑眉）怎么，也想来蹭颜料？",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你画得真好。",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "（笑）这么自信？",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "text": "（笔尖顿了顿，耳尖微红）……还行吧。（把画板转给你看）……这朵玉兰，我画了三遍才像。",
+        "next": 99
+      },
+      {
+        "speaker": "zijun",
+        "text": "（挑眉笑）……自信是基本功。（递过一支笔）……要不要试？画坏了算我的。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zj_art_01",
+    "requireFlags": [
+      "zj_meet_01"
+    ],
+    "charId": "zijun",
+    "location": "art_room",
+    "slotId": "noon",
+    "triggerDay": 0,
+    "minAff": 15,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "午后的速写",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "午休的画室，你撞见林紫君在速写本上飞快地勾线，抬头看见你，把本子往怀里一合。",
+        "next": 1
+      },
+      {
+        "speaker": "zijun",
+        "pose": "default",
+        "emoji": "🎨",
+        "text": "（合上本子，挑眉）……偷看我画画？（顿了顿，把本子推过来一点）……就让你看一眼，别传出去。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（翻看）你画的是我们班？",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "（笑）这么藏着，画的谁啊？",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "text": "（耳尖红了下）……才不是。（小声）……画了点窗外，还有……随便的人。（把本子抽回去）……别问了。",
+        "next": 99
+      },
+      {
+        "speaker": "zijun",
+        "text": "（被你笑得有点慌）……画的是风景！（把本子护在身后）……你再问，我可要收费了啊。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zj_friend_01",
+    "requireFlags": [
+      "zj_art_01"
+    ],
+    "charId": "zijun",
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 30,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "借来的画册",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "图书馆，你正翻一本绝版的西湖画册，却发现被人先一步抽走了——林紫君抱着它，冲你挑了挑眉。",
+        "next": 1
+      },
+      {
+        "speaker": "zijun",
+        "pose": "default",
+        "emoji": "🎨",
+        "text": "（把画册往怀里一抱）……晚了，我先拿的。（顿了顿，却把书摊开放在两人中间）……分你一半看，怎么样？",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你明明就是特意留给我的。",
+            "affDelta": 14,
+            "next": 3
+          },
+          {
+            "text": "（凑近）一起看，成交。",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "text": "（被说中，耳尖红了）……才、才没有特意。（把椅子挪近了一点）……就是，觉得你会喜欢。",
+        "next": 99
+      },
+      {
+        "speaker": "zijun",
+        "text": "（肩膀挨近了些）……成交。（指尖点在画上的断桥）……以后这种好东西，我留一份给你。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zj_close_01",
+    "requireRelState": "close",
+    "charId": "zijun",
+    "location": "art_room",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 60,
+    "priority": 8,
+    "title": "画里的人是你",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "傍晚的画室只剩你们，他破天荒把速写本摊开在你面前，翻到一页——画里的主角，分明是你。",
+        "next": 1
+      },
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "emoji": "🎨",
+        "text": "（指尖压着那页，没敢看你）……别误会，是、是练人体结构。（声音发虚）……画着画着，就成你了。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（笑）林紫君，你脸红了。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "（轻轻合上本子）那，以后只画我？",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "text": "（捂了下脸，耳尖通红）……才没有！（却没反驳，把笔往你手边一放）……你、你定。你说画谁，我画谁。",
+        "next": 99
+      },
+      {
+        "speaker": "zijun",
+        "text": "（被你一合本子，怔了下，然后笑）……行。（低头在空白页写了行小字，推给你看）……'专属模特'，盖章了。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zj_crush_01",
+    "requireRelState": "crush",
+    "charId": "zijun",
+    "location": "library",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 85,
+    "priority": 8,
+    "title": "速写本最后一页",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "初三的一个夜里，图书馆快关门，林紫君把那本速写本塞进你手里，自己先红了耳根。",
+        "next": 1
+      },
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "emoji": "🎨",
+        "text": "（把本子推过来）……最后一页，给你看的。（深吸一口气）画的是'我想在一起的人'。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（翻开）……是我。",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "（抬眼看他）你想说的，是喜欢我？",
+            "affDelta": 8,
+            "next": 3
+          }
+        ]
+      },
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "text": "（点头，声音发紧）……嗯。（难得没了平时的飒爽，像个普通少年）……我喜欢你，紫君说的，算数。",
+        "next": 4
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（笑）那这本，归我收藏了。",
+            "affDelta": 20,
+            "next": 5
+          },
+          {
+            "text": "（握住他的手）我也是，从借画册那天。",
+            "affDelta": 12,
+            "next": 6
+          }
+        ]
+      },
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "text": "（愣了下，然后笑开）……归你。（把笔帽拔了递给你）……以后，我画，你收，一辈子。",
+        "next": 99
+      },
+      {
+        "speaker": "zijun",
+        "text": "（被你一握，整个人都软了点）……（小声）……那说好了。（把速写本轻轻合上，塞进你书包）",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "zj_chat",
+    "requireFlags": [
+      "zj_meet_01"
+    ],
+    "charId": "zijun",
+    "location": "art_room",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 1,
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "title": "画室的闲笔",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "画室里，林紫君正咬着笔杆发呆，见你进来，挑了挑眉。",
+        "choices": [
+          {
+            "text": "看他画一会儿",
+            "blockIfTempFlag": "zj_chat_done",
+            "affDelta": 2,
+            "setTempFlag": "zj_chat_done",
+            "next": 1
+          },
+          {
+            "text": "送他一盒新颜料 (💰-25)",
+            "reqMoney": 25,
+            "affDelta": 5,
+            "statDelta": {
+              "money": -25,
+              "stress": -5
+            },
+            "next": 2
+          },
+          {
+            "text": "不打扰，先走了",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "zijun",
+        "pose": "default",
+        "emoji": "🎨",
+        "text": "（把画板转给你）……坐。我画我的，你发你的呆。（顿了顿）……你在这儿，我手稳。",
+        "next": 3
+      },
+      {
+        "speaker": "zijun",
+        "text": "（接过颜料，眼睛亮了）……可以啊，识货。（挤一点在调色盘）……这色，回头画你专用的。",
+        "next": 3
+      },
+      {
+        "speaker": "zijun",
+        "text": "（挑眉）……还看？看要收费的啊。（却把椅子往你那边挪了挪）……算了，今天免费。",
+        "next": 0
+      }
+    ]
+  },
+  {
+    "id": "zj_library_01",
+    "requireFlags": [
+      "zj_friend_01"
+    ],
+    "charId": "zijun",
+    "location": "library",
+    "slotId": "noon",
+    "triggerDay": 0,
+    "minAff": 35,
+    "priority": 50,
+    "excludeRelState": "cold",
+    "title": "窗边的写生",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "正午的图书馆，阳光铺满靠窗的桌子。林紫君正对着窗外的梧桐写生，看见你，拍了拍对面的空椅。",
+        "next": 1
+      },
+      {
+        "speaker": "zijun",
+        "pose": "default",
+        "emoji": "🎨",
+        "text": "（笔尖点了点对面）……坐。这光好，适合画你。（说完自己先红了耳尖）……我是说，画风景，你别多想。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（坐下）那你画吧，我当模特。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "（笑）林紫君，你嘴硬。",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "zijun",
+        "pose": "shy",
+        "text": "（笔尖顿了顿，嘴角弯起）……行，那我画了。（声音很轻）……你别动，这一刻挺好。",
+        "next": 99
+      },
+      {
+        "speaker": "zijun",
+        "text": "（被你笑得耳尖更红）……才不硬。（把画好的速写推给你看——窗边人影，分明是你）……自己看。",
+        "next": 99
+      }
+    ]
+  }
+]

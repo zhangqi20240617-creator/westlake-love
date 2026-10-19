@@ -1,0 +1,880 @@
+[
+  {
+    "id": "life_conflict_excluded",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "morning",
+    "triggerDay": 30,
+    "priority": 80,
+    "title": "被排挤",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "早自习时，你发现临桌的几个同学把座位挪远了，不再搭理你。教室角落有人低声说着什么，时不时瞥向你这边。"
+      },
+      {
+        "speaker": "player",
+        "text": "这是怎么了？我哪里得罪他们了……",
+        "setFlag": "flag_conflict_active",
+        "statDelta": {
+          "stress": 8,
+          "social": -3
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_conflict_rumor",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "noon",
+    "triggerDay": 45,
+    "priority": 85,
+    "excludeFlags": [
+      "flag_conflict_resolved"
+    ],
+    "title": "谣言风波",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "午休时，有人告诉你：班里几个同学在背后说你坏话，起因竟然只是上次课堂抢答时你多说了两句。"
+      },
+      {
+        "speaker": "player",
+        "text": "不过是说了几句实话，怎么就闹成这样……",
+        "setFlag": "flag_conflict_active",
+        "statDelta": {
+          "stress": 10,
+          "social": -4
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_conflict_bystander",
+    "charId": null,
+    "location": "classroom",
+    "slotId": null,
+    "triggerDay": 50,
+    "priority": 90,
+    "requireFlags": [
+      "flag_conflict_active"
+    ],
+    "title": "旁观者",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "你目睹了班级矛盾在悄悄激化。那几个同学开始把全班分成两个圈子，连午饭坐哪儿都成了表态。"
+      },
+      {
+        "speaker": "player",
+        "text": "这样下去，班级气氛会越来越差的……",
+        "statDelta": {
+          "stress": 6,
+          "social": -2
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_conflict_reconcile",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "after",
+    "triggerDay": 60,
+    "priority": 95,
+    "requireFlags": [
+      "flag_conflict_active"
+    ],
+    "excludeFlags": [
+      "flag_conflict_resolved"
+    ],
+    "title": "握手言和",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "放学后，你主动找到对方，平心静气说清楚了那次的误会。对方沉默了一会儿，最终点了点头。"
+      },
+      {
+        "speaker": "player",
+        "text": "（吐出一口气）终于……说清楚了。",
+        "setFlag": "flag_conflict_resolved",
+        "statDelta": {
+          "social": 6,
+          "stress": -8
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_family_quarrel",
+    "charId": null,
+    "location": "home",
+    "slotId": "evening",
+    "triggerDay": 60,
+    "priority": 75,
+    "title": "爸妈吵架了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "吃饭时，爸妈不知为何起了争执，声音越来越大。你夹在中间，筷子悄悄放下，假装在看手机。"
+      },
+      {
+        "speaker": "player",
+        "text": "太压抑了……",
+        "setFlag": "flag_family_quarrel",
+        "statDelta": {
+          "stress": 10,
+          "social": -3
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_family_reconcile",
+    "charId": null,
+    "location": "home",
+    "slotId": "evening",
+    "triggerDay": 70,
+    "priority": 76,
+    "requireFlags": [
+      "flag_family_quarrel"
+    ],
+    "title": "重归于好",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "你回家时，爸妈已坐在沙发上看电视。爸爸递给妈妈一杯茶，气氛已缓和许多，像什么都没发生过。"
+      },
+      {
+        "speaker": "player",
+        "text": "（悄悄松了口气）终于和好了。",
+        "setFlag": "flag_family_ok",
+        "statDelta": {
+          "stress": -8,
+          "social": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_family_grandparent",
+    "charId": null,
+    "location": "home",
+    "slotId": "morning",
+    "triggerDay": 90,
+    "priority": 60,
+    "requireHoliday": "any",
+    "title": "探望爷奶",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "假期里，你跟爸妈一起去探望爷爷奶奶。奶奶一见你就把手拉住，塞了一大袋零食，问你吃得好不好、睡得够不够。"
+      },
+      {
+        "speaker": "player",
+        "text": "（心里暖融融的）这种日子，才是真正的假期。",
+        "statDelta": {
+          "stress": -10,
+          "social": 3,
+          "charm": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_anxiety_attack",
+    "charId": null,
+    "location": "home",
+    "slotId": null,
+    "minStress": 45,
+    "priority": 280,
+    "repeatable": true,
+    "title": "焦虑发作与自我调节",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "（操场边的树荫下，心跳突然快得不像话。明明只是一次小测验，你却觉得胸口有什么东西死死揪住，喘不上气。）"
+      },
+      {
+        "speaker": "player",
+        "text": "……",
+        "choices": [
+          {
+            "text": "深呼吸，慢慢把自己拉回来（压力-12）",
+            "statDelta": {
+              "stress": -12
+            },
+            "next": 99
+          },
+          {
+            "text": "硬撑过去，装作没事人（压力+6）",
+            "statDelta": {
+              "stress": 6
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "life_morning_jog",
+    "charId": null,
+    "location": "playground",
+    "slotId": "morning",
+    "triggerDay": 5,
+    "priority": 30,
+    "repeatable": true,
+    "title": "清晨跑步",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "清晨操场几乎没有别人，只有脚步声和远处的鸟鸣。跑完一圈，额头微微出汗，但心情比刚起床时轻松多了。",
+        "statDelta": {
+          "strength": 3,
+          "stress": -5
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_rainy_mood",
+    "charId": null,
+    "location": "home",
+    "slotId": "evening",
+    "triggerDay": 10,
+    "priority": 25,
+    "requireWeather": "rainy",
+    "repeatable": true,
+    "title": "雨夜独思",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "窗外的雨声忽大忽小，你趴在书桌上发了一会儿呆。有时候想得太多，反而什么都想不清楚。",
+        "statDelta": {
+          "art": 2,
+          "stress": -3
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_canteen_rush",
+    "charId": null,
+    "location": "off_campus_shop",
+    "slotId": "noon",
+    "triggerDay": 3,
+    "priority": 20,
+    "repeatable": true,
+    "title": "午饭大作战",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "午饭时间食堂人满为患，你排了好一会儿，最后只剩不太好吃的番茄炒蛋。不过，饿了嘛，抢到什么吃什么。",
+        "statDelta": {
+          "social": 1,
+          "stress": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_exam_eve_stress",
+    "charId": null,
+    "location": "home",
+    "slotId": "evening",
+    "triggerDay": 85,
+    "priority": 70,
+    "title": "考前夜",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "明天就是期中考试了。你把课本翻了又翻，却一个字都看不进去。闭眼，深呼吸。"
+      },
+      {
+        "speaker": "player",
+        "text": "好了，该睡就睡吧。明天的事明天再说。",
+        "statDelta": {
+          "stress": 5,
+          "intellect": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_midterm_result",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "morning",
+    "triggerDay": 88,
+    "priority": 72,
+    "title": "成绩单",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "老师把期中成绩单发下来。你盯着那张纸看了好一会儿——有几科没想到会这样，有几科又比预想中好一点。"
+      },
+      {
+        "speaker": "player",
+        "text": "这次……还能接受。下次一定要更好。",
+        "statDelta": {
+          "intellect": 3,
+          "stress": -4
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_semester_reflection",
+    "charId": null,
+    "location": "home",
+    "slotId": "evening",
+    "triggerDay": 178,
+    "priority": 65,
+    "title": "学期总结",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "这学期就要结束了。你翻着日记回顾——有认识新朋友的日子，也有压力大到想哭的深夜。总体而言，你还站在这里。"
+      },
+      {
+        "speaker": "player",
+        "text": "下学期，继续加油。",
+        "statDelta": {
+          "social": 3,
+          "stress": -5,
+          "charm": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_study_burnout",
+    "charId": null,
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 100,
+    "priority": 60,
+    "minStress": 35,
+    "repeatable": true,
+    "title": "学习倦怠",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "图书馆的光线有点昏黄，书本里的字像在漂移。你盯着同一道题看了十分钟，愣是没看进去。"
+      },
+      {
+        "speaker": "player",
+        "text": "……要不今天就到这里吧。",
+        "choices": [
+          {
+            "text": "放下书本，出去走走（压力-8）",
+            "statDelta": {
+              "stress": -8
+            },
+            "next": 99
+          },
+          {
+            "text": "再撑一小时（智力+2，压力+5）",
+            "statDelta": {
+              "intellect": 2,
+              "stress": 5
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "life_afternoon_nap",
+    "charId": null,
+    "location": "home",
+    "slotId": "noon",
+    "triggerDay": 20,
+    "priority": 15,
+    "repeatable": true,
+    "title": "午睡",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "趁着午饭后的空档，你躺下来打了个盹。窗帘拉着，风扇转着，很快就沉入了短暂的梦乡。",
+        "statDelta": {
+          "stress": -8,
+          "strength": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_library_solitude",
+    "charId": null,
+    "location": "library",
+    "slotId": "morning",
+    "triggerDay": 15,
+    "priority": 22,
+    "repeatable": true,
+    "title": "一个人的图书馆",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "早自习前，图书馆里几乎没有别人。你随手取了本书，靠着窗边翻完。阳光斜进来，尘埃在光里浮动。",
+        "statDelta": {
+          "art": 3,
+          "intellect": 2,
+          "stress": -4
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_cold_weather",
+    "charId": null,
+    "location": "school_gate",
+    "slotId": "after",
+    "triggerDay": 150,
+    "priority": 18,
+    "requireSeason": "winter",
+    "title": "初冬第一天",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "今天明显冷了很多。你把外套领子立起来，哈了口白气。走在放学路上，感觉今年的冬天来得特别快。"
+      },
+      {
+        "speaker": "player",
+        "text": "是冬天了啊……",
+        "statDelta": {
+          "art": 2,
+          "stress": -2
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_spring_cherry",
+    "charId": null,
+    "location": "lakeside",
+    "slotId": "after",
+    "triggerDay": 200,
+    "priority": 55,
+    "requireSeason": "spring",
+    "title": "西湖边的樱花",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "西湖边的樱花开了一大片，粉的、白的，被风一吹，像下雨一样落下来。你站在树下，仰面看了一会儿，什么都没想。"
+      },
+      {
+        "speaker": "player",
+        "text": "……真好看。",
+        "statDelta": {
+          "art": 5,
+          "stress": -8,
+          "charm": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_sports_injury",
+    "charId": null,
+    "location": "playground",
+    "slotId": "noon",
+    "triggerDay": 50,
+    "priority": 50,
+    "title": "运动受伤",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "踢球时不小心扭了脚踝。虽然不是很严重，但走路还是有点疼。"
+      },
+      {
+        "speaker": "player",
+        "text": "下次要注意安全……",
+        "choices": [
+          {
+            "text": "去校医室处理一下",
+            "statDelta": {
+              "stress": -3,
+              "strength": -1
+            },
+            "next": 99
+          },
+          {
+            "text": "忍着，下午还有事",
+            "statDelta": {
+              "strength": -3,
+              "stress": 3
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "life_lost_wallet",
+    "charId": null,
+    "location": "off_campus_shop",
+    "slotId": "noon",
+    "triggerDay": 80,
+    "priority": 55,
+    "title": "钱包丢了",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "掏口袋准备付账，才发现钱包不见了。翻遍了书包，还是没找到。"
+      },
+      {
+        "speaker": "player",
+        "text": "完了！里面还有好几十块……",
+        "choices": [
+          {
+            "text": "原路折回去找",
+            "statDelta": {
+              "money": -20,
+              "stress": 5
+            },
+            "next": 99
+          },
+          {
+            "text": "认命，向同学借",
+            "statDelta": {
+              "money": -30,
+              "social": -2,
+              "stress": 8
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "life_good_grade",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "morning",
+    "triggerDay": 120,
+    "priority": 45,
+    "title": "惊喜成绩",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "老师把一次小测验发回来。你下意识准备接受惨状——结果一看，居然是满分？"
+      },
+      {
+        "speaker": "player",
+        "text": "（愣了半天）……我是不是看错了？",
+        "statDelta": {
+          "intellect": 4,
+          "stress": -5,
+          "charm": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_social_awkward",
+    "charId": null,
+    "location": "school_gate",
+    "slotId": "after",
+    "triggerDay": 25,
+    "priority": 20,
+    "repeatable": true,
+    "title": "社恐现场",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "校门口遇到了一个脸熟但叫不出名字的同学。你们对视了两秒，都假装没看见对方，低头各走各路。"
+      },
+      {
+        "speaker": "player",
+        "text": "（抠了抠手指）……下次一定先问名字……",
+        "statDelta": {
+          "social": 1,
+          "stress": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "life_late_night_study",
+    "charId": null,
+    "location": "home",
+    "slotId": "evening",
+    "triggerDay": 30,
+    "priority": 15,
+    "repeatable": true,
+    "title": "熬夜刷题",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "刷题刷到一半，肚子突然咕咕叫。你悄悄摸黑去厨房泡了碗泡面，蹲在夜灯旁解决掉了。"
+      },
+      {
+        "speaker": "player",
+        "text": "……这可能是今天最幸福的时刻。",
+        "statDelta": {
+          "stress": -5,
+          "intellect": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "olympiad_recruit",
+    "charId": null,
+    "location": "classroom",
+    "slotId": "after",
+    "triggerDay": 150,
+    "priority": 220,
+    "excludeFlags": [
+      "flag_olympiad_joined",
+      "flag_olympiad_dropped"
+    ],
+    "noTimeCost": false,
+    "title": "班主任的密谈",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "放学后，班主任把你单独留在教室里。他把一张报名表放在桌上，表情严肃却带着几分期待。\n\n「学校要推荐人参加市级数学联赛选拔，老师觉得你有这个实力。」"
+      },
+      {
+        "speaker": null,
+        "text": "他停顿了一下：「这条路不轻松——要牺牲很多周末，压力会比现在大得多。但如果你能走到最后，保送名校不是梦。」"
+      },
+      {
+        "speaker": "player",
+        "text": "……",
+        "choices": [
+          {
+            "text": "我愿意参加！（压力+5，开启奥赛之路）",
+            "setFlag": "flag_olympiad_joined",
+            "statDelta": {
+              "stress": 5,
+              "intellect": 3
+            },
+            "next": 99
+          },
+          {
+            "text": "谢谢老师，但我现在还不准备好……（婉拒）",
+            "setFlag": "flag_olympiad_dropped",
+            "statDelta": {
+              "stress": -3
+            },
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "olympiad_training_1",
+    "charId": null,
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 160,
+    "priority": 220,
+    "requireFlags": [
+      "flag_olympiad_joined"
+    ],
+    "excludeFlags": [
+      "flag_olympiad_training_1",
+      "flag_olympiad_dropped"
+    ],
+    "title": "第一轮集训",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "周末的图书馆里，你和另外三四个被选中的同学围坐在一起，眼前是厚厚一叠竞赛专题。\n\n指导老师在黑板上刷刷刷地推了一道极难的压轴题，然后把粉笔一放：「自己想。」"
+      },
+      {
+        "speaker": "player",
+        "text": "（盯着题目，慢慢进入状态）……好，想。",
+        "setFlag": "flag_olympiad_training_1",
+        "statDelta": {
+          "intellect": 5,
+          "stress": 12,
+          "social": -3
+        }
+      }
+    ],
+    "requireWeekend": true
+  },
+  {
+    "id": "olympiad_training_2",
+    "charId": null,
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 200,
+    "priority": 220,
+    "requireFlags": [
+      "flag_olympiad_training_1"
+    ],
+    "excludeFlags": [
+      "flag_olympiad_training_2",
+      "flag_olympiad_dropped"
+    ],
+    "title": "第二轮集训",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "集训进入第二阶段。题目难度骤然提升，几个同学已经悄悄放弃了。你坐在原来的位置，咬着笔头，盯着草稿纸上密密麻麻的推导过程。"
+      },
+      {
+        "speaker": null,
+        "text": "老师把你的草稿拿起来看了看，点了点头：「有想法。继续。」"
+      },
+      {
+        "speaker": "player",
+        "text": "（筋疲力尽，却又有一种奇怪的满足）……我还撑得住。",
+        "setFlag": "flag_olympiad_training_2",
+        "statDelta": {
+          "intellect": 6,
+          "stress": 15,
+          "social": -5
+        }
+      }
+    ],
+    "requireWeekend": true
+  },
+  {
+    "id": "olympiad_training_3",
+    "charId": null,
+    "location": "library",
+    "slotId": "after",
+    "triggerDay": 280,
+    "priority": 220,
+    "requireFlags": [
+      "flag_olympiad_training_2"
+    ],
+    "excludeFlags": [
+      "flag_olympiad_training_done",
+      "flag_olympiad_dropped"
+    ],
+    "title": "魔鬼集训·收尾",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "最后一轮集训结束了。你站在图书馆门口，天色已经暗下来。这一个学期，你为此牺牲了多少个周末，已经数不清了。"
+      },
+      {
+        "speaker": null,
+        "text": "指导老师拍了拍你的肩膀：「市赛在第360天，省赛在第420天。你准备好了。」"
+      },
+      {
+        "speaker": "player",
+        "text": "（沉默片刻，深吸一口气）……我准备好了。",
+        "setFlag": "flag_olympiad_training_done",
+        "statDelta": {
+          "intellect": 8,
+          "stress": 10,
+          "charm": 5
+        }
+      }
+    ],
+    "requireWeekend": true
+  },
+  {
+    "id": "olympiad_city_round",
+    "charId": null,
+    "location": null,
+    "slotId": null,
+    "triggerDay": 360,
+    "priority": 500,
+    "requireFlags": [
+      "flag_olympiad_joined"
+    ],
+    "excludeFlags": [
+      "flag_olympiad_dropped",
+      "flag_olympiad_city_done"
+    ],
+    "noTimeCost": true,
+    "title": "市级初赛",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "初赛的考场在市里的重点高中。这是一卷真题，你握紧了笔。",
+        "logicType": "quiz_olympiad_city",
+        "logicTargets": {
+          "pass": 1,
+          "fail": 2
+        },
+        "next": 99
+      },
+      {
+        "speaker": "player",
+        "text": "呼……顺利通过了！那道压轴大题思路正好清晰！",
+        "setFlag": "flag_olympiad_city_done",
+        "statDelta": {
+          "stress": 15,
+          "intellect": 10
+        },
+        "next": 100
+      },
+      {
+        "speaker": "player",
+        "text": "全乱了……完全没有头绪。这场竞赛对我来说还是太勉强了。",
+        "setFlag": "flag_olympiad_dropped",
+        "statDelta": {
+          "stress": 30,
+          "art": -5
+        },
+        "next": 100
+      }
+    ]
+  },
+  {
+    "id": "olympiad_province_final",
+    "charId": null,
+    "location": null,
+    "slotId": null,
+    "triggerDay": 420,
+    "priority": 500,
+    "requireFlags": [
+      "flag_olympiad_training_done",
+      "flag_olympiad_city_done"
+    ],
+    "excludeFlags": [
+      "flag_olympiad_gold"
+    ],
+    "noTimeCost": true,
+    "title": "省决赛·金牌",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "省级决赛的大礼堂座无虚席。这是最终的决战，必须答对至少2道以上才能斩获金牌。",
+        "logicType": "quiz_olympiad_final",
+        "logicTargets": {
+          "pass": 1,
+          "fail": 2
+        },
+        "next": 99
+      },
+      {
+        "speaker": "player",
+        "text": "……做对了！！这份答卷将改变我的人生轨迹！",
+        "setFlag": "flag_olympiad_gold",
+        "statDelta": {
+          "stress": -50,
+          "social": 20,
+          "charm": 20
+        },
+        "next": 100
+      },
+      {
+        "speaker": "player",
+        "text": "那些精妙的辅助线到底在哪里……还是功亏一篑了。",
+        "setFlag": "flag_olympiad_dropped",
+        "statDelta": {
+          "stress": 40,
+          "art": -10
+        },
+        "next": 100
+      }
+    ]
+  }
+]

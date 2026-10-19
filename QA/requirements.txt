@@ -1,0 +1,8 @@
+pdfplumber
+rapidfuzz
+pyautogui
+mss
+keyboard
+pyperclip
+pillow
+easyocr

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "deskmate_wanqing_note",
+    "title": "晚晴传来的纸条",
+    "location": "classroom",
+    "timeCost": 1,
+    "priority": 300,
+    "requireFlags": [
+      "flag_deskmate_wanqing"
+    ],
+    "excludeFlags": [],
+    "triggerDay": 1,
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "语文课上，老师正在讲台上念着枯燥的阅读理解。突然，一张折成千纸鹤的纸条推到了你手边。\n\n打开一看，上面有一行娟秀的字：「周末要一起去西湖边写游记作业吗？」\n\n（当前同桌：苏晚晴）",
+        "choices": [
+          {
+            "text": "悄悄回传纸条答应",
+            "next": 1
+          },
+          {
+            "text": "假装没看见继续听课",
+            "next": 2
+          }
+        ]
+      },
+      {
+        "speaker": "player",
+        "text": "（我在纸条上写下了一个笑脸，悄悄推了回去）",
+        "statDelta": {
+          "social": 2,
+          "stress": -5
+        },
+        "next": 99
+      },
+      {
+        "speaker": "player",
+        "text": "（中考在即，还是专心听讲吧。）晚晴似乎有些失落。",
+        "statDelta": {
+          "intellect": 3,
+          "stress": -1
+        },
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "deskmate_fatboy_sleep",
+    "title": "胖子的掩护",
+    "location": "classroom",
+    "timeCost": 1,
+    "priority": 300,
+    "requireFlags": [
+      "flag_deskmate_generic_boy_sleep"
+    ],
+    "excludeFlags": [],
+    "triggerDay": 1,
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "历史课。同桌的胖子已经睡得口水都流出来了。正当老师目光扫过来时，你本能地在桌底踢了他一脚。\n\n「啊？！到哪了？商朝灭亡了吗？」胖子猛地坐直，把老师都吓了一跳。\n\n（当前同桌：睡神胖子）",
+        "statDelta": {
+          "social": 3,
+          "stress": -5
+        },
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "deskmate_nerd_notes",
+    "title": "学霸的神仙笔记",
+    "location": "classroom",
+    "timeCost": 1,
+    "priority": 300,
+    "requireFlags": [
+      "flag_deskmate_generic_girl_nerd"
+    ],
+    "excludeFlags": [],
+    "triggerDay": 1,
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "临近期中，老师讲的难点太多了，你有些记不下来。突然，一本工整无比、甚至用了三种颜色荧光笔标注的神仙笔记推到了你桌面上。\n\n女孩扶了扶无边框眼镜，没有看你：「下课前还我。」\n\n（当前同桌：内卷学霸）",
+        "statDelta": {
+          "intellect": 8,
+          "stress": 3
+        },
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "deskmate_troublemaker_snack",
+    "title": "课桌下的辣条",
+    "location": "classroom",
+    "timeCost": 1,
+    "priority": 300,
+    "requireFlags": [
+      "flag_deskmate_generic_boy_trouble"
+    ],
+    "excludeFlags": [],
+    "triggerDay": 1,
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "自习课上，极其安静。突然，旁边传来极为微小的塑料袋撕裂声。调皮的同桌用宽大的校服掩护着，迅速将半包辣条扔进你的抽屉。\n\n「嘘，刚从小卖部进的货，分你一半。」\n\n（当前同桌：百事通调皮鬼）",
+        "statDelta": {
+          "stress": -10,
+          "intellect": -1
+        },
+        "next": 99
+      }
+    ]
+  }
+]

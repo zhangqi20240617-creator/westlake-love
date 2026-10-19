@@ -1,0 +1,466 @@
+[
+    {
+        "id": "vacation_park_explore",
+
+        "location": "vacation_park",
+
+        "repeatable": true,
+        "slots": [
+            "morning",
+            "noon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "公园里安静，偶尔有风吹过。\n假期的空气和上学时不一样——懒散、宽阔，像是时间放慢了脚步。",
+
+                "choices": [
+                    {
+                        "text": "🌳 在大树下坐一坐",
+
+                        "next": "tree_rest"
+
+                    },
+                    {
+                        "text": "🏃 沿着湖边跑道跑步",
+
+                        "next": "run"
+
+                    },
+                    {
+                        "text": "🎧 戴着耳机发呆",
+
+                        "next": "daydream"
+
+                    },
+                    {
+                        "text": "👀 看看有没有认识的人",
+
+                        "next": "look_around"
+
+                    }
+                ]
+            },
+            {
+                "id": "tree_rest",
+
+                "text": "树荫的影子一格一格移过来。\n你想了很多事情，又什么都没想。\n这种感觉不错。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -10
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "art",
+
+                        "amount": 1
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "run",
+
+                "text": "跑了两圈，喘着气停在长椅旁边。\n身上热起来，脑子反而清醒了。\n假期也要保持状态。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "strength",
+
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -5
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "daydream",
+
+                "text": "耳机里的歌单放了一首又一首。\n你想到了很多遥远的事情，又都慢慢飘散了。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -12
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "art",
+
+                        "amount": 2
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "look_around",
+
+                "text": "公园里有遛狗的大爷，有推着婴儿车的阿姨，有骑着小车的孩子。\n没有你认识的人……或者说，刚好一点干扰也没有。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "social",
+
+                        "amount": 1
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -6
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（假期就应该这样浪费。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "vacation_park_char_meet",
+
+        "location": "vacation_park",
+
+        "repeatable": false,
+        "requireFav": {
+            "any": 40
+        },
+        "slots": [
+            "afternoon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "公园湖边的长椅旁，你看到了一个熟悉的背影——\n她/他好像在发呆，没注意到你走过来。",
+
+                "choices": [
+                    {
+                        "text": "👋 走过去打招呼",
+
+                        "next": "greet"
+
+                    },
+                    {
+                        "text": "😶 绕开，不打扰",
+
+                        "next": "avoid"
+
+                    }
+                ]
+            },
+            {
+                "id": "greet",
+
+                "text": "\"……啊，是你。\"\n她/他转过来，有些意外，但眼神里有一种放松的亮度。\n\"你也来这里。\"\n两个人就这么并排坐着，说了很久的话，也有很长时间什么都没说。",
+
+                "effects": [
+                    {
+                        "type": "favorBest",
+
+                        "amount": 6
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -8
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "vacation_park_meet_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "avoid",
+
+                "text": "你绕过去，没有打扰她/他。\n独处的人大概也需要自己的空间。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -5
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "vacation_park_meet_done"
+
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（假期的相遇，没有作业和考试的背景，感觉格外不同。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "part_time_apply",
+
+        "location": "part_time_job",
+
+        "repeatable": false,
+        "excludeFlags": [
+            "flag_has_parttime_job"
+        ],
+        "slots": [
+            "morning",
+            "noon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "这里张着几张招工告示——\n假期打工，挣点零花钱，也不是坏事。",
+
+                "choices": [
+                    {
+                        "text": "🧋 奶茶店（社交+，每周+80💰，压力+2）",
+
+                        "next": "apply_tea"
+
+                    },
+                    {
+                        "text": "📦 整理图书（智力+，每周+80💰，压力+1）",
+
+                        "next": "apply_library"
+
+                    },
+                    {
+                        "text": "🛵 快递分拣（运动+，每周+80💰，压力+2）",
+
+                        "next": "apply_delivery"
+
+                    }
+                ]
+            },
+            {
+                "id": "apply_tea",
+
+                "text": "奶茶店的老板点点头——\n\"从明天开始吧，制服领一领，注意别把珍珠滴到地上。\"",
+
+                "effects": [
+                    {
+                        "type": "setFlag",
+
+                        "flag": "flag_has_parttime_job"
+
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "job_tea"
+
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "social",
+
+                        "amount": 2
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "apply_library",
+
+                "text": "图书整理员。\n你觉得这还挺适合你的——安静，有规律，书还可以顺便翻翻。",
+
+                "effects": [
+                    {
+                        "type": "setFlag",
+
+                        "flag": "flag_has_parttime_job"
+
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "job_library"
+
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "intellect",
+
+                        "amount": 2
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "apply_delivery",
+
+                "text": "快递分拣，凌晨时段。\n腰酸，手疼，但包裹一放好就有一种奇怪的满足感。",
+
+                "effects": [
+                    {
+                        "type": "setFlag",
+
+                        "flag": "flag_has_parttime_job"
+
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "job_delivery"
+
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "strength",
+
+                        "amount": 2
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（打工就是这样，从下一个周末开始结算收入。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "part_time_work",
+
+        "location": "part_time_job",
+
+        "repeatable": true,
+        "requireFlag": "flag_has_parttime_job",
+
+        "slots": [
+            "morning",
+            "noon",
+            "after"
+        ],
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "（你今天来上班了。\n流程已经很熟悉，哈欠打了一半，手就自动开始干活了。）",
+
+                "choices": [
+                    {
+                        "text": "💪 认真干活，争取表现好",
+
+                        "next": "work_hard"
+
+                    },
+                    {
+                        "text": "😴 混混过场",
+
+                        "next": "work_lazy"
+
+                    }
+                ]
+            },
+            {
+                "id": "work_hard",
+
+                "text": "这个时段你干得比平时更投入。\n后来老板递给你一杯饮料：\n\"你今天效率不错，辛苦了。\"",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "charm",
+
+                        "amount": 1
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "work_lazy",
+
+                "text": "差不多就行了。\n打工嘛，命都是自己的。\n就是有点累，睡意翻涌而来。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": 6
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（周末结工资，这周的所得记心里了。）",
+
+                "isEnd": true
+            }
+        ]
+    }
+]

@@ -1,0 +1,86 @@
+{
+    "day": 2,
+    "day_of_week": 2,
+    "diary": [
+        {
+            "day": 1,
+            "grade": "初一",
+            "slot": "上午",
+            "text": "开学第一天，杭州的天空很蓝。"
+        },
+        {
+            "day": 1,
+            "grade": "初一",
+            "slot": "上午",
+            "text": "和陈雨桐聊了聊"
+        },
+        {
+            "day": 1,
+            "grade": "初一",
+            "slot": "晚上",
+            "text": "和叶菁菁聊了聊"
+        }
+    ],
+    "favorability": {
+        "beichen": 0,
+        "jingjing": 24,
+        "jingjing_m": 0,
+        "keke": 0,
+        "wanqing": 0,
+        "xiaoxia": 0,
+        "yifei": 0,
+        "yutong": 2,
+        "zicheng": 0,
+        "zijun": 0
+    },
+    "flags": {
+        "jj_001": true,
+        "last_interact_jingjing": 1,
+        "last_interact_yutong": 1,
+        "seen_jingjing_default": true,
+        "seen_jingjing_shy": true,
+        "seen_yutong_default": true,
+        "seen_yutong_serious": true,
+        "yt_001": true
+    },
+    "gender": "male",
+    "hw_neglect_count": 0,
+    "hw_status": 0,
+    "inventory": {},
+    "money": 100,
+    "player_name": "张语翰",
+    "recent_logs": [
+        "[中午] 上传成功！已同步至云端。",
+        "[上午] 📚 学习 +1",
+        "[上午] 💬 社交 +1",
+        "[上午] ✨ intellect+3, stress+5",
+        "[上午] 💢 压力 +5",
+        "[上午] 📚 学习 +3",
+        "[晚上] 🌸 叶菁菁 好感度 +1",
+        "[晚上] 🌸 叶菁菁 好感度 +3",
+        "[晚上] ✨ social+1, stress-5",
+        "[晚上] 💢 压力 -5",
+        "[晚上] 💬 社交 +1",
+        "[放学后] 📚 学习 +3",
+        "[放学后] 💢 压力 +5",
+        "[放学后] 📅 课后作业已经布置，记得回卧室完成。",
+        "[中午] 💢 压力 +4",
+        "[中午] 🎨 艺术 +2",
+        "[中午] 📚 学习 +5",
+        "[中午] ✨ intellect+4, art+1, stress+3",
+        "[中午] 💢 压力 +3",
+        "[中午] 🎨 艺术 +1"
+    ],
+    "saved_at": "2026-05-22T16:44:50",
+    "school_name": "杭州市杭州中学",
+    "slot_index": 1,
+    "stats": {
+        "addict": 0,
+        "art": 13,
+        "charm": 10,
+        "intellect": 29,
+        "social": 12,
+        "strength": 10,
+        "stress": 17
+    }
+}

@@ -1,0 +1,217 @@
+[
+  {
+    "id": "event_sports_meet",
+    "title": "校运会：燃烧的塑胶跑道",
+    "location": "playground",
+    "timeCost": 1,
+    "priority": 999,
+    "requireFlags": [],
+    "excludeFlags": [],
+    "triggerDay": 1,
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "随着进行曲响彻校园，校运会的入场式开始了。各个班级穿着五花八门的班服走过主席台。\n\n今年你们班定做了一套惨绿色的荧光T恤，穿上之后简直像一排发光的韭菜。",
+        "choices": [
+          {
+            "text": "老老实实穿好走方阵",
+            "next": 1
+          },
+          {
+            "text": "卷起袖子强行耍酷",
+            "next": 2
+          },
+          {
+            "text": "带头吐槽这衣服太难看了！",
+            "next": 3
+          }
+        ]
+      },
+      {
+        "speaker": "narrator",
+        "text": "你中规中矩地完成了入场式，班主任满意地点了点头。",
+        "statDelta": {
+          "stress": 2
+        },
+        "next": 10
+      },
+      {
+        "speaker": "narrator",
+        "text": "你不仅卷起袖子，还擅自带了一副墨镜，显得极其叛逆！但在阳光的折射下，竟然有不少别班的女生偷偷看你。\n\n代价是教导主任事后恶狠狠地瞪了你一眼。",
+        "statDelta": {
+          "charm": 5,
+          "social": 2,
+          "stress": 5
+        },
+        "next": 10
+      },
+      {
+        "speaker": "narrator",
+        "text": "你的吐槽引起了周围男生的强烈共鸣，大家在队列里哄笑起来。这让你在班级里积累了声望。",
+        "statDelta": {
+          "social": 8,
+          "stress": -3
+        },
+        "next": 10
+      },
+      {
+        "speaker": "narrator",
+        "text": "【中午时分】\n\n烈日当头，上午的短跑和跳远等项目已经结束。你坐在树荫下，看着热闹的操场，决定……",
+        "choices": [
+          {
+            "text": "用高智商撰写全校广播加油稿",
+            "next": 11
+          },
+          {
+            "text": "去终点线做后勤送水狂魔",
+            "next": 12
+          }
+        ]
+      },
+      {
+        "speaker": "player",
+        "text": "（你奋笔疾书，写下了一段辞藻华丽、情感充沛的加油稿。没过多久，广播站就用播音腔全校播送了这段文字。）",
+        "statDelta": {
+          "charm": 3,
+          "intellect": 3
+        },
+        "next": 20
+      },
+      {
+        "speaker": "narrator",
+        "text": "你拿着几瓶矿泉水来到终点线。正好看到一位刚跑完接力赛，满脸通红的女孩喘着气走来。",
+        "choices": [
+          {
+            "text": "给晚晴递水",
+            "next": 13
+          },
+          {
+            "text": "给小桐递水",
+            "next": 14
+          },
+          {
+            "text": "给刚认识的女同学递水",
+            "next": 15
+          }
+        ]
+      },
+      {
+        "speaker": "wanqing",
+        "text": "“呼……谢谢你，今天真热啊。”晚晴接过水瓶，有些羞涩地避开了你的目光，但你可以看到她嘴角的笑意。",
+        "statDelta": {
+          "social": 2
+        },
+        "probNext": {
+          "chance": 1.0,
+          "successNext": 20,
+          "successStat": {},
+          "failNext": 20,
+          "failStat": {}
+        }
+      },
+      {
+        "speaker": "yutong",
+        "text": "“诶？你在这儿等我这大半天就是为了送水？勉强心领啦！”小桐一把夺过水，咕咚咕咚喝了好几口。",
+        "statDelta": {
+          "social": 2
+        },
+        "next": 20
+      },
+      {
+        "speaker": "narrator",
+        "text": "你把水发给了班里的边缘同学。大家对你的好心表示感谢。",
+        "statDelta": {
+          "social": 5
+        },
+        "next": 20
+      },
+      {
+        "speaker": "narrator",
+        "text": "【下午】\n\n最残酷的男子 1000 米长跑检录开始了。站在起跑线上，看着发令员缓缓举起发令枪，你的心脏狂跳不已。\n\n“各就各位——砰！”",
+        "choices": [
+          {
+            "text": "冲刺尝试夺冠 (要求体能≥80)",
+            "requireStats": {
+              "strength": 80
+            },
+            "next": 21
+          },
+          {
+            "text": "跟随大部队匀速跑 (要求体能≥50)",
+            "requireStats": {
+              "strength": 50
+            },
+            "next": 22
+          },
+          {
+            "text": "硬着头皮半走半跑 (体能<50专属)",
+            "requireStats": {
+              "strength": 0
+            },
+            "excludeStats": {
+              "strength": 50
+            },
+            "next": 23
+          }
+        ]
+      },
+      {
+        "speaker": "player",
+        "text": "你在最后一圈发力反超，犹如破风的猎豹！冲过终点线的那一刻，全班爆发出震耳欲聋的尖叫声，你甚至听到了隔壁班女生的惊叹。",
+        "statDelta": {
+          "charm": 20,
+          "social": 20,
+          "stress": -30,
+          "strength": 2
+        },
+        "next": 30
+      },
+      {
+        "speaker": "player",
+        "text": "你稳扎稳打，最后以中游的位置完成了比赛。虽然没有引起全场沸腾，但至少完成了任务。",
+        "statDelta": {
+          "social": 2,
+          "stress": -10,
+          "strength": 1
+        },
+        "next": 30
+      },
+      {
+        "speaker": "player",
+        "text": "跑到第二圈时，你已经感觉胸口像炸裂一样疼痛，双腿灌了铅。大部队已经绝尘而去，只留你在跑道上苦苦挣扎……",
+        "probNext": {
+          "chance": 0.5,
+          "successNext": 24,
+          "successStat": {},
+          "failNext": 25,
+          "failStat": {}
+        }
+      },
+      {
+        "speaker": "narrator",
+        "text": "就在你想要放弃改为步行时，跑道内场突然跟上来一个熟悉的身影。\n“别低头！调整呼吸——！我陪你跑完最后一圈！”\n\n那竟然是你关系最好的女孩在赛道内侧陪跑！哪怕是被全场注视，哪怕被教导主任呵斥，她也依然跑在你的身侧。",
+        "statDelta": {
+          "stress": -50,
+          "social": 2
+        },
+        "next": 30
+      },
+      {
+        "speaker": "player",
+        "text": "你步履维艰地挪过了终点线，感觉整个世界都在天旋地转，但总算没有丢人地当了逃兵。",
+        "statDelta": {
+          "stress": 10,
+          "strength": 1
+        },
+        "next": 30
+      },
+      {
+        "speaker": "narrator",
+        "text": "随着夕阳西下，精彩而又疲惫的一场校运会终于落幕了。\n你们拖着沉重的步伐走出了校门，明天，依然是属于试卷和补习班的高压生活。",
+        "skipToNextDay": true,
+        "next": 99
+      }
+    ],
+    "manual_only": true
+  }
+]

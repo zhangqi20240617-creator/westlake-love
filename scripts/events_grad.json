@@ -1,0 +1,134 @@
+[
+  {
+    "id": "event_grad_trip_start",
+    "title": "毕业季的最后决断",
+    "location": "classroom",
+    "timeCost": 0,
+    "priority": 9999,
+    "scenes": [
+      {
+        "speaker": "narrator",
+        "text": "中考出分了。\n无论成绩如何，初中三年的生活都已经画上了句号。\n\n在各奔东西的高中生涯开始前，你的小金库里还剩下 {money} 元。\n你注视着窗外的夕阳，打算怎么度过这最后的一段自由时光？",
+        "choices": [
+          {
+            "text": "【海岛双人游】邀请晚晴共赴海南 (需要金钱3000，好感>80)",
+            "requireStats": {
+              "money": 3000
+            },
+            "requireFav": {
+              "wanqing": 80
+            },
+            "next": 10
+          },
+          {
+            "text": "【海岛双人游】邀请雨桐共赴海南 (需要金钱3000，好感>80)",
+            "requireStats": {
+              "money": 3000
+            },
+            "requireFav": {
+              "yutong": 80
+            },
+            "next": 15
+          },
+          {
+            "text": "【绿皮火车】买硬座带晚晴去隔壁省看海 (需要金钱300，好感>60)",
+            "requireStats": {
+              "money": 300
+            },
+            "requireFav": {
+              "wanqing": 60
+            },
+            "next": 20
+          },
+          {
+            "text": "【绿皮火车】买硬座带雨桐去隔壁省看海 (需要金钱300，好感>60)",
+            "requireStats": {
+              "money": 300
+            },
+            "requireFav": {
+              "yutong": 60
+            },
+            "next": 25
+          },
+          {
+            "text": "【留守打工】没钱就不乱跑了，独自去西泠桥吹风",
+            "next": 30
+          }
+        ]
+      },
+      {
+        "speaker": "narrator",
+        "text": "你豪掷重金，包下了所有开销。晚晴穿着性感的泳装，戴着墨镜和你并肩走在亚龙湾的沙滩上。",
+        "moneyDelta": -3000,
+        "next": 11
+      },
+      {
+        "speaker": "wanqing",
+        "text": "“呐，没想到你以前只知道做卷子，关键时刻还挺懂浪漫的嘛。”她摘下墨镜，夕阳下对你嫣然一笑。",
+        "statDelta": {
+          "charm": 20,
+          "social": 20
+        },
+        "logicType": "grad_trip_finish",
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "你豪掷重金订了海景套房。雨桐虽然嘴上抱怨你乱花钱，但还是遮掩不住穿着白纱裙在浪花里乱跑的喜悦。",
+        "moneyDelta": -3000,
+        "next": 16
+      },
+      {
+        "speaker": "yutong",
+        "text": "“答应我，到了高中……不，到了大学，也不准忘了我。”她停下脚步，回头定定地看着你。",
+        "statDelta": {
+          "charm": 20,
+          "social": 20
+        },
+        "logicType": "grad_trip_finish",
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "你兜里没几个子儿，但还是勇敢地邀请了她。你们挤在绿皮火车的硬座上，摇晃了整整一宿。",
+        "moneyDelta": -300,
+        "next": 21
+      },
+      {
+        "speaker": "wanqing",
+        "text": "半夜，她把头靠在了你的肩膀上。你不敢动弹半点，听着窗外铁轨隆隆的声音，这就是青春最硬核的浪漫吧。",
+        "statDelta": {
+          "social": 10
+        },
+        "logicType": "grad_trip_finish",
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "经费有限，你们只能买慢车硬座去廉价民宿。雨桐趴在火车的窗边，呆呆地看着黑夜里的灯火。",
+        "moneyDelta": -300,
+        "next": 26
+      },
+      {
+        "speaker": "yutong",
+        "text": "“谢谢你陪我看海……虽然这车有点臭。”她悄悄在桌底拉住了你的手。",
+        "statDelta": {
+          "social": 10
+        },
+        "logicType": "grad_trip_finish",
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "看着朋友圈里别人满世界飞，你显得过分安静。你推着单车绕着西湖骑了一整圈，然后在断桥边买了个冰淇淋。\n钱这种东西，以后自己去挣。在这个安静的夏天，你在精神上获得了极大的洗礼和坚韧。",
+        "statDelta": {
+          "intellect": 15,
+          "stress": -50
+        },
+        "logicType": "grad_trip_finish",
+        "next": 99
+      }
+    ],
+    "manual_only": true
+  }
+]

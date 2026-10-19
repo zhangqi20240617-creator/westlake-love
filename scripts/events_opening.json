@@ -1,0 +1,672 @@
+[
+    {
+        "id": "opening_day1_morning",
+        "charId": null,
+        "location": null,
+        "slotId": "morning",
+        "triggerDay": 1,
+        "priority": 9999,
+        "title": "初一开学第一天",
+        "manual_only": true,
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "九月一日，初一开学。\n背着新书包走进西湖中学的校门，操场上人头攒动，横幅红底白字——\n「热烈欢迎二○二四级新同学！」\n\n你对照通知单，找到了自己的班级：初一（三）班。\n沿着走廊找到教室，门口已经站了几个陌生面孔。"
+            },
+            {
+                "speaker": null,
+                "text": "教室里还没几个人。阳光从窗户斜进来，黑板擦得很干净。\n桌上没有名牌——座位是自由的。",
+                "choices": [
+                    {
+                        "text": "🪟 靠窗边坐（风景好，容易走神）",
+                        "statDelta": {
+                            "art": 2,
+                            "intellect": -1
+                        },
+                        "next": 2
+                    },
+                    {
+                        "text": "🧑‍🤝‍🧑 坐中间（普通位，方便交流）",
+                        "statDelta": {
+                            "social": 2
+                        },
+                        "next": 3
+                    },
+                    {
+                        "text": "🎯 坐第一排（紧挨黑板，拼搏向学）",
+                        "statDelta": {
+                            "intellect": 3,
+                            "stress": 3
+                        },
+                        "next": 4
+                    }
+                ]
+            },
+            {
+                "speaker": "narrator",
+                "text": "窗外是操场，再远一点是西湖的一角。\n坐在这里，视线总忍不住往外漂。\n旁边的同学轻声说：「这位置好，采光够。」\n你们对视了一眼，她/他率先伸出手：\n「你好，我叫……」",
+                "setFlag": "opening_seat_window",
+                "next": 10
+            },
+            {
+                "speaker": "narrator",
+                "text": "中间是全班最热闹的核心地带。\n很快，左右邻座都到了，自我介绍此起彼伏，气氛轻松。\n「你从哪个小学来的？」\n「杭州本地的？」\n不到十分钟，你已经交换了两个新名字。",
+                "setFlag": "opening_seat_middle",
+                "next": 10
+            },
+            {
+                "speaker": "narrator",
+                "text": "第一排，离讲台最近的地方。\n班主任进来时，目光第一个落在你这里，点了点头。\n这个位置，意味着更多关注——也意味着更多压力。",
+                "setFlag": "opening_seat_front",
+                "next": 10
+            },
+            {
+                "speaker": null,
+                "text": "班主任走进来，把一叠资料放在讲台上。\n她大约四十岁，短发，笑起来眼角有细纹。\n\n「我是你们班主任，语文老师，周思宁。」\n「初中三年，我们一起走。」\n\n短暂的自我介绍结束了。接下来，每个同学站起来说自己的名字和小学——\n轮到你了。",
+                "setFlag": "opening_day1_done",
+                "statDelta": {
+                    "social": 3,
+                    "stress": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "opening_day1_noon",
+        "charId": null,
+        "location": null,
+        "slotId": "noon",
+        "triggerDay": 1,
+        "priority": 9999,
+        "title": "第一顿食堂午饭",
+        "manual_only": true,
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "第一天的午饭时间，食堂里乱成一锅粥。\n初一新生找位置，初二初三的学长学姐已经驾轻就熟地占好了窗口前的位置。\n\n你排了好一会儿，端着托盘左顾右盼——哪里还有空座？"
+            },
+            {
+                "speaker": null,
+                "text": "就在这时，有人喊了你一声：\n「喂！同班的！这边有位置！」\n\n是早上在教室里打过招呼的那几个人。\n你走过去，坐下来。",
+                "choices": [
+                    {
+                        "text": "🍚 主动开口聊天（结识新朋友）",
+                        "statDelta": {
+                            "social": 4,
+                            "stress": -2
+                        },
+                        "next": 2
+                    },
+                    {
+                        "text": "😶 专心吃饭，听别人聊（先观察观察）",
+                        "statDelta": {
+                            "intellect": 1,
+                            "stress": -1
+                        },
+                        "next": 3
+                    }
+                ]
+            },
+            {
+                "speaker": "narrator",
+                "text": "你主动说起小学时候的趣事，对面的同学接上来，很快笑声越来越多。\n食堂嘈杂的背景音里，这张桌子变得特别有生气。\n\n——初中的第一顿饭，比预想中好多了。",
+                "statDelta": {
+                    "social": 2
+                },
+                "next": 99
+            },
+            {
+                "speaker": "narrator",
+                "text": "你默默吃饭，耳朵竖着听别人说话。\n有人在聊游戏，有人在聊住哪个小区，有人在问军训怎么过……\n\n「听说后天就开始军训了。」\n这句话让你筷子顿了一下。\n\n——打起精神吧，三年才刚开始。",
+                "statDelta": {
+                    "stress": 2,
+                    "intellect": 1
+                },
+                "next": 99
+            }
+        ]
+    },
+    {
+        "id": "opening_day1_after",
+        "charId": null,
+        "location": null,
+        "slotId": "after",
+        "triggerDay": 1,
+        "priority": 9999,
+        "title": "班主任发课程表",
+        "manual_only": true,
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "下午最后一节课，班主任把课程表发下来。\n语文、数学、英语、科学、历史……\n你扫了一眼，框框满满的，比小学多了不少科目。"
+            },
+            {
+                "speaker": "narrator",
+                "text": "「明天正式上课只有上午。」班主任站在讲台上说，\n「后天——\n军训开始。」\n\n教室里一阵骚动。有人悄悄说「总算来了」，有人长吁一口气，有人把头埋进胳膊里。\n\n你听着，心里悄悄做好了准备。",
+                "setFlag": "opening_schedule_received",
+                "statDelta": {
+                    "stress": 3,
+                    "intellect": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "opening_day1_eve",
+        "charId": null,
+        "location": null,
+        "slotId": "evening",
+        "triggerDay": 1,
+        "priority": 9999,
+        "title": "第一天回家",
+        "manual_only": true,
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "放学，背着书包走出校门。\n傍晚的西湖路上，风比上午凉了一点，树叶晃了晃。\n\n今天是初中的第一天——说不上什么感觉，只是脑子里有点满，脚步却比早上轻。"
+            },
+            {
+                "speaker": "narrator",
+                "text": "回到家，妈妈问：「第一天怎么样？」\n\n你想了想，说：「还好。」\n\n停顿了一秒，又加了一句：「同学看起来都不错。」\n\n——这已经是最诚实的答案了。",
+                "statDelta": {
+                    "stress": -8,
+                    "social": 1
+                },
+                "setFlag": "opening_day1_finished"
+            }
+        ]
+    },
+    {
+        "id": "training_kickoff",
+        "charId": null,
+        "location": null,
+        "slotId": "morning",
+        "triggerDay": 2,
+        "priority": 9999,
+        "title": "军训开始",
+        "manual_only": true,
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "第三天清晨，六点五十分的哨声把你从半梦半醒中扯出来。\n宿舍里一片混乱，有人在找袜子，有人在摸眼镜，有人连鞋带都没系好就往外跑。\n\n操场上，迷彩服的教官已经站在那里了。\n\n「集合——！快！快！快！」"
+            },
+            {
+                "speaker": "narrator",
+                "text": "军训：两周。\n\n日晒、手势、口令、内务、匍匐、正步——\n你站在队列里，望着前面一排脑袋，感到某种奇异的平静。\n\n不管有多难，这都是属于初中的记忆。",
+                "setFlag": "training_started",
+                "statDelta": {
+                    "strength": 2,
+                    "stress": 5
+                }
+            }
+        ]
+    },
+    {
+        "id": "training_day_sun",
+        "charId": null,
+        "location": null,
+        "slotId": "morning",
+        "triggerDay": 2,
+        "priority": 60,
+        "repeatable": true,
+        "requireHoliday": "training",
+        "title": "烈日站军姿",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "上午十点，太阳爬到头顶正中。\n操场上没有遮阴，地面的热气从脚底一直往上蒸。\n你保持军姿——抬头、挺胸、收腹、脚跟并拢——一动不动。\n\n汗水沿着脖子流下去，衬衣里面的背后已经全湿了。",
+                "choices": [
+                    {
+                        "text": "💪 咬牙坚持，一步不退（体能+2，压力-5）",
+                        "statDelta": {
+                            "strength": 2,
+                            "stress": -5
+                        },
+                        "next": 2
+                    },
+                    {
+                        "text": "😵 悄悄往阴影处挪半步",
+                        "statDelta": {
+                            "stress": -8,
+                            "charm": -1
+                        },
+                        "next": 3
+                    }
+                ]
+            },
+            {
+                "speaker": "narrator",
+                "text": "教官走过来，在你面前停了一秒，目光扫过来又扫过去，什么也没说——\n那是某种沉默的认可。\n\n风吹了一下。忽然觉得站得很稳。",
+                "next": 99
+            },
+            {
+                "speaker": "narrator",
+                "text": "旁边的同学瞥了你一眼，没说话。\n教官转过身那一刻，你又挪了回去——\n但这一次汗流得更多了。",
+                "next": 99
+            }
+        ]
+    },
+    {
+        "id": "training_drillmaster_strict",
+        "charId": null,
+        "location": null,
+        "slotId": "morning",
+        "triggerDay": 3,
+        "priority": 150,
+        "requireHoliday": "training",
+        "title": "教官发飙",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "队列训练，李教官走到队伍中间，突然停住了脚步。\n\n「谁动了？！」\n\n全队鸦雀无声。风吹过操场，旗帜猎猎作响。"
+            },
+            {
+                "speaker": "narrator",
+                "text": "他把全排留下重喊了三遍口令。声音洪亮，音调里带着军人特有的穿透力。\n\n第三遍的时候，有人偷偷用眼神互相鼓励。\n你也是其中一个。\n\n——在那一刻，集体感忽然从什么地方生长出来了。",
+                "setFlag": "training_drillmaster_done",
+                "statDelta": {
+                    "stress": 8,
+                    "social": 3,
+                    "strength": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "training_internal_affairs",
+        "charId": null,
+        "location": null,
+        "slotId": "noon",
+        "triggerDay": 2,
+        "priority": 80,
+        "requireHoliday": "training",
+        "title": "叠豆腐块",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "内务检查，被子要叠成「豆腐块」——四角整齐、棱线分明。\n看起来很简单。你展开被子，从头来过。\n\n十五分钟后，你的被子像一堆受了委屈的布料。"
+            },
+            {
+                "speaker": null,
+                "text": "旁边铺位的同学学长凑过来看了看，没说话，直接上手帮你捋了两下。\n「先把四个角压平……这样……」\n\n也说不清是谁教会了谁。",
+                "choices": [
+                    {
+                        "text": "📚 认真学，一遍过（压力-5，魅力+1）",
+                        "statDelta": {
+                            "stress": -5,
+                            "charm": 1
+                        },
+                        "next": 2
+                    },
+                    {
+                        "text": "🤷 凑合过，随便叠叠",
+                        "statDelta": {
+                            "stress": -2,
+                            "strength": -1
+                        },
+                        "next": 3
+                    }
+                ]
+            },
+            {
+                "speaker": "narrator",
+                "text": "教官检查时，在你床前停了一下，点了点头。\n「这就对了。」\n\n——那两个字，比想象中好听很多。",
+                "setFlag": "training_internal_done",
+                "next": 99
+            },
+            {
+                "speaker": "narrator",
+                "text": "教官走过来，用两根手指把被子捏了捏，没说话——\n只是把你排到了「整改名单」里。",
+                "statDelta": {
+                    "stress": 3
+                },
+                "next": 99
+            }
+        ]
+    },
+    {
+        "id": "training_crawl",
+        "charId": null,
+        "location": null,
+        "slotId": "after",
+        "triggerDay": 4,
+        "priority": 100,
+        "requireHoliday": "training",
+        "title": "匍匐前进",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "操场的草地上。教官一声令下，所有人趴下——\n用肘部和膝盖，匍匐前进。\n\n泥土的气息、草的涩味、前面同学的军靴——挤进你的视野。\n腿已经不知道酸了多少次了。"
+            },
+            {
+                "speaker": null,
+                "text": "快到终点的时候，右边的人忽然慢了下来，发出轻微的呻吟声——\n好像膝盖磕到石子了。",
+                "choices": [
+                    {
+                        "text": "🤜 减速，低声问他还好吗（社交+3，体能-1）",
+                        "statDelta": {
+                            "social": 3,
+                            "strength": -1
+                        },
+                        "next": 2
+                    },
+                    {
+                        "text": "🏃 继续往前推进，专注自己",
+                        "statDelta": {
+                            "strength": 2
+                        },
+                        "next": 3
+                    }
+                ]
+            },
+            {
+                "speaker": "narrator",
+                "text": "「没事……谢谢，你先走。」\n他/她咬着牙，跟了上来。\n\n到达终点，你们并排站起来，对视了一秒，都笑了。\n这段战壕里的两分钟，比认识三天说的话都管用。",
+                "setFlag": "training_crawl_helped",
+                "next": 99
+            },
+            {
+                "speaker": "narrator",
+                "text": "你到达终点，站起来，胳膊肘红了一片。\n教官在旁边记了个时间，「还行。」",
+                "statDelta": {
+                    "strength": 1
+                },
+                "next": 99
+            }
+        ]
+    },
+    {
+        "id": "training_night_talk",
+        "charId": null,
+        "location": null,
+        "slotId": "evening",
+        "triggerDay": 5,
+        "priority": 70,
+        "requireHoliday": "training",
+        "title": "宿舍夜话",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "熄灯后，宿舍里还是有声音。\n不是大声说话，只是那种压低了音量的、睡前特有的絮叨。\n\n「今天教官说我站姿像个麻袋……」\n「你还好，他说我是装饰用的假人。」\n有人突然呵呵笑了，压抑着声音，肩膀在被子里抖。"
+            },
+            {
+                "speaker": null,
+                "text": "在黑暗里，说话比白天容易得多。\n你听着，偶尔插进去一句，发现大家其实都不难相处。\n\n——也许军训最有用的，不是那些站姿和口令，\n而是睡前的这几分钟。",
+                "statDelta": {
+                    "social": 5,
+                    "stress": -6,
+                    "art": 1
+                },
+                "setFlag": "training_night_talked"
+            }
+        ]
+    },
+    {
+        "id": "training_heatstroke",
+        "charId": null,
+        "location": null,
+        "slotId": "noon",
+        "triggerDay": 7,
+        "priority": 200,
+        "minStress": 40,
+        "requireHoliday": "training",
+        "title": "中暑边缘",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "午饭前，你感到一阵头晕。\n眼前的操场开始发白，耳朵里有轻微的嗡嗡声。\n\n——是快中暑了。"
+            },
+            {
+                "speaker": null,
+                "text": "旁边的同学注意到你脸色不对：\n「喂，你没事吧？」",
+                "choices": [
+                    {
+                        "text": "🤒 去找教官报告，去阴凉处休息",
+                        "statDelta": {
+                            "stress": -15,
+                            "strength": -2
+                        },
+                        "next": 2
+                    },
+                    {
+                        "text": "😬 撑着说「没事」，继续站",
+                        "statDelta": {
+                            "stress": -5,
+                            "strength": -4,
+                            "charm": 2
+                        },
+                        "next": 3
+                    }
+                ]
+            },
+            {
+                "speaker": "narrator",
+                "text": "教官让你去树荫下坐着，塞给你一瓶盐水。\n「喝了。」\n\n没有责备，只有一句平静的命令。\n你喝了，脑袋慢慢清醒过来。",
+                "next": 99
+            },
+            {
+                "speaker": "narrator",
+                "text": "你横着一口气，撑过了午饭集合。\n但回到宿舍，整个人倒在床上，半天没力气动——\n\n这种倔劲，值不值得，自己心里知道。",
+                "next": 99
+            }
+        ]
+    },
+    {
+        "id": "training_song_contest",
+        "charId": null,
+        "location": null,
+        "slotId": "after",
+        "triggerDay": 10,
+        "priority": 110,
+        "requireHoliday": "training",
+        "title": "军训歌曲对抗赛",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "各班军训歌曲比赛，在操场举行。\n\n裁判是三个教官，端着椅子坐在主席台前，神情严肃。\n你们班排好队，声音先从零散变得整齐，最后洪洪亮亮地冲上去——\n\n「向前——向前——向前——」"
+            },
+            {
+                "speaker": "narrator",
+                "text": "唱完，有人喉咙哑了，有人站姿已经歪了，但所有人眼睛都亮着。\n\n最后公布成绩，你们班得了全年级第二。\n第一名是初一（一）班。\n\n「差一点！」班长小声说。但笑容没掌控住。",
+                "setFlag": "training_song_done",
+                "statDelta": {
+                    "social": 6,
+                    "stress": -8,
+                    "charm": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "training_study_break",
+        "charId": null,
+        "location": null,
+        "slotId": "evening",
+        "triggerDay": 6,
+        "priority": 30,
+        "repeatable": true,
+        "requireHoliday": "training",
+        "title": "军训晚自习",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "军训结束后的晚自习，走廊里还有人把队跨着步回教室。\n教室里安静下来，只有笔在纸上划过的声音。\n\n你翻开书，发现白天的内容还挺有意思——\n或者只是因为安静，让思路清晰了一点。",
+                "statDelta": {
+                    "intellect": 2,
+                    "stress": -3
+                }
+            }
+        ]
+    },
+    {
+        "id": "training_food_complaint",
+        "charId": null,
+        "location": null,
+        "slotId": "noon",
+        "triggerDay": 8,
+        "priority": 25,
+        "repeatable": true,
+        "requireHoliday": "training",
+        "title": "军训伙食",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "今天的午餐是白米饭配大锅菜。\n大锅菜不算好吃——土豆炖得太软，肉片有点少。\n\n但你已经饿了半天，端起饭缸子，三两下扒完了。\n\n旁边的人感慨：「我妈做的比这好吃十倍。」\n你点头表示赞同——这是今天最有共识的一件事。",
+                "statDelta": {
+                    "social": 2,
+                    "stress": -4,
+                    "strength": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "training_self_reflect",
+        "charId": null,
+        "location": null,
+        "slotId": "morning",
+        "triggerDay": 12,
+        "priority": 40,
+        "requireHoliday": "training",
+        "title": "军训倒计时",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "还有三天。\n\n你在宿舍里数着——不是迫不及待，只是忽然意识到，\n这段日子快结束了。\n\n站在宿舍窗口往外看，操场上下一批同学还在训练，\n口号和哨声混在一起，飘进来。"
+            },
+            {
+                "speaker": "narrator",
+                "text": "军训最难的不是站姿，也不是匍匐，\n是那种被别人的时间表完全填满、自己什么都决定不了的感觉。\n\n但也有一些东西，在那种感觉里悄悄生长——\n比如在同一件难事里，认识了一些人。",
+                "statDelta": {
+                    "social": 2,
+                    "art": 2,
+                    "stress": -4
+                }
+            }
+        ]
+    },
+    {
+        "id": "training_rain_drill",
+        "charId": null,
+        "location": null,
+        "slotId": "after",
+        "triggerDay": 9,
+        "priority": 55,
+        "requireHoliday": "training",
+        "title": "雨天集训",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "下午开始下雨。\n你以为终于可以休息——结果教官只是换了个地方继续训。\n\n走廊里，冒着湿气，穿着被雨打湿了袖子的衣服，继续练队列。",
+                "choices": [
+                    {
+                        "text": "🌧️ 反正都淋湿了，干脆入戏（体能+2）",
+                        "statDelta": {
+                            "strength": 2,
+                            "stress": -3
+                        },
+                        "next": 2
+                    },
+                    {
+                        "text": "😤 心里默默不高兴",
+                        "statDelta": {
+                            "stress": 5
+                        },
+                        "next": 3
+                    }
+                ]
+            },
+            {
+                "speaker": "narrator",
+                "text": "湿透了的袖子甩了甩水，步伐反而比晴天更整齐——\n说不清原因，大概是因为大家都在淋，反而没什么好矫情的了。",
+                "next": 99
+            },
+            {
+                "speaker": "narrator",
+                "text": "你在心里划掉一个格子：「今天很差劲」。\n\n但等你回到宿舍，换上干衣服，喝了杯热水，\n心情居然慢慢回来了。",
+                "next": 99
+            }
+        ]
+    },
+    {
+        "id": "training_letter_home",
+        "charId": null,
+        "location": null,
+        "slotId": "evening",
+        "triggerDay": 11,
+        "priority": 35,
+        "requireHoliday": "training",
+        "title": "给家里发消息",
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "熄灯前，趁着还有五分钟，你悄悄拿起手机——\n（学校军训期间规定不能用手机，但宿舍里其实有人在用）\n\n给妈妈发了一条消息：「还好，没中暑，别担心。」"
+            },
+            {
+                "speaker": "narrator",
+                "text": "过了两分钟，手机震了一下。\n「乖，好好吃饭，发照片过来。」\n\n你关掉手机，把它塞进枕头底下。\n宿舍里又有人在说话——今天的卧谈内容是教官到底有几岁。\n\n——总会过去的，所有难熬的事都会过去。",
+                "statDelta": {
+                    "stress": -8,
+                    "social": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "training_end_ceremony",
+        "charId": null,
+        "location": null,
+        "slotId": "morning",
+        "triggerDay": 14,
+        "priority": 9999,
+        "title": "军训结束!联欢晚会",
+        "manual_only": true,
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "第十四天，军训最后一天。\n\n下午，学校在操场搭了个简易舞台。\n联欢晚会——每个班出一个节目，不限形式。\n\n你们班排了个集体舞，台词是自己编的，服装是用教室里的窗帘凑出来的。"
+            },
+            {
+                "speaker": "narrator",
+                "text": "站在台上，灯光打下来，底下的同学起哄、鼓掌、吹口哨。\n\n那个在熄灯前絮叨个没完的家伙，今天跑调跑得最开心。\n你在旁边看着，忽然觉得笑出来是很自然的事。"
+            },
+            {
+                "speaker": "narrator",
+                "text": "晚会结束，教官站在台边，罕见地摘下了军帽：\n\n「两周，你们不比我带过的任何一届差。」\n\n很短的一句话。\n操场上有人带头鼓掌，接着哄然成片。\n\n军训，结束了。",
+                "setFlag": "training_finished",
+                "statDelta": {
+                    "social": 8,
+                    "stress": -15,
+                    "charm": 3,
+                    "strength": 3
+                }
+            }
+        ]
+    },
+    {
+        "id": "opening_ng_echo",
+        "charId": null,
+        "location": null,
+        "slotId": "morning",
+        "triggerDay": 1,
+        "priority": 9998,
+        "title": "熟悉的陌生感",
+        "manual_only": true,
+        "requireNGCount": 1,
+        "scenes": [
+            {
+                "speaker": null,
+                "text": "九月一日，初一开学。\n\n你站在西湖中学的校门口，蝉声还和记忆里一模一样。\n阳光、人群、那面红底白字的横幅……\n\n一切都太熟悉了——\n而这里，没有人知道你来过这里。"
+            },
+            {
+                "speaker": "narrator",
+                "text": "你走进去，找到初一（三）班，找到那扇门。\n\n教室里的同学们陌生地看着你。\n你对他们笑了笑，找了个位置坐下来。\n\n——又是第一天。\n这次，会不同吗？",
+                "setFlag": "ng_opening_seen",
+                "statDelta": {
+                    "social": 2,
+                    "art": 3
+                }
+            }
+        ]
+    }
+]

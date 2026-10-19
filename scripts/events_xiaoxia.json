@@ -1,0 +1,520 @@
+[
+  {
+    "id": "xx_001",
+    "rewardSprite": "xiaoxia",
+    "charId": "xiaoxia",
+    "location": "playground",
+    "slotId": "noon",
+    "triggerDay": 2,
+    "minAff": 0,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "操场上的爽朗女生",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "操场上，一个女生在踢足球，停球、传球、射门——动作利索到你多看了两眼。"
+      },
+      {
+        "speaker": "xiaoxia",
+        "pose": "casual",
+        "text": "喂！看什么看！来踢吗？",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "来！（走进去）",
+            "affDelta": 12,
+            "statDelta": {
+              "sport": 5
+            },
+            "next": 3
+          },
+          {
+            "text": "不会踢……",
+            "affDelta": 3,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（咧嘴笑）好啊！我教你！我叫林小夏，隔壁班的。",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "没事，我教你。（把球滚过来）先感受球感。",
+        "affDelta": 8,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "xx_002",
+    "requireFlags": [
+      "xx_001"
+    ],
+    "charId": "xiaoxia",
+    "location": "playground",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 15,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "汗水与晚风",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "刚跑完步的小夏满脸通红，正大口喝着水。"
+      },
+      {
+        "speaker": "xiaoxia",
+        "pose": "sport",
+        "text": "呼——爽！喂，要不要来比试一下短跑？",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "谁怕谁啊，来！（全力以赴）",
+            "affDelta": 12,
+            "statDelta": {
+              "sport": 3,
+              "stress": 5
+            },
+            "next": 3
+          },
+          {
+            "text": "我肯定跑跑不过你……",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（哈哈大笑）有志气！虽然你还是输了，但姿势不错！",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（拍拍你的背）别这么没信心嘛！多练练就行！",
+        "affDelta": 3,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "xx_injury",
+    "requireFlags": [
+      "xx_001"
+    ],
+    "charId": "xiaoxia",
+    "location": "playground",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 8,
+    "priority": 6,
+    "excludeRelState": "cold",
+    "title": "膝盖上的擦伤",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "操场上，林小夏正坐在跑道边，低头看膝盖，摔破了皮，有点血。"
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（听见脚步声抬头）没事，小擦伤。",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（掏出创可贴）给你。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "你有没有带创可贴？",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（愣了一下，接过来）……你口袋里备着这个？（轻笑）谢了，妈。",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "没有。（停顿）……你有？（眼睛亮了一下）给我！",
+        "affDelta": 7,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "xx_sports_day",
+    "requireFlags": [
+      "xx_injury"
+    ],
+    "rewardSprite": "xiaoxia",
+    "charId": "xiaoxia",
+    "location": "playground",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 25,
+    "priority": 7,
+    "excludeRelState": "cold",
+    "title": "运动会·终点线",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "秋季运动会，小夏报了800米和跳远。你站在终点线等她——她第一个冲过来。"
+      },
+      {
+        "speaker": "xiaoxia",
+        "pose": "sport",
+        "text": "（喘着气，停在你面前）……看见了吗？！（比了个第一）",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "看见了！你真厉害！（鼓掌）",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "我全程都在看你。",
+            "affDelta": 15,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（大咧咧地笑，然后往旁边挪了一步）……那就好。（停顿，摸摸鼻子）谢谢你在。",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（动作停了一下，然后装作若无其事）……废话，我表现这么好，不看就亏了。",
+        "affDelta": 8,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "xx_quiet",
+    "requireFlags": [
+      "xx_sports_day"
+    ],
+    "charId": "xiaoxia",
+    "location": "playground",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 45,
+    "priority": 8,
+    "excludeRelState": "cold",
+    "title": "操场上的安静",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "初三下学期，操场上只剩你们俩。小夏没有踢球，坐着看夕阳。"
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "……今天不想动。（难得地说）就想坐一下。",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（坐在她旁边，什么都不说）",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "怎么了，太累了吗？",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（沉默了一会儿）……谢谢你没说话。（夕阳很好看）",
+        "affDelta": 8,
+        "next": 99
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（叹口气）……中考完想睡三天。（侧过头）你呢？",
+        "affDelta": 5,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "xx_teach",
+    "charId": "xiaoxia",
+    "location": "playground",
+    "slotId": "noon",
+    "triggerDay": 0,
+    "minAff": 10,
+    "priority": 6,
+    "requireFlags": [
+      "xx_001"
+    ],
+    "excludeRelState": "cold",
+    "title": "我来教你",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "操场上，小夏把球踢给你。你控球失误，球滚远了。"
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（跑去把球捡回来，笑得很灿烂）没事，重来！我教你。",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "那就麻烦老师了。（弯腰行礼）",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "好……你有耐心教吗？",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（拍胸脯）当然！我教过好几个人了——他们都学得比你快。（然后立刻说）但你有潜力！",
+        "affDelta": 5,
+        "next": 99
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（把球放在你脚边）……有，你慢慢来。（认真起来）先感受一下球在脚上的重量。",
+        "affDelta": 8,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "xx_lose",
+    "charId": "xiaoxia",
+    "location": "playground",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 30,
+    "priority": 7,
+    "requireFlags": [
+      "xx_sports_day"
+    ],
+    "rewardSprite": "xiaoxia",
+    "excludeRelState": "cold",
+    "title": "输了之后",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "班级联赛惨败。小夏是第一个离开球场的，她独自坐在操场边缘的台阶上。她没有哭，只是紧紧抱着双膝，呆呆地望着滚落在远处的足球。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "（坐到她旁边，什么都没说）",
+            "affDelta": 15,
+            "next": 2
+          },
+          {
+            "text": "小夏，没事的，下次……",
+            "affDelta": 3,
+            "next": 3
+          }
+        ]
+      },
+      {
+        "speaker": "xiaoxia",
+        "pose": "sport",
+        "text": "（过了许久，她终于沉闷地开口）……你难道不打算说点『下次一定会更好』之类的安慰话吗？",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（她用力皱起眉头）……『下次更好』这种轻飘飘的话，我现在真的一句也不想听。（她停顿了一下，将脸深深埋进膝盖里）",
+        "emoji": "⚽"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "不说。就陪你坐着。",
+            "affDelta": 12,
+            "next": 5
+          },
+          {
+            "text": "那我们就先难受一会儿。",
+            "affDelta": 10,
+            "next": 5
+          }
+        ]
+      },
+      {
+        "speaker": "xiaoxia",
+        "pose": "sport",
+        "text": "（她沉默了漫长的时间，最终身体微微倾斜，肩膀轻轻触碰到了你）……无论如何，谢谢你能来陪我。",
+        "affDelta": 5,
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "xx_chat",
+    "charId": "xiaoxia",
+    "location": "playground",
+    "slotId": "after",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 1,
+    "repeatable": true,
+    "requireFlags": [
+      "xx_001"
+    ],
+    "excludeRelState": "cold",
+    "title": "操场的汗水",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "夕阳下的操场，小夏刚结束了一场酣畅淋漓的练习，正在场边喝水。"
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "陪她聊聊训练",
+            "affDelta": 2,
+            "setTempFlag": "xx_chat_done",
+            "next": 2
+          },
+          {
+            "text": "去买瓶运动饮料给她 (💰-15)",
+            "reqMoney": 15,
+            "affDelta": 4,
+            "statDelta": {
+              "money": -15
+            },
+            "next": 3
+          },
+          {
+            "text": "加油训练，我先走啦",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（她接过饮料，冲你咧嘴一笑）……谢啦！刚好渴了。",
+        "next": 4
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "（她一口气喝完，满足地舒了口气）……哈！活过来了。",
+        "next": 4
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "还有啥事不？",
+        "next": 1
+      }
+    ]
+  },
+  {
+    "id": "xx_cold_war_01",
+    "charId": "xiaoxia",
+    "requireRelState": "close",
+    "location": "playground",
+    "slotId": "evening",
+    "triggerDay": 0,
+    "minAff": 60,
+    "priority": 900,
+    "title": "跑道上的冷风",
+    "scenes": [
+      {
+        "speaker": "xiaoxia",
+        "pose": "default",
+        "text": "（她擦着汗，挑眉看你）今天训练你心不在焉的，队友跟你搭话你都爱答不理。怎么，跟我待一块儿嫌闷了？"
+      },
+      {
+        "speaker": "player",
+        "text": "？",
+        "choices": [
+          {
+            "text": "（火大）你懂个屁，少来管我！",
+            "affDelta": -5,
+            "relCold": true,
+            "next": 99
+          },
+          {
+            "text": "（缓和）刚才情绪有点崩，别往心里去。",
+            "affDelta": 3,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xx_cold_recover_01",
+    "charId": "xiaoxia",
+    "requireRelState": "cold",
+    "location": "playground",
+    "slotId": "morning",
+    "triggerDay": 0,
+    "minAff": 0,
+    "priority": 950,
+    "relRecover": true,
+    "title": "递来的水瓶",
+    "scenes": [
+      {
+        "speaker": "xiaoxia",
+        "pose": "shy",
+        "text": "（她把一瓶水抛给你，咧了咧嘴又别过脸）……那天是我嘴太快，拿你撒气不对。"
+      },
+      {
+        "speaker": "xiaoxia",
+        "text": "还一起训练不？操场又不会自己跑。",
+        "next": 99
+      }
+    ]
+  }
+]

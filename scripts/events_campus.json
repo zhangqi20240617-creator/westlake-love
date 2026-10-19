@@ -1,0 +1,515 @@
+[
+    {
+        "id": "canteen_random",
+
+        "location": "school_canteen",
+
+        "repeatable": true,
+        "slots": [
+            "noon"
+        ],
+        "workdayOnly": true,
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "食堂里热气腾腾，铁盘碰铁盘的声音连成一片。\n队伍很长，你把托盘挂在栏杆上慢慢往前挪。",
+
+                "choices": [
+                    {
+                        "text": "🍱 打红烧肉饭（+饱腹）",
+
+                        "next": "braised_pork"
+
+                    },
+                    {
+                        "text": "🍜 排一条更短的面条窗口",
+
+                        "next": "noodle"
+
+                    },
+                    {
+                        "text": "👀 四处张望，找人坐",
+
+                        "next": "look_seat"
+
+                    }
+                ]
+            },
+            {
+                "id": "braised_pork",
+
+                "text": "打菜阿姨给你舀了满满一勺——\n\"你这孩子脸嫩，多吃点。\"\n你道了谢，端着盘子找了个靠窗的位置。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -5
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "strength",
+
+                        "amount": 1
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "noodle",
+
+                "text": "面条窗口只有三个人。\n等待的时候，锅里的汤翻滚着冒白气，闻起来有点家的味道。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -4
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "social",
+
+                        "amount": 1
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "look_seat",
+
+                "text": "你端着盘子环顾四周——全是人，全是声音，却有几张面孔是认识的。\n找到一个靠角落的空位，坐了下去，旁边的同学对你点点头。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "social",
+
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -3
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（食堂的午饭，平淡而踏实。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "canteen_seat_meet",
+
+        "location": "school_canteen",
+
+        "repeatable": true,
+        "requireFav": {
+            "any": 30
+        },
+        "slots": [
+            "noon"
+        ],
+        "workdayOnly": true,
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "你端着盘子找座位——\n然后你看到了她，她的托盘就放在对面那个空位旁边。\n眼神碰上的一瞬间。",
+
+                "choices": [
+                    {
+                        "text": "😊 走过去坐下",
+
+                        "next": "sit_down"
+
+                    },
+                    {
+                        "text": "😅 装作没看见",
+
+                        "next": "avoid"
+
+                    }
+                ]
+            },
+            {
+                "id": "sit_down",
+
+                "text": "\"我可以坐这儿吗？\"\n\"……嗯。\"\n就这两句话，然后两个人对着各自的盘子，中间夹着食堂所有的嘈杂，却像一个只有两个人的气泡。",
+
+                "effects": [
+                    {
+                        "type": "favorBest",
+
+                        "amount": 5
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -5
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "avoid",
+
+                "text": "你转了个方向，找了另一张桌子。\n不是因为不想坐——只是没想好开口说什么。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -3
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（食堂的缘分，没有剧本，只有盘子。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "canteen_drink_buy",
+
+        "location": "school_canteen",
+
+        "repeatable": true,
+        "slots": [
+            "noon"
+        ],
+        "workdayOnly": true,
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "角落里有一台自动饮料机，投币格里有一枚一块钱。\n你看了看饮料列表。",
+
+                "choices": [
+                    {
+                        "text": "🍺 买瓶冰镇饮料（-2元，压力-8）",
+
+                        "next": "buy_drink",
+
+                        "requireMoney": 2
+                    },
+                    {
+                        "text": "💧 算了，喝水就行",
+
+                        "next": "skip"
+
+                    }
+                ]
+            },
+            {
+                "id": "buy_drink",
+
+                "text": "叮——饮料滚出来，凉的。\n你拿在手里，感受一下那种冰凉，然后一口气喝了一半。\n整个人好像被刷新了一下。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -8
+                    },
+                    {
+                        "type": "money",
+
+                        "amount": -2
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "skip",
+
+                "text": "你转身去接了一杯热水。\n省钱也是一种技能。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -2
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（吃饱了，下午还有课。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "kiosk_snack_buy",
+
+        "location": "school_kiosk",
+
+        "repeatable": true,
+        "slots": [
+            "noon",
+            "after"
+        ],
+        "workdayOnly": true,
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "小卖部的货架堆满了各种零食，塑料包装反光。\n老板靠在收银台上，眼皮半抬地看着你。",
+
+                "choices": [
+                    {
+                        "text": "🍜 买一包辣条（-3元，压力-6）",
+
+                        "next": "buy_lazi",
+
+                        "requireMoney": 3
+                    },
+                    {
+                        "text": "🍫 买一块巧克力（-5元，压力-8，社交+1）",
+
+                        "next": "buy_choco",
+
+                        "requireMoney": 5
+                    },
+                    {
+                        "text": "📒 买一本笔记本（-8元，作业效率+）",
+
+                        "next": "buy_notebook",
+
+                        "requireMoney": 8
+                    },
+                    {
+                        "text": "👀 随便逛逛",
+
+                        "next": "browse"
+
+                    }
+                ]
+            },
+            {
+                "id": "buy_lazi",
+
+                "text": "一撕开袋子，辣味立刻扑出来——\n旁边的人皱了皱眉，你假装没发现。\n辣得眼睛都湿了，但很过瘾。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -6
+                    },
+                    {
+                        "type": "money",
+
+                        "amount": -3
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "buy_choco",
+
+                "text": "你把巧克力掰成两半，另一半随手递给旁边等零钱的同学。\n\"谢了——\"\n\"没事。\"",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -8
+                    },
+                    {
+                        "type": "stat",
+
+                        "stat": "social",
+
+                        "amount": 1
+                    },
+                    {
+                        "type": "money",
+
+                        "amount": -5
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "buy_notebook",
+
+                "text": "新本子，格子里空白，等着被写满。\n你有些解释不了的仪式感——用新本子当天，作业写起来格外认真。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "intellect",
+
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+
+                        "flag": "kiosk_notebook_buff"
+
+                    },
+                    {
+                        "type": "money",
+
+                        "amount": -8
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "browse",
+
+                "text": "你在货架前晃了半圈，什么都没买。\n但看了很多零食，产生了一种\"好像逛了街\"的错觉。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": -2
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（小卖部永远有一种神奇的治愈力。）",
+
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "kiosk_encounter",
+
+        "location": "school_kiosk",
+
+        "repeatable": true,
+        "slots": [
+            "noon",
+            "after"
+        ],
+        "workdayOnly": true,
+        "nodes": [
+            {
+                "id": "start",
+
+                "text": "你正在结账，听到背后有人拍你的肩膀——\n\"哥们儿，能借我三块钱吗？刚好没带零钱。\"",
+
+                "choices": [
+                    {
+                        "text": "👍 借吧，没关系（-3元）",
+
+                        "next": "lend",
+
+                        "requireMoney": 3
+                    },
+                    {
+                        "text": "😅 我也没带多少……",
+
+                        "next": "refuse"
+
+                    }
+                ]
+            },
+            {
+                "id": "lend",
+
+                "text": "\"好，拿去吧。\"\n\"谢了兄弟，改天还你——\"\n他已经跑去付钱了。\n你看着他的背影，觉得这笔账大概会就这么消失了。但也无所谓。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "social",
+
+                        "amount": 2
+                    },
+                    {
+                        "type": "money",
+
+                        "amount": -3
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "refuse",
+
+                "text": "\"我也差不多……\"\n他叹口气，又去问旁边的人了。\n你有点别扭，说不清是为什么。",
+
+                "effects": [
+                    {
+                        "type": "stat",
+
+                        "stat": "stress",
+
+                        "amount": 2
+                    }
+                ],
+                "next": "end"
+
+            },
+            {
+                "id": "end",
+
+                "text": "（校内小卖部的人情债，轻飘飘的，却不清零。）",
+
+                "isEnd": true
+            }
+        ]
+    }
+]

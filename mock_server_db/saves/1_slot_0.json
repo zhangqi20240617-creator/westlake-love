@@ -1,0 +1,69 @@
+{
+    "day": 1,
+    "day_of_week": 1,
+    "diary": [
+        {
+            "day": 1,
+            "grade": "初一",
+            "slot": "上午",
+            "text": "开学第一天，杭州的天空很蓝。"
+        },
+        {
+            "day": 1,
+            "grade": "初一",
+            "slot": "上午",
+            "text": "和陈雨桐聊了聊"
+        }
+    ],
+    "favorability": {
+        "beichen": 0,
+        "jingjing": 20,
+        "jingjing_m": 0,
+        "keke": 0,
+        "wanqing": 0,
+        "xiaoxia": 0,
+        "yifei": 0,
+        "yutong": 1,
+        "zicheng": 0,
+        "zijun": 0
+    },
+    "flags": {
+        "last_interact_yutong": 1,
+        "seen_yutong_default": true,
+        "seen_yutong_serious": true,
+        "yt_001": true
+    },
+    "gender": "male",
+    "hw_neglect_count": 0,
+    "hw_status": 1,
+    "inventory": {},
+    "money": 100,
+    "player_name": "1",
+    "recent_logs": [
+        "[放学后] 解析云端响应失败: Unknown error getting token",
+        "[放学后] 📅 课后作业已经布置，记得回卧室完成。",
+        "[中午] 💢 压力 +4",
+        "[中午] 🎨 艺术 +2",
+        "[中午] 📚 学习 +5",
+        "[中午] ✨ intellect+4, art+1, stress+3",
+        "[中午] 💢 压力 +3",
+        "[中午] 🎨 艺术 +1",
+        "[中午] 📚 学习 +4",
+        "[上午] 👩‍🎓 陈雨桐 好感度 +1",
+        "[上午] ✨ intellect+3, stress+5",
+        "[上午] 💢 压力 +5",
+        "[上午] 📚 学习 +3"
+    ],
+    "saved_at": "2026-05-22T13:22:43",
+    "school_name": "1",
+    "slot_index": 2,
+    "stats": {
+        "addict": 0,
+        "art": 13,
+        "charm": 10,
+        "intellect": 22,
+        "social": 10,
+        "strength": 10,
+        "stress": 12
+    }
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "dean_catch_dorm",
+    "title": "教导主任查寝",
+    "location": "dorm",
+    "timeCost": 0,
+    "priority": 999,
+    "scenes": [
+      {
+        "speaker": "narrator",
+        "text": "半夜，你躲在被窝里偷偷用手机跟朋友聊天。正聊得起劲，宿舍门外的玻璃窗外，突然多了一个手电筒的刺眼光斑……\n\n紧接着，一颗熟悉的“地中海”头型幽幽地贴在了玻璃上。是教导主任！",
+        "choices": [
+          {
+            "text": "立刻把手机塞进内裤里装睡 (要求敏捷/体能)",
+            "next": 1
+          },
+          {
+            "text": "僵在原地，被当场抓获",
+            "next": 2
+          }
+        ]
+      },
+      {
+        "speaker": "player",
+        "text": "（你以迅雷不及掩耳之势把手机藏进了裤裆，翻过身开始打呼噜。主任推门进来扫视了一圈，没发现破绽，冷哼一声走了……）",
+        "statDelta": {
+          "stress": 10,
+          "dean_suspicion": -20
+        },
+        "next": 99
+      },
+      {
+        "speaker": "dean",
+        "text": "“大半夜不睡觉，手机交出来！！！”\n\n你连人带手机被提溜到了走廊上罚站了一整夜。第二天被迫在全校面前做检讨！",
+        "statDelta": {
+          "stress": 30,
+          "social": -10,
+          "addict": -20
+        },
+        "logicType": "punish_reflection",
+        "next": 99
+      }
+    ],
+    "manual_only": true
+  },
+  {
+    "id": "dean_catch_dating",
+    "title": "操场上的手电筒",
+    "location": "playground",
+    "timeCost": 0,
+    "priority": 999,
+    "scenes": [
+      {
+        "speaker": "narrator",
+        "text": "晚风习习，你和高好感的那个女孩子在操场看台的阴影处散步，享受着难得的静谧。\n\n突然，一道强光手电照了过来！\n\n“那边那两个！哪个班的？！大晚上不回宿舍在干嘛！”教导主任咆哮着冲了过来。",
+        "choices": [
+          {
+            "text": "挺身而出：“是我强迫她来的，不关她的事！”",
+            "next": 1
+          },
+          {
+            "text": "吓得松开手，各自低头认错",
+            "next": 2
+          }
+        ]
+      },
+      {
+        "speaker": "narrator",
+        "text": "你勇敢地挡在女孩面前，一口咬定全是自己的主意。女孩在身后感激又愧疚地看着你。\n\n主任大怒：“好小子，你还挺有出息是吧？明天给我写三千字检查，全校通报！”",
+        "statDelta": {
+          "social": -20,
+          "stress": 30,
+          "charm": 20
+        },
+        "logicType": "punish_reflection",
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "你们俩被吓坏了，结结巴巴地认错，气氛降到了冰点。这段刚萌芽的感情遭受了重创。",
+        "statDelta": {
+          "social": -10,
+          "stress": 20
+        },
+        "logicType": "punish_reflection",
+        "next": 99
+      }
+    ],
+    "manual_only": true
+  },
+  {
+    "id": "dean_punish_reflection",
+    "title": "全校大会检讨反馈",
+    "location": "classroom",
+    "timeCost": 0,
+    "priority": 999,
+    "scenes": [
+      {
+        "speaker": "narrator",
+        "text": "【第二天·升旗仪式】\n\n你站在高高的主席台上，手里拿着连夜赶写出来的检讨书，全校上千双眼睛正盯着你。",
+        "choices": [
+          {
+            "text": "声泪俱下！用高智商念出国手级文章。 (要求智力≥80)",
+            "requireStats": {
+              "intellect": 80
+            },
+            "next": 1
+          },
+          {
+            "text": "硬着头皮结结巴巴地念完。",
+            "requireStats": {
+              "intellect": 0
+            },
+            "next": 2
+          }
+        ]
+      },
+      {
+        "speaker": "narrator",
+        "text": "你的文章极其工整，辞藻华丽，引经据典，不仅把教导主任听得舒坦，甚至台下的同学都对你的文采暗暗倾倒！不仅没丢人，反而还成名了。",
+        "statDelta": {
+          "social": 15,
+          "charm": 10,
+          "dean_suspicion": -50,
+          "punishment_level": 1
+        },
+        "next": 99
+      },
+      {
+        "speaker": "narrator",
+        "text": "你结结巴巴、毫无逻辑的检讨引得底下哄堂大笑。教导主任脸都绿了，你感觉自己这辈子都抬不起头了。\n\n恭喜，你背负了一个“班级处分”。",
+        "statDelta": {
+          "social": -15,
+          "stress": 10,
+          "dean_suspicion": -50,
+          "punishment_level": 1
+        },
+        "next": 99
+      }
+    ],
+    "manual_only": true
+  },
+  {
+    "id": "dean_revoke_punish",
+    "title": "教导主任的肯定",
+    "location": "classroom",
+    "timeCost": 0,
+    "priority": 999,
+    "scenes": [
+      {
+        "speaker": "dean",
+        "text": "“嗯，看你最近表现不错，我也不是不讲理的人。之前的通报批评，撤销了！以后好好做人，明白没？”\n\n（你的处分解除了，终于不用背负履历污点了！）",
+        "statDelta": {
+          "punishment_level": -1,
+          "social": 5
+        },
+        "next": 99
+      }
+    ],
+    "manual_only": true
+  }
+]

@@ -1,0 +1,460 @@
+[
+  {
+    "id": "kk_cold_war_01",
+    "charId": "keke",
+    "requireRelState": "close",
+    "location": "off_campus_shop",
+    "slotId": "evening",
+    "triggerDay": 300,
+    "minAff": 60,
+    "priority": 900,
+    "title": "便利店玻璃后的背影",
+    "scenes": [
+      {
+        "speaker": "keke",
+        "pose": "upset",
+        "text": "（她隔着便利店玻璃看你，手里捏着关东煮的叉子）……刚才是跟谁笑得那么开心？我站这儿半天，你眼睛长头顶上了？"
+      },
+      {
+        "speaker": "player",
+        "text": "？",
+        "choices": [
+          {
+            "text": "（不耐烦）你又摆大小姐架子了？我的事不用你管。",
+            "affDelta": -5,
+            "relCold": true,
+            "next": 99
+          },
+          {
+            "text": "（缓和）抱歉，刚才是跟同学闹着玩，真没忽略你。",
+            "affDelta": 3,
+            "next": 99
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kk_cold_recover_01",
+    "charId": "keke",
+    "requireRelState": "cold",
+    "location": "lakeside",
+    "slotId": "morning",
+    "triggerDay": 300,
+    "minAff": 0,
+    "priority": 950,
+    "relRecover": true,
+    "title": "湖堤上的一杯奶茶",
+    "scenes": [
+      {
+        "speaker": "keke",
+        "pose": "shy",
+        "text": "（她把一杯温奶茶塞给你，别过脸看湖面）……从上海转来，我谁都不认识，就你肯搭理我。那天是我太别扭了。"
+      },
+      {
+        "speaker": "keke",
+        "pose": "shy",
+        "text": "我们……还像刚转来那会儿那样，行吗？",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "keke_meet_01",
+    "charId": "keke",
+    "rewardSprite": "keke",
+    "location": "off_campus_shop",
+    "slotId": "morning",
+    "triggerDay": 300,
+    "minAff": 0,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "转学来的她",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "初二开学，校外小卖部。一个扎着蝴蝶结的女生正对着关东煮的柜子挑挑拣拣，校服领口别着一枚陌生的校徽。",
+        "next": 1
+      },
+      {
+        "speaker": "keke",
+        "emoji": "🎀",
+        "text": "（瞥见你打量，把下巴一扬）看什么？没见过转学生啊。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你不是本校的？从哪转来的？",
+            "affDelta": 8,
+            "next": 3
+          },
+          {
+            "text": "（笑）脾气还挺冲。",
+            "affDelta": 3,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "keke",
+        "text": "（别过脸）……上海。上周刚办完手续。（小声）……这地方，比我想的小多了。",
+        "next": 99
+      },
+      {
+        "speaker": "keke",
+        "text": "（把挑好的鱼丸递给老板）……你老盯着我干嘛，我又不会吃了你。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "keke_daily_01",
+    "requireFlags": [
+      "keke_meet_01"
+    ],
+    "charId": "keke",
+    "location": "lakeside",
+    "slotId": "after",
+    "triggerDay": 300,
+    "minAff": 15,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "湖边的同好",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "放学后西湖边，你看见那个转学生坐在长椅上，耳机里漏出一点音乐，脚边摊着本子。",
+        "next": 1
+      },
+      {
+        "speaker": "keke",
+        "emoji": "🎀",
+        "text": "（抬头）……又是你。你也来这儿发呆？",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你也常来？",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "随便走走，碰巧。",
+            "affDelta": 5,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "keke",
+        "pose": "shy",
+        "text": "（合上本子）……刚转来，没什么朋友。这儿安静，没人认识我。（顿了顿）……你别误会，我不是在诉苦。",
+        "next": 99
+      },
+      {
+        "speaker": "keke",
+        "text": "（往旁边挪了挪）……坐吧，椅子够长。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "keke_friend_01",
+    "requireFlags": [
+      "keke_daily_01"
+    ],
+    "charId": "keke",
+    "location": "off_campus_shop",
+    "slotId": "noon",
+    "triggerDay": 300,
+    "minAff": 30,
+    "priority": 100,
+    "excludeRelState": "cold",
+    "title": "关东煮的约定",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "午休，小卖部。你撞见她正把一盒关东煮推到一边，明显在犹豫要不要再加一串。",
+        "next": 1
+      },
+      {
+        "speaker": "keke",
+        "emoji": "🎀",
+        "text": "（察觉你在看）……怎么，你也要吃？",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "我请客，你挑。",
+            "affDelta": 14,
+            "next": 3
+          },
+          {
+            "text": "你每次都只买一串，省钱啊？",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "keke",
+        "text": "（愣了一下，低头笑）……上海那边，转学转惯了，什么都得自己算着花。（把一串萝卜递给你）……谢了，下次我请你。",
+        "next": 99
+      },
+      {
+        "speaker": "keke",
+        "pose": "upset",
+        "text": "（撇嘴）……才不是省钱。是、是怕胖。（把那串想要又没拿的塞进盒里）……你管得真宽。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "keke_close_01",
+    "requireRelState": "close",
+    "charId": "keke",
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 300,
+    "minAff": 60,
+    "priority": 8,
+    "title": "断桥下的心事",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "晚上的断桥边，她靠着石栏，风把她的蝴蝶结吹得轻轻晃。",
+        "next": 1
+      },
+      {
+        "speaker": "keke",
+        "emoji": "🎀",
+        "text": "（没看你）……跟你说个秘密。我在上海那所学校，一个能说真心话的人都没有。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "那现在呢？",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "（安静地听）",
+            "affDelta": 8,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "keke",
+        "pose": "shy",
+        "text": "（转过头，目光亮了一下又躲开）……现在，好像有了一个。（声音越来越小）……你别得意啊，就、就一个。",
+        "next": 99
+      },
+      {
+        "speaker": "keke",
+        "pose": "shy",
+        "text": "（把半块桂花糕掰给你）……给你。别说我小气。（指尖碰到你手背，像被烫到一样缩回去）",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "keke_crush_01",
+    "requireRelState": "crush",
+    "charId": "keke",
+    "location": "lakeside",
+    "slotId": "evening",
+    "triggerDay": 300,
+    "minAff": 85,
+    "priority": 8,
+    "title": "湖心的答案",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "初三的某天傍晚，西湖落霞烧红了半边天。她破天荒地主动在老位置等你，手里攥着那枚蝴蝶结发圈。",
+        "next": 1
+      },
+      {
+        "speaker": "keke",
+        "emoji": "🎀",
+        "pose": "shy",
+        "text": "（把你拉到柳树后，深吸一口气）……我问你个问题，你老实答。",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "你问。",
+            "affDelta": 10,
+            "next": 3
+          },
+          {
+            "text": "（点头，心跳很快）",
+            "affDelta": 8,
+            "next": 3
+          }
+        ]
+      },
+      {
+        "speaker": "keke",
+        "pose": "shy",
+        "text": "（别过脸，耳尖通红）……从上海到杭州，我最大的运气，是不是就是遇见你？（停顿）……你、你别不说话啊。",
+        "next": 4
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "我也是。遇见你，是我最大的运气。",
+            "affDelta": 20,
+            "next": 5
+          },
+          {
+            "text": "（轻轻把发圈戴回她手腕上）我懂。",
+            "affDelta": 12,
+            "next": 6
+          }
+        ]
+      },
+      {
+        "speaker": "keke",
+        "pose": "shy",
+        "text": "（愣了两秒，忽然笑出声，眼角有点湿）……笨蛋。谁、谁准你抢我台词的。",
+        "next": 99
+      },
+      {
+        "speaker": "keke",
+        "text": "（把发圈套回自己手腕，挽住你胳膊）……走吧，送我回家。今天，特许你送。",
+        "next": 99
+      }
+    ]
+  },
+  {
+    "id": "keke_chat",
+    "requireFlags": [
+      "keke_meet_01"
+    ],
+    "charId": "keke",
+    "location": "off_campus_shop",
+    "slotId": "after",
+    "triggerDay": 300,
+    "minAff": 0,
+    "priority": 1,
+    "repeatable": true,
+    "excludeRelState": "cold",
+    "title": "便利店闲聊",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "校外小卖部，方可可正趴在冰柜上看新出的汽水口味。",
+        "choices": [
+          {
+            "text": "陪她聊两句",
+            "blockIfTempFlag": "keke_chat_done",
+            "affDelta": 2,
+            "setTempFlag": "keke_chat_done",
+            "next": 1
+          },
+          {
+            "text": "请她喝新品汽水 (💰-20)",
+            "reqMoney": 20,
+            "affDelta": 5,
+            "statDelta": {
+              "money": -20,
+              "stress": -5
+            },
+            "next": 2
+          },
+          {
+            "text": "不打扰了，先走",
+            "next": 99
+          }
+        ]
+      },
+      {
+        "speaker": "keke",
+        "emoji": "🎀",
+        "text": "（抬眼）哟，你又来了。（把冰柜门一关）……陪我挑挑口味也行，反正你闲。",
+        "next": 3
+      },
+      {
+        "speaker": "keke",
+        "text": "（接过汽水，咕咚一口）……算你识相。（把吸管递到你嘴边又缩回）……想得美，自己买。",
+        "next": 3
+      },
+      {
+        "speaker": "keke",
+        "text": "（踢了踢脚边的瓶子）……还有事吗？没事我挑完了。",
+        "next": 0
+      }
+    ]
+  },
+  {
+    "id": "keke_morning_01",
+    "requireFlags": [
+      "keke_friend_01"
+    ],
+    "charId": "keke",
+    "location": "lakeside",
+    "slotId": "morning",
+    "triggerDay": 300,
+    "minAff": 35,
+    "priority": 50,
+    "excludeRelState": "cold",
+    "title": "晨雾里的喂鱼人",
+    "scenes": [
+      {
+        "speaker": null,
+        "text": "清晨的湖边还飘着薄雾，你远远看见那个转学生蹲在石阶上，往水里撒饼干屑。",
+        "next": 1
+      },
+      {
+        "speaker": "keke",
+        "emoji": "🎀",
+        "text": "（回头看见你，把食指竖在嘴前）嘘——鱼都认识我了，别吓跑。（顿了顿）……你起这么早？",
+        "next": 2
+      },
+      {
+        "speaker": "player",
+        "text": "?",
+        "choices": [
+          {
+            "text": "来看你喂鱼啊。",
+            "affDelta": 12,
+            "next": 3
+          },
+          {
+            "text": "晨练路过。这么巧。",
+            "affDelta": 6,
+            "next": 4
+          }
+        ]
+      },
+      {
+        "speaker": "keke",
+        "text": "（把最后一块饼干掰一半递你）……喂，分你。它们抢食的样子，比人诚实多了。（笑了）",
+        "next": 99
+      },
+      {
+        "speaker": "keke",
+        "text": "（拍拍身边石阶）……坐会儿？雾散了就不好看了。（小声）……也就你，我肯一起看。",
+        "next": 99
+      }
+    ]
+  }
+]

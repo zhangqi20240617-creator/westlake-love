@@ -1,0 +1,94 @@
+[
+    {
+        "id": "wish_1",
+        "username": "陈雨桐",
+        "school": "西湖中学",
+        "content": "希望未来的我们，依然能像今天一样坐在西湖边聊天。🍃",
+        "replies": [
+            {
+                "username": "叶菁菁",
+                "school": "西湖中学",
+                "content": "好呀！到时候我们要带上热乎乎的定胜糕！😋"
+            },
+            {
+                "username": "林大白",
+                "school": "西湖中学",
+                "content": "加一！顺便带个球去苏堤上打！"
+            },
+            {
+                "username": "2",
+                "school": "2",
+                "content": "加油啊， 我是你爸爸"
+            }
+        ]
+    },
+    {
+        "id": "wish_2",
+        "username": "叶菁菁",
+        "school": "西湖中学",
+        "content": "加油！这次期末考试一定要考到班级前十，绝对不能被他看扁了！😤",
+        "replies": [
+            {
+                "username": "陈雨桐",
+                "school": "西湖中学",
+                "content": "加油菁菁！我也来帮你一起复习！📖"
+            }
+        ]
+    },
+    {
+        "id": "wish_3",
+        "username": "林大白",
+        "school": "西湖中学",
+        "content": "西湖醋鱼真的很难吃……下周再也不点这道菜了。🥢",
+        "replies": [
+            {
+                "username": "万清",
+                "school": "建兰中学",
+                "content": "这其实是草鱼的宿命……建议去点东坡肉。🥩"
+            },
+            {
+                "username": "11212",
+                "school": "3123",
+                "content": "真的呀"
+            }
+        ]
+    },
+    {
+        "id": "wish_4",
+        "username": "万清",
+        "school": "建兰中学",
+        "content": "只要笔尖还在纸上滑动，属于我们的故事就永远没有结束的那天。✍️",
+        "replies": []
+    },
+    {
+        "id": "wish_5",
+        "username": "学霸君",
+        "school": "求是中学",
+        "content": "每天刷十道奥数题，中考一定要考上二中！🔥",
+        "replies": [
+            {
+                "username": "老师",
+                "school": "求是中学",
+                "content": "好志向！但要注意劳逸结合，多睡饱觉。"
+            },
+            {
+                "username": "11212",
+                "school": "3123",
+                "content": "厉害啊"
+            }
+        ]
+    },
+    {
+        "id": "wish_1779429097493",
+        "username": "11212",
+        "school": "3123",
+        "content": "我希望能考上贡院校区",
+        "replies": [
+            {
+                "username": "陈雨桐",
+                "school": "西湖中学",
+                "content": "希望你的愿望都能实现。顺便提醒一句，今天的数学功课写完了吗？📚"
+            }
+        ]
+    }
+]

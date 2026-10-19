@@ -1,0 +1,474 @@
+[
+    {
+        "id": "grad_class_photo",
+        "location": "playground",
+        "slots": [
+            "morning"
+        ],
+        "triggerDay": 564,
+        "priority": 80,
+        "repeatable": false,
+        "manual_only": true,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "毕业照的日子。\n所有人穿着校服站在操场上，摄影师喊了十几遍\"往中间靠一靠\"，\n前排的人半蹲着，后排的人踮起脚——\n然后咔嚓一声。",
+                "choices": [
+                    {
+                        "text": "📸 认真地笑",
+                        "next": "smile"
+                    },
+                    {
+                        "text": "😢 悄悄回头看教学楼",
+                        "next": "look_back"
+                    },
+                    {
+                        "text": "🌀 搞一点乱子",
+                        "next": "prank"
+                    }
+                ]
+            },
+            {
+                "id": "smile",
+                "text": "你笑了。\n不是那种配合摄影师的笑——是真的笑。\n不知道为什么，但就是觉得，现在这一刻，挺好的。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "grad_photo_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "look_back",
+                "text": "你在\"咔嚓\"前的最后一秒钟，偷偷回头看了一眼教学楼。\n三年，一千多天，那扇窗里进进出出的你们。\n照片里你的表情因此有点模糊，但你记住了那一眼。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -5
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "grad_photo_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "prank",
+                "text": "\"咔嚓\"的瞬间，你和旁边三个人同时摆了个夸张的动作。\n摄影师气得补了一张——但那张搞乱的照片，被班里人截图转发了好几圈。\n事后，连平时严肃的同学都说：这张才像我们班。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 4
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -6
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "grad_photo_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（这张照片，会是你和初中唯一的合影。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "grad_yearbook",
+        "location": "classroom",
+        "slots": [
+            "after"
+        ],
+        "triggerDay": 565,
+        "priority": 78,
+        "repeatable": false,
+        "manual_only": true,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "老师发下来一本同学录，封面印着学校名字和\"2027届\"。\n\"大家互相写一写，留个念想。\"\n你拿着笔，不知道该先打开哪一页。",
+                "choices": [
+                    {
+                        "text": "✏️ 认真想一句送给某人的话",
+                        "next": "write_careful"
+                    },
+                    {
+                        "text": "🔀 随手写了几句话，到处签名",
+                        "next": "write_casual"
+                    },
+                    {
+                        "text": "😶 拿着同学录，但没有写完",
+                        "next": "write_nothing"
+                    }
+                ]
+            },
+            {
+                "id": "write_careful",
+                "text": "你翻到你最想写的那一页，坐在那里想了很久。\n最后写了三行——不文艺，也不煽情，就是你真正想说的话。\n对方拿到的时候，读了两遍，笑了一下，没有说什么。",
+                "effects": [
+                    {
+                        "type": "favorBest",
+                        "amount": 5
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "yearbook_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "write_casual",
+                "text": "你在同学录上到处飘，签了很多名，写了很多\"加油\"\"保持联系\"\"不许变坏\"。\n有人也在你的同学录上写了一句：\n\"你这个人，很难让人忘记。\"\n你不确定这是不是夸你，但看了很多次。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 3
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "yearbook_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "write_nothing",
+                "text": "你拿着同学录，坐了很久，却总是放不下笔——\n写什么都觉得太轻，又觉得太重。\n最后，同学录被交回去的时候，你那一页基本是空的。\n只有最后一行，有人替你写了：\"这页留给主人的沉默。\"",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": 3
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "yearbook_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（同学录，六月的气味，墨水的气味——初中的气味。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "grad_farewell_dinner",
+        "location": "community",
+        "slots": [
+            "evening"
+        ],
+        "triggerDay": 567,
+        "priority": 76,
+        "repeatable": false,
+        "manual_only": true,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "班里自发组织了散伙饭，订在校门口那家开了好多年的大排档。\n你们搬来四张桌子拼在一起，乱哄哄的，每个人都在大声说话。\n老板娘端来一锅汤：\"学生们吃好啊，以后各奔东西，要健健康康的。\"",
+                "choices": [
+                    {
+                        "text": "🍻 起身举杯祝大家",
+                        "next": "toast"
+                    },
+                    {
+                        "text": "🎤 讲一段话",
+                        "next": "speech"
+                    },
+                    {
+                        "text": "📸 拍下这一刻",
+                        "next": "photo"
+                    }
+                ]
+            },
+            {
+                "id": "toast",
+                "text": "\"来，干了！\"\n你举起杯子（里面是可乐），对着满桌的人——\n他们也跟着举起来了，碰杯的声音叮叮当当的。\n有人喝着喝着哭了，有人一边擦眼泪一边喊\"不许哭\"。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 4
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -8
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "farewell_dinner_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "speech",
+                "text": "你突然站起来，张嘴，发现什么词都找不到。\n然后就说了最简单的那句：\n\"大家……谢谢陪我读完这三年。\"\n桌子一下子安静了，然后有人开始鼓掌。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 5
+                    },
+                    {
+                        "type": "favorBest",
+                        "amount": 4
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "farewell_dinner_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "photo",
+                "text": "你把手机举起来：\"来，所有人进镜头！\"\n凑了三秒，拍了一张十几个人挤在一起、歪七扭八的照片。\n没有人好看，但所有人都笑得很真实。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "social",
+                        "amount": 3
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "farewell_dinner_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（散伙饭的最后，大家都说\"以后要联系\"\n但所有人心里都知道，有些人今晚之后就再也不会常联系了。\n这不是悲剧，这只是长大。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "grad_last_class",
+        "location": "classroom",
+        "slots": [
+            "morning"
+        ],
+        "triggerDay": 563,
+        "priority": 82,
+        "repeatable": false,
+        "manual_only": true,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "初中最后一堂课——语文。\n周老师把课本合上，放在讲台上，然后没有再拿起来。\n\"今天不讲书本了。我想跟你们说几句话。\"",
+                "choices": [
+                    {
+                        "text": "👂 认真听",
+                        "next": "listen"
+                    },
+                    {
+                        "text": "📝 把她说的话记下来",
+                        "next": "write_down"
+                    },
+                    {
+                        "text": "🔍 看着窗外",
+                        "next": "look_outside"
+                    }
+                ]
+            },
+            {
+                "id": "listen",
+                "text": "\"你们是我带的第七届初三——\n每一届我都说，这届最难带。但每一届我都最舍不得。\"\n她顿了一下，嗓音有些哑。\n\"去吧。外面很大，你们要去看看。\"",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -10
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 1
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "last_class_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "write_down",
+                "text": "你打开最后一页空白，把她说的话一句一句记下来。\n三年，第一次在语文课上，努力记住每一个字——\n不为考试，只为不想忘记。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -6
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "last_class_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "look_outside",
+                "text": "阳光打在走廊上，操场上没有人，空空的。\n你就那么看着，听着老师说话声变成一种模糊的背景——\n然后突然回过神来，发现自己在哭。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -12
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "last_class_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（最后一课。课本不重要了，什么都不重要了。\n只有那扇窗、那束光、那个声音。）",
+                "isEnd": true
+            }
+        ]
+    },
+    {
+        "id": "grad_three_year_montage",
+        "location": "west_lake",
+        "slots": [
+            "evening"
+        ],
+        "triggerDay": 568,
+        "priority": 74,
+        "repeatable": false,
+        "manual_only": true,
+        "nodes": [
+            {
+                "id": "start",
+                "text": "中考前的最后一个夜晚，你一个人走到西湖边。\n风很轻，灯很暖，湖面上有点点倒影。\n三年，在脑海里一格一格浮过来——",
+                "choices": [
+                    {
+                        "text": "🌊 就这样站着，让记忆来",
+                        "next": "memories"
+                    },
+                    {
+                        "text": "📖 翻出之前写的日记",
+                        "next": "diary"
+                    },
+                    {
+                        "text": "📱 给最重要的人发一条消息",
+                        "next": "msg_important"
+                    }
+                ]
+            },
+            {
+                "id": "memories",
+                "text": "初一第一天早读、那次考试失利后在走廊发呆、第一次帮人解题的成就感\n还有你记住的那些面孔——\n它们走马灯一样来了，你没有拦，也没有追。\n都是真的。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -15
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "art",
+                        "amount": 2
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "montage_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "diary",
+                "text": "你翻出初一写的第一篇日记。\n字迹很小，很认真，现在有点认不出，好像是另一个人写的——\n也确实是另一个人写的。\n你把日记本合上，收进包里。",
+                "effects": [
+                    {
+                        "type": "stat",
+                        "stat": "intellect",
+                        "amount": 2
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -10
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "montage_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "msg_important",
+                "text": "你给那个人发了一条消息，想了很久，最后只写了：\n\"这三年，谢谢有你。\"\n对方回了一个很慢的省略号，然后：\n\"我也是。\"",
+                "effects": [
+                    {
+                        "type": "favorBest",
+                        "amount": 6
+                    },
+                    {
+                        "type": "stat",
+                        "stat": "stress",
+                        "amount": -10
+                    },
+                    {
+                        "type": "setFlag",
+                        "flag": "montage_done"
+                    }
+                ],
+                "next": "end"
+            },
+            {
+                "id": "end",
+                "text": "（初中三年。\n它不完美，也不是童话——\n但它是真实发生过的。\n而你，真实地活过了每一天。）",
+                "isEnd": true
+            }
+        ]
+    }
+]

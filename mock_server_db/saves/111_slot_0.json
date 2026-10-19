@@ -1,0 +1,44 @@
+{
+    "day": 1,
+    "day_of_week": 1,
+    "diary": [
+        {
+            "day": 1,
+            "grade": "初一",
+            "slot": "上午",
+            "text": "开学第一天，杭州的天空很蓝。"
+        }
+    ],
+    "favorability": {
+        "beichen": 0,
+        "jingjing": 20,
+        "jingjing_m": 0,
+        "keke": 0,
+        "wanqing": 0,
+        "xiaoxia": 0,
+        "yifei": 0,
+        "yutong": 0,
+        "zicheng": 0,
+        "zijun": 0
+    },
+    "flags": {},
+    "gender": "male",
+    "hw_neglect_count": 0,
+    "hw_status": 0,
+    "inventory": {},
+    "money": 100,
+    "player_name": "111",
+    "recent_logs": [],
+    "saved_at": "2026-05-22T13:27:38",
+    "school_name": "1111",
+    "slot_index": 0,
+    "stats": {
+        "addict": 0,
+        "art": 10,
+        "charm": 10,
+        "intellect": 10,
+        "social": 10,
+        "strength": 10,
+        "stress": 0
+    }
+}

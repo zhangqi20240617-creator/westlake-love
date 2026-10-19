@@ -1,0 +1,142 @@
+[
+  {
+    "id": "yutong",
+    "name": "陈雨桐",
+    "emoji": "👩‍🎓",
+    "tag": "班长·学霸",
+    "color": "#5b9fd4",
+    "intro": "认真自律，外冷内热，总是第一个到教室。",
+    "locations": [
+      "classroom",
+      "library"
+    ],
+    "baseAff": 0,
+    "unlockDay": 1
+  },
+  {
+    "id": "jingjing",
+    "name": "叶菁菁",
+    "emoji": "🌸",
+    "tag": "青梅竹马",
+    "color": "#e87d9a",
+    "intro": "从小住你隔壁，什么都懂你，就是不说透。",
+    "locations": [
+      "community",
+      "school_gate"
+    ],
+    "baseAff": 20,
+    "unlockDay": 1
+  },
+  {
+    "id": "wanqing",
+    "name": "苏晚晴",
+    "emoji": "📚",
+    "tag": "文艺委员",
+    "color": "#a78bfa",
+    "intro": "永远在图书馆，写着没人看过的故事。",
+    "locations": [
+      "library",
+      "lakeside"
+    ],
+    "baseAff": 0,
+    "unlockDay": 3
+  },
+  {
+    "id": "xiaoxia",
+    "name": "林小夏",
+    "emoji": "⚽",
+    "tag": "体育委员",
+    "color": "#4caf8a",
+    "intro": "阳光到令人眼晕，在操场上永远跑最快。",
+    "locations": [
+      "playground",
+      "playground"
+    ],
+    "baseAff": 0,
+    "unlockDay": 2
+  },
+  {
+    "id": "keke",
+    "name": "方可可",
+    "emoji": "🎀",
+    "tag": "转学生（初二转入）",
+    "color": "#f59e0b",
+    "intro": "从上海转来，有点傲娇，其实很孤独。",
+    "locations": [
+      "off_campus_shop",
+      "lakeside"
+    ],
+    "baseAff": 0,
+    "unlockDay": 270
+  },
+  {
+    "id": "yifei",
+    "name": "沈逸飞",
+    "emoji": "🎻",
+    "tag": "音乐课代表",
+    "color": "#5b9fd4",
+    "intro": "拉小提琴，总站在走廊发呆，眼神很远。",
+    "locations": [
+      "music_room",
+      "lakeside"
+    ],
+    "baseAff": 0,
+    "unlockDay": 1
+  },
+  {
+    "id": "zicheng",
+    "name": "周子诚",
+    "emoji": "🏀",
+    "tag": "篮球队长",
+    "color": "#4caf8a",
+    "intro": "一笑露虎牙，球打得好，人也特别照顾人。",
+    "locations": [
+      "playground",
+      "off_campus_shop"
+    ],
+    "baseAff": 0,
+    "unlockDay": 2
+  },
+  {
+    "id": "beichen",
+    "name": "顾北辰",
+    "emoji": "🌙",
+    "tag": "神秘转学生",
+    "color": "#a78bfa",
+    "intro": "初二转入，话极少，总是最后一个离开图书馆。",
+    "locations": [
+      "library",
+      "school_gate"
+    ],
+    "baseAff": 0,
+    "unlockDay": 150
+  },
+  {
+    "id": "jingjing_m",
+    "name": "叶明轩",
+    "emoji": "🌿",
+    "tag": "青梅竹马",
+    "color": "#e87d9a",
+    "intro": "从小住你隔壁，默默保护你，就是开口太难。",
+    "locations": [
+      "community",
+      "school_gate"
+    ],
+    "baseAff": 20,
+    "unlockDay": 1
+  },
+  {
+    "id": "zijun",
+    "name": "林紫君",
+    "emoji": "🎨",
+    "tag": "美术课代表",
+    "color": "#f59e0b",
+    "intro": "画画第一，性格飒爽，对喜欢的人会脸红。",
+    "locations": [
+      "art_room",
+      "library"
+    ],
+    "baseAff": 0,
+    "unlockDay": 1
+  }
+]

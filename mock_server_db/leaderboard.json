@@ -1,0 +1,27 @@
+[
+    {
+        "username": "学霸君",
+        "intellect": 95,
+        "school": "杭州求是中学"
+    },
+    {
+        "username": "陈雨桐",
+        "intellect": 88,
+        "school": "西湖中学"
+    },
+    {
+        "username": "林大白",
+        "intellect": 82,
+        "school": "西湖中学"
+    },
+    {
+        "username": "叶菁菁",
+        "intellect": 60,
+        "school": "西湖中学"
+    },
+    {
+        "username": "张语翰",
+        "intellect": 29,
+        "school": "杭州市杭州中学"
+    }
+]
